@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmptyCell" rowHeight="574" id="mwI-wH-Wp5" customClass="EmptyCell" customModule="Exchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="574"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mwI-wH-Wp5" id="x8F-7M-c82">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="574"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fC-Ph-HeZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="574"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJN-u7-BL3">
+                                <rect key="frame" x="16" y="258" width="361" height="58"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="aVY-mV-SKg">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="24"/>
+                                        <color key="tintColor" name="IconOnSurfaceDisabled"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Por-8P-dTX" customClass="Caption" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="361" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="TextOnSurfaceDisabled"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aVY-mV-SKg" firstAttribute="leading" secondItem="cJN-u7-BL3" secondAttribute="leading" id="7jz-WN-PbQ"/>
+                                    <constraint firstItem="aVY-mV-SKg" firstAttribute="top" secondItem="cJN-u7-BL3" secondAttribute="top" id="CU2-9B-c71"/>
+                                    <constraint firstItem="Por-8P-dTX" firstAttribute="top" secondItem="aVY-mV-SKg" secondAttribute="bottom" constant="16" id="EzX-4m-eHq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Por-8P-dTX" secondAttribute="bottom" id="IX6-pg-wnX"/>
+                                    <constraint firstItem="Por-8P-dTX" firstAttribute="leading" secondItem="cJN-u7-BL3" secondAttribute="leading" id="PmL-ng-SRM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Por-8P-dTX" secondAttribute="trailing" id="VfF-Kg-osa"/>
+                                    <constraint firstAttribute="trailing" secondItem="aVY-mV-SKg" secondAttribute="trailing" id="zYV-pr-ryK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundBase"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cJN-u7-BL3" secondAttribute="bottom" constant="16" id="3c3-Ql-gaW"/>
+                            <constraint firstAttribute="trailing" secondItem="cJN-u7-BL3" secondAttribute="trailing" constant="16" id="Bo5-zo-pBt"/>
+                            <constraint firstItem="cJN-u7-BL3" firstAttribute="leading" secondItem="8fC-Ph-HeZ" secondAttribute="leading" constant="16" id="Hd3-29-0Ac"/>
+                            <constraint firstItem="cJN-u7-BL3" firstAttribute="centerY" secondItem="8fC-Ph-HeZ" secondAttribute="centerY" id="LNa-uu-0XA"/>
+                            <constraint firstItem="cJN-u7-BL3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8fC-Ph-HeZ" secondAttribute="top" constant="16" id="hj7-JN-kjR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8fC-Ph-HeZ" firstAttribute="leading" secondItem="x8F-7M-c82" secondAttribute="leading" id="4ij-Vx-EEf"/>
+                    <constraint firstAttribute="trailing" secondItem="8fC-Ph-HeZ" secondAttribute="trailing" id="A5T-Kj-BQ5"/>
+                    <constraint firstAttribute="bottom" secondItem="8fC-Ph-HeZ" secondAttribute="bottom" id="BBz-EO-EX7"/>
+                    <constraint firstItem="8fC-Ph-HeZ" firstAttribute="top" secondItem="x8F-7M-c82" secondAttribute="top" id="ft3-JR-9UY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageViewIcon" destination="aVY-mV-SKg" id="2kd-zT-sdY"/>
+                <outlet property="labelText" destination="Por-8P-dTX" id="glM-Ao-0ao"/>
+            </connections>
+            <point key="canvasLocation" x="-147.32824427480915" y="261.26760563380282"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" width="24" height="24"/>
+        <namedColor name="BackgroundBase">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="IconOnSurfaceDisabled">
+            <color red="0.89411764705882357" green="0.89411764705882357" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextOnSurfaceDisabled">
+            <color red="0.89411764705882357" green="0.89411764705882357" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

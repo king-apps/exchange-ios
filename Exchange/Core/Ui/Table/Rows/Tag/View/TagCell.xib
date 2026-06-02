@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="RLQ-g6-lGb" customClass="TagCell" customModule="simulados_pro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RLQ-g6-lGb" id="Mxe-M0-odI">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydy-Cb-3cP">
+                        <rect key="frame" x="164.33333333333334" y="8" width="64.333333333333343" height="28"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="tag" translatesAutoresizingMaskIntoConstraints="NO" id="9m4-v3-2fH">
+                                <rect key="frame" x="8" y="8" width="12" height="12"/>
+                                <color key="tintColor" name="SemanticBrandPrimary500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9m4-v3-2fH" secondAttribute="height" multiplier="1:1" id="IzF-vg-yYa"/>
+                                    <constraint firstAttribute="width" constant="12" id="r1y-5z-S0d"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcJ-Vs-WWW" customClass="CaptionSemibold" customModule="simulados_pro" customModuleProvider="target">
+                                <rect key="frame" x="24.000000000000004" y="4" width="32.333333333333343" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" name="SemanticBrandPrimary500"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fcJ-Vs-WWW" firstAttribute="top" secondItem="Ydy-Cb-3cP" secondAttribute="top" constant="4" id="Bj9-l7-nxA"/>
+                            <constraint firstAttribute="trailing" secondItem="fcJ-Vs-WWW" secondAttribute="trailing" constant="8" id="CTp-aa-ytC"/>
+                            <constraint firstItem="fcJ-Vs-WWW" firstAttribute="leading" secondItem="9m4-v3-2fH" secondAttribute="trailing" constant="4" id="XxH-oG-AIQ"/>
+                            <constraint firstItem="9m4-v3-2fH" firstAttribute="centerY" secondItem="Ydy-Cb-3cP" secondAttribute="centerY" id="aCQ-se-xod"/>
+                            <constraint firstAttribute="bottom" secondItem="fcJ-Vs-WWW" secondAttribute="bottom" constant="4" id="cl6-T0-vpE"/>
+                            <constraint firstItem="9m4-v3-2fH" firstAttribute="leading" secondItem="Ydy-Cb-3cP" secondAttribute="leading" constant="8" id="dlZ-NB-bVN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="SemanticBgApp"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ydy-Cb-3cP" secondAttribute="trailing" constant="16" id="2SN-wf-I8f"/>
+                    <constraint firstItem="Ydy-Cb-3cP" firstAttribute="top" secondItem="Mxe-M0-odI" secondAttribute="top" constant="8" id="A5m-3H-kl4"/>
+                    <constraint firstAttribute="bottom" secondItem="Ydy-Cb-3cP" secondAttribute="bottom" constant="8" id="N4T-RC-CPY"/>
+                    <constraint firstItem="Ydy-Cb-3cP" firstAttribute="centerX" secondItem="Mxe-M0-odI" secondAttribute="centerX" id="dal-RJ-10X"/>
+                    <constraint firstItem="Ydy-Cb-3cP" firstAttribute="leading" secondItem="Mxe-M0-odI" secondAttribute="leading" priority="250" constant="16" id="o3V-m5-HMo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="constraintCenter" destination="dal-RJ-10X" id="jzr-CR-8f2"/>
+                <outlet property="imageViewIcon" destination="9m4-v3-2fH" id="jXQ-DZ-TP9"/>
+                <outlet property="labelTitle" destination="fcJ-Vs-WWW" id="3hM-sX-VYR"/>
+                <outlet property="viewBackground" destination="Ydy-Cb-3cP" id="dPJ-8T-o5e"/>
+            </connections>
+            <point key="canvasLocation" x="82" y="146"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tag" width="24" height="24"/>
+        <namedColor name="SemanticBgApp">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemanticBrandPrimary500">
+            <color red="0.23529411764705882" green="0.2627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

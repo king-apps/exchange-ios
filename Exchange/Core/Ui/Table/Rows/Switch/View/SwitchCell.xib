@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" rowHeight="85" id="CqR-Hf-RuX" customClass="SwitchCell" customModule="Exchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CqR-Hf-RuX" id="0C7-Qh-sKx">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOl-fr-aHA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zp4-Il-Jcl" customClass="UIViewBase" customModule="Exchange" customModuleProvider="target">
+                                <rect key="frame" x="16" y="0.0" width="361" height="83"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUq-S6-fkL" customClass="Body" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="16" width="252" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="TextOnSurface"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yU9-0i-Dkr">
+                                        <rect key="frame" x="284" y="27.666666666666671" width="63" height="28"/>
+                                        <color key="onTintColor" name="BrandPrimary500"/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="CqR-Hf-RuX" eventType="valueChanged" id="TTD-Ue-nox"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundSurface100"/>
+                                <constraints>
+                                    <constraint firstItem="SUq-S6-fkL" firstAttribute="top" secondItem="Zp4-Il-Jcl" secondAttribute="top" constant="16" id="Aml-hg-QwG"/>
+                                    <constraint firstItem="yU9-0i-Dkr" firstAttribute="centerY" secondItem="SUq-S6-fkL" secondAttribute="centerY" id="F4Z-aw-koa"/>
+                                    <constraint firstAttribute="bottom" secondItem="SUq-S6-fkL" secondAttribute="bottom" constant="16" id="K5t-wx-rTV"/>
+                                    <constraint firstItem="yU9-0i-Dkr" firstAttribute="leading" secondItem="SUq-S6-fkL" secondAttribute="trailing" constant="16" id="Ma7-hc-ojr"/>
+                                    <constraint firstAttribute="trailing" secondItem="yU9-0i-Dkr" secondAttribute="trailing" constant="16" id="ZXm-wT-juh"/>
+                                    <constraint firstItem="SUq-S6-fkL" firstAttribute="leading" secondItem="Zp4-Il-Jcl" secondAttribute="leading" constant="16" id="eT1-yp-z0L"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundBase"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zp4-Il-Jcl" secondAttribute="trailing" constant="16" id="B4b-Ph-A81"/>
+                            <constraint firstItem="Zp4-Il-Jcl" firstAttribute="leading" secondItem="gOl-fr-aHA" secondAttribute="leading" constant="16" id="Dqr-np-G1H"/>
+                            <constraint firstItem="Zp4-Il-Jcl" firstAttribute="top" secondItem="gOl-fr-aHA" secondAttribute="top" id="OSl-Ug-pb0"/>
+                            <constraint firstAttribute="bottom" secondItem="Zp4-Il-Jcl" secondAttribute="bottom" constant="2" id="wRL-cy-eEH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gOl-fr-aHA" secondAttribute="bottom" id="8Xl-F7-K5O"/>
+                    <constraint firstItem="gOl-fr-aHA" firstAttribute="leading" secondItem="0C7-Qh-sKx" secondAttribute="leading" id="b7B-r7-kPj"/>
+                    <constraint firstAttribute="trailing" secondItem="gOl-fr-aHA" secondAttribute="trailing" id="eVi-El-JWk"/>
+                    <constraint firstItem="gOl-fr-aHA" firstAttribute="top" secondItem="0C7-Qh-sKx" secondAttribute="top" id="lDU-AM-NUm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="isOnSwitch" destination="yU9-0i-Dkr" id="bKJ-h0-HPs"/>
+                <outlet property="labelTitle" destination="SUq-S6-fkL" id="W8M-0g-q77"/>
+            </connections>
+            <point key="canvasLocation" x="-127" y="128"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundBase">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundSurface100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPrimary500">
+            <color red="0.14509803921568629" green="0.43137254901960786" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextOnSurface">
+            <color red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

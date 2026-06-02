@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InputTextViewCell" rowHeight="297" id="aOH-ly-G1f" customClass="InputTextViewCell" customModule="Exchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="296"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aOH-ly-G1f" id="ZkD-r5-8KV">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="296"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wz-xV-Z5N">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="296"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHD-Q1-4pE" customClass="UIViewBase" customModule="Exchange" customModuleProvider="target">
+                                <rect key="frame" x="16" y="0.0" width="361" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrR-xG-prI" customClass="BodyBold" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="24" width="269.66666666666669" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" name="TextOnSurface"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="0/100" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gt-fo-bit" customClass="Body" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="293.66666666666669" y="24" width="43.333333333333314" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="TextOnSurfaceSecondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv6-il-dfG">
+                                        <rect key="frame" x="16" y="60.333333333333343" width="321" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Lx9-Vh-ilm"/>
+                                        </constraints>
+                                        <color key="textColor" name="TextOnSurface"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Error" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ue-EB-Fj3" customClass="CaptionSemibold" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="162.33333333333334" width="321" height="15.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <color key="textColor" name="Error500"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundSurface100"/>
+                                <constraints>
+                                    <constraint firstItem="5Gt-fo-bit" firstAttribute="leading" secondItem="lrR-xG-prI" secondAttribute="trailing" constant="8" id="2Fz-g4-QUN"/>
+                                    <constraint firstItem="Bv6-il-dfG" firstAttribute="top" secondItem="lrR-xG-prI" secondAttribute="bottom" constant="16" id="7EL-Qf-ixf"/>
+                                    <constraint firstItem="4ue-EB-Fj3" firstAttribute="trailing" secondItem="Bv6-il-dfG" secondAttribute="trailing" id="AGB-V7-8OJ"/>
+                                    <constraint firstItem="lrR-xG-prI" firstAttribute="top" secondItem="UHD-Q1-4pE" secondAttribute="top" constant="24" id="ClM-qP-3nD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bv6-il-dfG" secondAttribute="bottom" priority="750" constant="16" id="Mp5-PP-jWj"/>
+                                    <constraint firstItem="lrR-xG-prI" firstAttribute="leading" secondItem="UHD-Q1-4pE" secondAttribute="leading" constant="16" id="Njd-Yt-e2P"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Gt-fo-bit" secondAttribute="trailing" constant="24" id="Ydx-xg-gla"/>
+                                    <constraint firstItem="Bv6-il-dfG" firstAttribute="leading" secondItem="lrR-xG-prI" secondAttribute="leading" id="aZM-vp-Jz1"/>
+                                    <constraint firstItem="4ue-EB-Fj3" firstAttribute="top" secondItem="Bv6-il-dfG" secondAttribute="bottom" constant="2" id="aZd-Me-beE"/>
+                                    <constraint firstItem="4ue-EB-Fj3" firstAttribute="leading" secondItem="Bv6-il-dfG" secondAttribute="leading" id="l5R-hG-JHS"/>
+                                    <constraint firstAttribute="bottom" secondItem="4ue-EB-Fj3" secondAttribute="bottom" constant="24" id="rU7-qu-Aom"/>
+                                    <constraint firstItem="5Gt-fo-bit" firstAttribute="top" secondItem="lrR-xG-prI" secondAttribute="top" id="uer-wW-8Sw"/>
+                                    <constraint firstItem="Bv6-il-dfG" firstAttribute="trailing" secondItem="5Gt-fo-bit" secondAttribute="trailing" id="wMc-hl-fYB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundBase"/>
+                        <constraints>
+                            <constraint firstItem="UHD-Q1-4pE" firstAttribute="leading" secondItem="9Wz-xV-Z5N" secondAttribute="leading" constant="16" id="5Xs-3g-Rit"/>
+                            <constraint firstAttribute="trailing" secondItem="UHD-Q1-4pE" secondAttribute="trailing" constant="16" id="Bu1-qp-ZaX"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UHD-Q1-4pE" secondAttribute="bottom" constant="8" id="CI8-zE-J6V"/>
+                            <constraint firstItem="UHD-Q1-4pE" firstAttribute="top" secondItem="9Wz-xV-Z5N" secondAttribute="top" id="g6T-px-9Jz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9Wz-xV-Z5N" firstAttribute="leading" secondItem="ZkD-r5-8KV" secondAttribute="leading" id="47Q-mA-jer"/>
+                    <constraint firstAttribute="bottom" secondItem="9Wz-xV-Z5N" secondAttribute="bottom" id="EOE-fh-1WY"/>
+                    <constraint firstAttribute="trailing" secondItem="9Wz-xV-Z5N" secondAttribute="trailing" id="hfX-LO-2FZ"/>
+                    <constraint firstItem="9Wz-xV-Z5N" firstAttribute="top" secondItem="ZkD-r5-8KV" secondAttribute="top" id="iQc-5E-Q2T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="labelCount" destination="5Gt-fo-bit" id="9rs-IL-6Z4"/>
+                <outlet property="labelError" destination="4ue-EB-Fj3" id="dbJ-Hh-5Er"/>
+                <outlet property="labelTitle" destination="lrR-xG-prI" id="iFv-9T-nft"/>
+                <outlet property="textView" destination="Bv6-il-dfG" id="ub9-Vl-kdB"/>
+            </connections>
+            <point key="canvasLocation" x="151.90839694656489" y="145.77464788732394"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundBase">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundSurface100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Error500">
+            <color red="0.86274509803921573" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextOnSurface">
+            <color red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextOnSurfaceSecondary">
+            <color red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

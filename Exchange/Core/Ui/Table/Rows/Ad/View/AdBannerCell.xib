@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AdBannerCell" rowHeight="100" id="rMR-4O-aJT" customClass="AdBannerCell" customModule="simulados_pro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rMR-4O-aJT" id="ODn-k1-Zyq">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THR-l9-gqW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC3-Je-r0F" customClass="AdBannerView" customModule="simulados_pro" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="361" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eXo-vI-eXM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="SemanticBgApp"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sC3-Je-r0F" secondAttribute="bottom" constant="16" id="7f1-ob-76C"/>
+                            <constraint firstItem="sC3-Je-r0F" firstAttribute="top" secondItem="THR-l9-gqW" secondAttribute="top" constant="16" id="JsE-Av-4sW"/>
+                            <constraint firstItem="sC3-Je-r0F" firstAttribute="leading" secondItem="THR-l9-gqW" secondAttribute="leading" constant="16" id="Jts-oP-36D"/>
+                            <constraint firstAttribute="trailing" secondItem="sC3-Je-r0F" secondAttribute="trailing" constant="16" id="Ymy-h2-pMe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="THR-l9-gqW" secondAttribute="trailing" id="6gH-Yn-deV"/>
+                    <constraint firstItem="THR-l9-gqW" firstAttribute="top" secondItem="ODn-k1-Zyq" secondAttribute="top" id="Ygu-XQ-gG4"/>
+                    <constraint firstItem="THR-l9-gqW" firstAttribute="leading" secondItem="ODn-k1-Zyq" secondAttribute="leading" id="hrm-vm-Ayg"/>
+                    <constraint firstAttribute="bottom" secondItem="THR-l9-gqW" secondAttribute="bottom" id="kLi-KX-GbH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="adBannerView" destination="sC3-Je-r0F" id="cUv-Xa-a2Y"/>
+            </connections>
+            <point key="canvasLocation" x="-321.37404580152668" y="184.50704225352115"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="SemanticBgApp">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

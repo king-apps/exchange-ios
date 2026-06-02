@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R4j-oh-25O">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web Content View Controller-->
+        <scene sceneID="l5V-uh-qqi">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="R4j-oh-25O" customClass="WebContentViewController" customModule="Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AYG-NB-1Uw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8a-fE-EEx">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="190"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjY-uc-wPm" customClass="UIButtonBase" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="329" y="142" width="40" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="8VA-La-Cy7"/>
+                                        </constraints>
+                                        <color key="tintColor" name="ButtonPrimary"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="x"/>
+                                        <connections>
+                                            <action selector="didClose" destination="R4j-oh-25O" eventType="touchUpInside" id="mNe-Qm-qWo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UjY-uc-wPm" secondAttribute="trailing" constant="24" id="KrE-KR-8Fs"/>
+                                    <constraint firstAttribute="bottom" secondItem="UjY-uc-wPm" secondAttribute="bottom" constant="24" id="Som-J8-rgS"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VT7-Xn-JSd">
+                                <rect key="frame" x="0.0" y="190" width="393" height="662"/>
+                                <color key="backgroundColor" name="BackgroundBase"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-9e-jND">
+                                <rect key="frame" x="170.66666666666666" y="443" width="52" height="52"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QQb-ue-ilN">
+                                        <rect key="frame" x="16" y="16" width="20" height="20"/>
+                                        <color key="color" name="IconOnBrandPrimary"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPrimary500"/>
+                                <constraints>
+                                    <constraint firstItem="QQb-ue-ilN" firstAttribute="leading" secondItem="78Q-9e-jND" secondAttribute="leading" constant="16" id="HNP-Ql-fNw"/>
+                                    <constraint firstAttribute="trailing" secondItem="QQb-ue-ilN" secondAttribute="trailing" constant="16" id="Km0-MC-LeN"/>
+                                    <constraint firstAttribute="bottom" secondItem="QQb-ue-ilN" secondAttribute="bottom" constant="16" id="h0n-Dd-XLR"/>
+                                    <constraint firstItem="QQb-ue-ilN" firstAttribute="top" secondItem="78Q-9e-jND" secondAttribute="top" constant="16" id="s9S-yL-pOg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IdM-Ln-GyO"/>
+                        <color key="backgroundColor" name="BackgroundSurface100"/>
+                        <constraints>
+                            <constraint firstItem="UjY-uc-wPm" firstAttribute="top" secondItem="IdM-Ln-GyO" secondAttribute="top" constant="24" id="Awm-YP-1Xh"/>
+                            <constraint firstItem="78Q-9e-jND" firstAttribute="centerX" secondItem="VT7-Xn-JSd" secondAttribute="centerX" id="QgC-UM-Mgt"/>
+                            <constraint firstAttribute="top" secondItem="Y8a-fE-EEx" secondAttribute="top" id="TYG-jx-MB0"/>
+                            <constraint firstItem="VT7-Xn-JSd" firstAttribute="top" secondItem="Y8a-fE-EEx" secondAttribute="bottom" id="XE3-N8-2IG"/>
+                            <constraint firstItem="IdM-Ln-GyO" firstAttribute="trailing" secondItem="Y8a-fE-EEx" secondAttribute="trailing" id="bGZ-4i-XGU"/>
+                            <constraint firstItem="78Q-9e-jND" firstAttribute="centerY" secondItem="VT7-Xn-JSd" secondAttribute="centerY" multiplier="0.9" id="eC9-9u-Ao8"/>
+                            <constraint firstAttribute="bottom" secondItem="VT7-Xn-JSd" secondAttribute="bottom" id="fP5-Fp-qi6"/>
+                            <constraint firstItem="Y8a-fE-EEx" firstAttribute="leading" secondItem="IdM-Ln-GyO" secondAttribute="leading" id="guM-QD-NIJ"/>
+                            <constraint firstItem="VT7-Xn-JSd" firstAttribute="leading" secondItem="Y8a-fE-EEx" secondAttribute="leading" id="ldB-1O-eWq"/>
+                            <constraint firstItem="VT7-Xn-JSd" firstAttribute="trailing" secondItem="Y8a-fE-EEx" secondAttribute="trailing" id="o5r-Ot-tXb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewLoading" destination="78Q-9e-jND" id="FOT-jw-Wbd"/>
+                        <outlet property="webView" destination="VT7-Xn-JSd" id="z2h-GU-1de"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xP4-Kz-kE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="-5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="x" width="24" height="24"/>
+        <namedColor name="BackgroundBase">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundSurface100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPrimary500">
+            <color red="0.14509803921568629" green="0.43137254901960786" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonPrimary">
+            <color red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="IconOnBrandPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

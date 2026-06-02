@@ -1,0 +1,6 @@
+*.xcuserstate
+.DS_Store
+
+# Local build artifacts
+tmp/
+DerivedData/

@@ -1,0 +1,16 @@
+// APP
+"App.Name" = "Troca Figurinhas 2026";
+
+
+/* ==================================================================================================== */
+/* AUTENTICACAO */
+/* ==================================================================================================== */
+"AuthHome.Description" = "Encontre figurinhas para trocar perto de você";
+
+
+// ITS A MATCH
+"ItsAMatch.Description" = "{$0} também tem interesse nas suas figurinhas";
+
+
+// MY PRODUCT
+"MyProduct.List.Title" = "Minhas figurinhas";

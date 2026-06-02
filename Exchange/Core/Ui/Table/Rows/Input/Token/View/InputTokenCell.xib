@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InputTokenCell" rowHeight="154" id="ym8-bh-BWK" customClass="InputTokenCell" customModule="Exchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="154"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ym8-bh-BWK" id="pmF-UQ-GT4">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="154"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUF-OQ-hdY" customClass="UIViewBase" customModule="Exchange" customModuleProvider="target">
+                        <rect key="frame" x="24" y="0.0" width="345" height="146"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input.Token.Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBK-a7-mXX" customClass="BodyBold" customModule="Exchange" customModuleProvider="target">
+                                <rect key="frame" x="16" y="24" width="313" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="TextOnSurface"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEY-Ta-lXp">
+                                <rect key="frame" x="32.666666666666657" y="50" width="280" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edY-t1-4Kb" customClass="UITextFieldTokenBase" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="8.0000000000000071" y="8" width="59.999999999999993" height="60"/>
+                                        <color key="backgroundColor" name="BackgroundBase"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="edY-t1-4Kb" secondAttribute="height" id="Ter-5q-sU5"/>
+                                            <constraint firstAttribute="width" constant="60" id="c2B-S0-xtc"/>
+                                        </constraints>
+                                        <color key="textColor" name="SemanticTextPrimary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartQuotesType="no" textContentType="one-time-code"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaA-Km-dSI" customClass="UITextFieldTokenBase" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="76" y="8" width="60" height="60"/>
+                                        <color key="backgroundColor" name="BackgroundBase"/>
+                                        <color key="textColor" name="SemanticTextPrimary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartQuotesType="no" textContentType="one-time-code"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ir-CE-B7q" customClass="UITextFieldTokenBase" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="144" y="8" width="60" height="60"/>
+                                        <color key="backgroundColor" name="BackgroundBase"/>
+                                        <color key="textColor" name="SemanticTextPrimary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartQuotesType="no" textContentType="one-time-code"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9a-pX-n7d" customClass="UITextFieldTokenBase" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="212.00000000000003" y="8" width="59.999999999999972" height="60"/>
+                                        <color key="backgroundColor" name="BackgroundBase"/>
+                                        <color key="textColor" name="SemanticTextPrimary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartQuotesType="no" textContentType="one-time-code"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundSurface100"/>
+                                <constraints>
+                                    <constraint firstItem="eaA-Km-dSI" firstAttribute="leading" secondItem="edY-t1-4Kb" secondAttribute="trailing" constant="8" id="2r9-1S-9a1"/>
+                                    <constraint firstItem="n9a-pX-n7d" firstAttribute="width" secondItem="5Ir-CE-B7q" secondAttribute="width" id="5IM-DF-bR3"/>
+                                    <constraint firstAttribute="trailing" secondItem="n9a-pX-n7d" secondAttribute="trailing" constant="8" id="F52-zG-R59"/>
+                                    <constraint firstItem="eaA-Km-dSI" firstAttribute="bottom" secondItem="edY-t1-4Kb" secondAttribute="bottom" id="KH7-B1-Q0r"/>
+                                    <constraint firstItem="eaA-Km-dSI" firstAttribute="width" secondItem="edY-t1-4Kb" secondAttribute="width" id="PP4-ht-RZ1"/>
+                                    <constraint firstItem="n9a-pX-n7d" firstAttribute="bottom" secondItem="5Ir-CE-B7q" secondAttribute="bottom" id="Pto-cd-C8t"/>
+                                    <constraint firstItem="eaA-Km-dSI" firstAttribute="top" secondItem="edY-t1-4Kb" secondAttribute="top" id="R6o-Mk-ZSl"/>
+                                    <constraint firstItem="5Ir-CE-B7q" firstAttribute="leading" secondItem="eaA-Km-dSI" secondAttribute="trailing" constant="8" id="R8S-tu-92x"/>
+                                    <constraint firstItem="n9a-pX-n7d" firstAttribute="leading" secondItem="5Ir-CE-B7q" secondAttribute="trailing" constant="8" id="ZFt-p0-NZj"/>
+                                    <constraint firstAttribute="bottom" secondItem="edY-t1-4Kb" secondAttribute="bottom" constant="8" id="Zfs-ln-OBk"/>
+                                    <constraint firstItem="5Ir-CE-B7q" firstAttribute="width" secondItem="eaA-Km-dSI" secondAttribute="width" id="cwY-OA-1Le"/>
+                                    <constraint firstItem="edY-t1-4Kb" firstAttribute="leading" secondItem="pEY-Ta-lXp" secondAttribute="leading" constant="8" id="fan-aa-pKK"/>
+                                    <constraint firstItem="edY-t1-4Kb" firstAttribute="top" secondItem="pEY-Ta-lXp" secondAttribute="top" constant="8" id="g3v-LY-ayz"/>
+                                    <constraint firstItem="5Ir-CE-B7q" firstAttribute="top" secondItem="eaA-Km-dSI" secondAttribute="top" id="hke-SZ-8vH"/>
+                                    <constraint firstItem="5Ir-CE-B7q" firstAttribute="bottom" secondItem="eaA-Km-dSI" secondAttribute="bottom" id="keh-Dg-twW"/>
+                                    <constraint firstItem="n9a-pX-n7d" firstAttribute="top" secondItem="5Ir-CE-B7q" secondAttribute="top" id="lZI-IU-Pfd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundSurface100"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sBK-a7-mXX" secondAttribute="trailing" constant="16" id="GZi-LN-RmS"/>
+                            <constraint firstItem="sBK-a7-mXX" firstAttribute="leading" secondItem="CUF-OQ-hdY" secondAttribute="leading" constant="16" id="Tua-lH-uvG"/>
+                            <constraint firstItem="pEY-Ta-lXp" firstAttribute="centerX" secondItem="CUF-OQ-hdY" secondAttribute="centerX" id="iO4-AA-m26"/>
+                            <constraint firstAttribute="bottom" secondItem="pEY-Ta-lXp" secondAttribute="bottom" constant="20" id="nXb-zV-e7r"/>
+                            <constraint firstItem="sBK-a7-mXX" firstAttribute="top" secondItem="CUF-OQ-hdY" secondAttribute="top" constant="24" id="rm4-XT-1mh"/>
+                            <constraint firstItem="edY-t1-4Kb" firstAttribute="top" secondItem="sBK-a7-mXX" secondAttribute="bottom" constant="16" id="xWV-PW-ZD8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CUF-OQ-hdY" firstAttribute="leading" secondItem="pmF-UQ-GT4" secondAttribute="leading" constant="24" id="8eJ-0C-I0v"/>
+                    <constraint firstAttribute="trailing" secondItem="CUF-OQ-hdY" secondAttribute="trailing" constant="24" id="KNx-hy-pdO"/>
+                    <constraint firstAttribute="bottom" secondItem="CUF-OQ-hdY" secondAttribute="bottom" constant="8" id="i6y-Tk-q8Y"/>
+                    <constraint firstItem="CUF-OQ-hdY" firstAttribute="top" secondItem="pmF-UQ-GT4" secondAttribute="top" id="igN-GH-C1O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="textField1" destination="edY-t1-4Kb" id="sGd-F2-0P0"/>
+                <outlet property="textField2" destination="eaA-Km-dSI" id="0ey-6P-X0p"/>
+                <outlet property="textField3" destination="5Ir-CE-B7q" id="z9Z-j2-zQt"/>
+                <outlet property="textField4" destination="n9a-pX-n7d" id="G2i-cI-0dQ"/>
+            </connections>
+            <point key="canvasLocation" x="19.083969465648853" y="139.43661971830986"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundBase">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundSurface100">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemanticTextPrimary">
+            <color red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextOnSurface">
+            <color red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

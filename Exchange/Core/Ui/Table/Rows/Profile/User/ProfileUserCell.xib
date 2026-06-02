@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProfileUserCell" rowHeight="283" id="jTf-Ab-haq" customClass="ProfileUserCell" customModule="Exchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="283"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jTf-Ab-haq" id="qEe-15-K7N">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="283"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsS-hi-NMj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="283"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" image="brand-circle" translatesAutoresizingMaskIntoConstraints="NO" id="hWW-s2-128">
+                                <rect key="frame" x="0.0" y="-520.66666666666663" width="393" height="735"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="EQ0-fd-eJq">
+                                <rect key="frame" x="146.66666666666666" y="8" width="100" height="100"/>
+                                <color key="backgroundColor" name="BrandPrimary100"/>
+                                <color key="tintColor" name="BaseWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EQ0-fd-eJq" secondAttribute="height" id="EWF-hB-tzX"/>
+                                    <constraint firstAttribute="width" constant="100" id="uKT-Vc-Erw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhm-lX-yLp" customClass="BodyBold" customModule="Exchange" customModuleProvider="target">
+                                <rect key="frame" x="24" y="123.99999999999999" width="345" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="BaseWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-Hc-1zz" customClass="BodySmall" customModule="Exchange" customModuleProvider="target">
+                                <rect key="frame" x="24" y="148.33333333333334" width="345" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="BrandPrimary100"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundBase"/>
+                        <constraints>
+                            <constraint firstItem="EQ0-fd-eJq" firstAttribute="top" secondItem="lsS-hi-NMj" secondAttribute="top" constant="8" id="2Cv-tR-AcX"/>
+                            <constraint firstItem="hWW-s2-128" firstAttribute="leading" secondItem="lsS-hi-NMj" secondAttribute="leading" id="FU3-Kh-NK0"/>
+                            <constraint firstItem="EQ0-fd-eJq" firstAttribute="centerX" secondItem="lsS-hi-NMj" secondAttribute="centerX" id="I9x-PJ-rwi"/>
+                            <constraint firstItem="bgh-Hc-1zz" firstAttribute="leading" secondItem="qhm-lX-yLp" secondAttribute="leading" id="KAy-Ow-vQT"/>
+                            <constraint firstItem="qhm-lX-yLp" firstAttribute="top" secondItem="EQ0-fd-eJq" secondAttribute="bottom" constant="16" id="Lph-0M-ISE"/>
+                            <constraint firstAttribute="trailing" secondItem="hWW-s2-128" secondAttribute="trailing" id="Z9T-DI-xMw"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hWW-s2-128" secondAttribute="bottom" constant="32" id="boD-st-qHP"/>
+                            <constraint firstItem="hWW-s2-128" firstAttribute="bottom" secondItem="bgh-Hc-1zz" secondAttribute="bottom" constant="48" id="cCu-MM-8cA"/>
+                            <constraint firstAttribute="trailing" secondItem="qhm-lX-yLp" secondAttribute="trailing" constant="24" id="hJC-N8-wt5"/>
+                            <constraint firstItem="qhm-lX-yLp" firstAttribute="leading" secondItem="lsS-hi-NMj" secondAttribute="leading" constant="24" id="hK3-sP-ea7"/>
+                            <constraint firstItem="bgh-Hc-1zz" firstAttribute="top" secondItem="qhm-lX-yLp" secondAttribute="bottom" constant="4" id="iJe-Jb-YEC"/>
+                            <constraint firstItem="bgh-Hc-1zz" firstAttribute="trailing" secondItem="qhm-lX-yLp" secondAttribute="trailing" id="kUm-7v-duR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="lsS-hi-NMj" secondAttribute="bottom" id="3Cw-Ci-5Fs"/>
+                    <constraint firstAttribute="trailing" secondItem="lsS-hi-NMj" secondAttribute="trailing" id="IOA-h7-er1"/>
+                    <constraint firstItem="lsS-hi-NMj" firstAttribute="leading" secondItem="qEe-15-K7N" secondAttribute="leading" id="rn7-4Y-BTH"/>
+                    <constraint firstItem="lsS-hi-NMj" firstAttribute="top" secondItem="qEe-15-K7N" secondAttribute="top" id="s6r-Wz-zTG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageViewAvatar" destination="EQ0-fd-eJq" id="wLn-e9-ey4"/>
+                <outlet property="labelEmail" destination="bgh-Hc-1zz" id="RO6-xP-I1m"/>
+                <outlet property="labelName" destination="qhm-lX-yLp" id="I3b-5X-mu5"/>
+            </connections>
+            <point key="canvasLocation" x="319.84732824427482" y="160.21126760563382"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="brand-circle" width="735" height="735"/>
+        <image name="user" width="24" height="24"/>
+        <namedColor name="BackgroundBase">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BaseWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPrimary100">
+            <color red="0.7803921568627451" green="0.84705882352941175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
