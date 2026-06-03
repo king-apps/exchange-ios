@@ -9,9 +9,7 @@ extension StickerListViewController: knowMoreDelegate {
             
             switch option {
             case .stickerImage:
-                handlerImage()
-                // TO-DO
-                //openCamera()
+                openCamera()
                 break
             default: break
             }
@@ -19,7 +17,7 @@ extension StickerListViewController: knowMoreDelegate {
         
     }
     
-    func knoMoreDidClose(option: KnowMoreOption?) {
+    func knowMoreDidClose(option: KnowMoreOption?) {
         
         if let option = option {
             switch option {

@@ -16,7 +16,7 @@ extension ProfileListViewController: knowMoreDelegate {
         }
     }
     
-    func knoMoreDidClose(option: KnowMoreOption?) {
+    func knowMoreDidClose(option: KnowMoreOption?) {
         
     }
 }

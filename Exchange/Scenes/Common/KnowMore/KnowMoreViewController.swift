@@ -19,7 +19,7 @@ protocol KnowMoreDisplayLogic: AnyObject {
 
 protocol knowMoreDelegate: AnyObject {
     func knowMoreDidtapAction(option: KnowMoreOption?)
-    func knoMoreDidClose(option: KnowMoreOption?)
+    func knowMoreDidClose(option: KnowMoreOption?)
 }
 
 
@@ -149,7 +149,7 @@ class KnowMoreViewController: MainBaseViewController, KnowMoreDisplayLogic {
     // Handler actions
     @IBAction func didClose() {
         dismiss(animated: true) {
-            self.delegate?.knoMoreDidClose(option: self.option)
+            self.delegate?.knowMoreDidClose(option: self.option)
         }
     }
     @IBAction func didAction() {

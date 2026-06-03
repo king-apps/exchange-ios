@@ -201,6 +201,7 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
     }
     func onSave(viewModel: StickerList.Save.ViewModel) {
         fetch()
+        viewFilterBadge.isHidden = !LocalConfig.shared.filterStickerIsActive()
     }
     
     @objc private func textFieldDidEditingChanged(_ textField: UITextField) {

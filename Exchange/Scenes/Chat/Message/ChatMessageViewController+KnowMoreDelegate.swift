@@ -20,7 +20,7 @@ extension ChatMessageViewController: knowMoreDelegate {
         
     }
     
-    func knoMoreDidClose(option: KnowMoreOption?) {
+    func knowMoreDidClose(option: KnowMoreOption?) {
         
         if let option = option {
             switch option {

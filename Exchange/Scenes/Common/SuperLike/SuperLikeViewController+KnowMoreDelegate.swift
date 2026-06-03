@@ -6,7 +6,7 @@ extension SuperLikeViewController: knowMoreDelegate {
     func knowMoreDidtapAction(option: KnowMoreOption?) {
         send()
     }
-    func knoMoreDidClose(option: KnowMoreOption?) {
+    func knowMoreDidClose(option: KnowMoreOption?) {
         
     }
     
