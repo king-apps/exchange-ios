@@ -127,7 +127,15 @@ class ChatListViewController: MainBaseViewController, ChatListDisplayLogic {
         interactor?.delete(request: request)
     }
     func onDelete(viewModel: ChatList.Delete.ViewModel) {
-        
+        let hasChatList = rows.contains {
+            if case .chatList = $0 {
+                return true
+            }
+            return false
+        }
+        if !hasChatList {
+            fetch()
+        }
     }
     func onDelete(error: String) {
         

@@ -152,7 +152,9 @@ class MainBaseViewController: UIViewController {
             let api = MatchApi()
             let request = MatchChatDenunciateRequestDTO(chatId: id, reason: reason.rawValue)
             api.chatDenunciate(request: request) { error in
-                
+                api.chatDelete(request: .init(id: id)) { error in
+                    
+                }
             }
         }
         

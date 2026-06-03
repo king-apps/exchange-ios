@@ -35,6 +35,32 @@ enum Root {
             var list: [RootController]
         }
     }
+    
+    enum FcmToken {
+        struct Request {
+            
+        }
+        struct Response {
+            var error: String?
+        }
+        struct ViewModel {
+            
+        }
+    }
+    
+    
+    enum UserProfile {
+        struct Request {
+            
+        }
+        struct Response {
+            var user: User?
+            var error: String?
+        }
+        struct ViewModel {
+            var messagesNotViewed: Int
+        }
+    }
  
     
     struct RootController {

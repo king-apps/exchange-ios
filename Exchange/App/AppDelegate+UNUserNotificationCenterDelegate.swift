@@ -41,12 +41,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
         NotificationCenter.default.post(name: .reloadChatList, object: nil)
         NotificationCenter.default.post(name: .reloadChatListBadge, object: nil)
-        completionHandler([.banner, .sound, .badge])
+        // TO-DO caso precise mostrar push com o app aberto, so descomentar essa linha
+        // completionHandler([.banner, .sound, .badge])
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         // TO-DO
-        // Deeplink (tratar aqui os parametros de abertura de notificacao
+        // Deeplink (tratar aqui os parametros de abertura de notificacao)
         completionHandler()
     }
     

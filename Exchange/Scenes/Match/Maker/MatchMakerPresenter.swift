@@ -72,7 +72,10 @@ class MatchMakerPresenter: MatchMakerPresentationLogic {
     func search(response: MatchMaker.Search.Response) {
         
         if let error = response.error {
-            viewController?.onSearchError(error: error)
+            viewController?.onSearchError(
+                error: error,
+                generation: response.generation
+            )
         }
         else {
             var cards = [CardModel]()
@@ -97,7 +100,10 @@ class MatchMakerPresenter: MatchMakerPresentationLogic {
             }
             
 
-            let viewModel = MatchMaker.Search.ViewModel(cards: cards)
+            let viewModel = MatchMaker.Search.ViewModel(
+                cards: cards,
+                generation: response.generation
+            )
             viewController?.onSearch(viewModel: viewModel)
         }
     }

@@ -115,6 +115,7 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
         interactor?.updateCollected(request: request)
     }
     func onUpdateCollected(viewModel: StickerList.UpdateCollected.ViewModel) {
+        let previousRowCount = rows.count
         rows = viewModel.rows
         
         if let error = viewModel.error {
@@ -128,6 +129,10 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
         }
         
         let indexPaths = uniqueIndexPaths(indexPathsForStatisticRows() + [stickerIndexPath])
+        guard previousRowCount == rows.count, indexPaths.allSatisfy({ $0.row < previousRowCount }) else {
+            tableView?.reloadData()
+            return
+        }
         
         UIView.performWithoutAnimation {
             tableView?.reloadRows(at: indexPaths, with: .none)

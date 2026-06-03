@@ -39,7 +39,8 @@ class SuperLikeWorker {
     // Handler save
     func save(product: Product?, storeProduct: SKProduct?, message: String, completion: @escaping(_ error: String?) -> ()) {
         
-       
+        self.send(product: product, message: message, completion: completion)
+        return
         guard let storeProduct else {
             completion("Alert.Generic.Error".localized)
             return

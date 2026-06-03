@@ -92,7 +92,11 @@ class MatchMakerInteractor: MatchMakerBusinessLogic, MatchMakerDataStore {
                 self.list = products
             }
             
-            let response = MatchMaker.Search.Response(list: list, error: error)
+            let response = MatchMaker.Search.Response(
+                list: list,
+                error: error,
+                generation: request.generation
+            )
             self.presenter?.search(response: response)
         }
     }

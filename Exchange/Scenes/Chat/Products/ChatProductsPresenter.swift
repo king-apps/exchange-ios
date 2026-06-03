@@ -93,7 +93,7 @@ class ChatProductsPresenter: ChatProductsPresentationLogic {
                         .init(
                             color: .textOnSurfaceSecondary,
                             icon: .none,
-                            title: "SEUS PRODUTOS"
+                            title: "Chat.Products.Me.Name".localized.uppercased()
                         )
                     )
                 )

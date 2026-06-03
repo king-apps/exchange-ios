@@ -21,13 +21,16 @@ enum MatchMaker {
     enum Search {
         struct Request {
             var page: Int
+            var generation: Int
         }
         struct Response {
             var list: [Product]?
             var error: String?
+            var generation: Int
         }
         struct ViewModel {
             var cards: [CardModel]
+            var generation: Int
         }
     }
 

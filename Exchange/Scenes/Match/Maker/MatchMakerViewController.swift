@@ -12,7 +12,7 @@ protocol MatchMakerDisplayLogic: AnyObject {
     func onNotification(viewModel: MatchMaker.Notification.ViewModel)
     func onTracking(viewModel: MatchMaker.Tracking.ViewModel)
     func onSearch(viewModel: MatchMaker.Search.ViewModel)
-    func onSearchError(error: String)
+    func onSearchError(error: String, generation: Int)
     func onDetail(viewModel: MatchMaker.Detail.ViewModel)
     func onIntention(viewModel: MatchMaker.Intention.ViewModel)
     func onIntentionError(error: String)
@@ -55,6 +55,8 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
     }
     private var interstitial: RewardedInterstitialAd?
     private var isFirstLoad: Bool = true
+    private var loadingAnimationGeneration: Int = 0
+    private var searchGeneration: Int = 0
     
   
     // Constructor
@@ -99,7 +101,7 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
     
     // Setup inputs
     func setupInputs() {
-        
+
         imageViewCircle.tintColor = .secondaryLabel
         viewButtons.alpha = 0.0
         viewLoading0.layer.cornerRadius = viewLoading0.bounds.width * 0.5
@@ -156,6 +158,9 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
     
     // Handler loading
     func showLoading(completion: @escaping() -> ()) {
+        loadingAnimationGeneration += 1
+        let generation = loadingAnimationGeneration
+
         if status != .loading {
             status = .loading
             UIView.animate(withDuration: AppConfig.Animation.duration, delay: 0.0, options: .curveEaseInOut) {
@@ -163,16 +168,16 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
                 self.viewButtons.alpha = 0.0
                 self.viewLoading.alpha = 1.0
             } completion: { (finished) in
+                guard finished, self.loadingAnimationGeneration == generation, self.status == .loading else { return }
                 self.constraintFullHeightCircle.isActive = false
                 UIView.animate(withDuration: AppConfig.Animation.duration, delay: 0.0, options: .curveEaseInOut) {
                     self.imageViewCircle.tintColor = .secondaryLabel
                     self.viewLoading.alpha = 1.0
                     self.view.layoutIfNeeded()
                 } completion: { (finished) in
-                    if finished {
-                        self.animationLoading()
-                        completion()
-                    }
+                    guard finished, self.loadingAnimationGeneration == generation, self.status == .loading else { return }
+                    self.animationLoading()
+                    completion()
                 }
             }
         }
@@ -199,6 +204,7 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
         }
     }
     func hideLoading(completion: @escaping() -> ()) {
+        loadingAnimationGeneration += 1
         status = .ready
         self.constraintFullHeightCircle.isActive = true
         UIView.animate(withDuration: AppConfig.Animation.duration, delay: 0.0, options: .curveEaseInOut) {
@@ -224,18 +230,29 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
         search()
     }
     func search() {
+        searchGeneration += 1
+        let generation = searchGeneration
         cardIndex = 0
         self.viewEmpty.alpha = 0
         showLoading {
-            let request = MatchMaker.Search.Request(page: self.page)
+            guard generation == self.searchGeneration else { return }
+
+            let request = MatchMaker.Search.Request(
+                page: self.page,
+                generation: generation
+            )
             self.interactor?.search(request: request)
         }
     }
     func onSearch(viewModel: MatchMaker.Search.ViewModel) {
+        guard viewModel.generation == searchGeneration else { return }
+
         page += 1
         if viewModel.cards.count > 0 {
             self.viewEmpty.alpha = 0
             DispatchQueue.main.asyncAfter(deadline: .now() + AppConfig.Animation.duration) {
+                guard viewModel.generation == self.searchGeneration else { return }
+
                 self.cards = viewModel.cards
                 self.viewSwipeable.discardViews()
                 self.viewSwipeable.numberOfActiveView = UInt(self.cards.count > 3 ? 3 : self.cards.count)
@@ -251,31 +268,44 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
         }
         else {
             DispatchQueue.main.asyncAfter(deadline: .now() + AppConfig.Animation.duration) {
-                UIView.animate(withDuration: AppConfig.Animation.duration, delay: 0.0) {
-                    self.viewButtons.alpha = 0
-                    self.viewLoading.alpha = 0
-                    self.viewEmpty.alpha = 1
-                }
-                completion: { finished in
+                guard viewModel.generation == self.searchGeneration else { return }
+
+                self.showEmptyState {
                     if self.page > 1 {
                         self.showAd()
                     }
                 }
-
             }
         }
         if isFirstLoad {
             isFirstLoad = false
         }
     }
-    func onSearchError(error: String) {
+    func onSearchError(error: String, generation: Int) {
+        guard generation == searchGeneration else { return }
+
         displayAlert(nil, message: error)
         DispatchQueue.main.asyncAfter(deadline: .now() + AppConfig.Animation.duration) {
-            UIView.animate(withDuration: AppConfig.Animation.duration, delay: 0.0) {
-                self.viewButtons.alpha = 0
-                self.viewLoading.alpha = 0
-                self.viewEmpty.alpha = 1
-            }
+            guard generation == self.searchGeneration else { return }
+
+            self.showEmptyState()
+        }
+    }
+
+    private func showEmptyState(completion: (() -> Void)? = nil) {
+        loadingAnimationGeneration += 1
+        status = .ready
+        cards.removeAll()
+        cardIndex = 0
+        viewSwipeable.discardViews()
+
+        UIView.animate(withDuration: AppConfig.Animation.duration, delay: 0.0) {
+            self.viewSwipeable.alpha = 0
+            self.viewButtons.alpha = 0
+            self.viewLoading.alpha = 0
+            self.viewEmpty.alpha = 1
+        } completion: { _ in
+            completion?()
         }
     }
     
@@ -374,16 +404,18 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
        // handlerIntention()
     }
     func onIntentionError(error: String) {
-        handlerIntention()
+        displayAlert(nil, message: error)
     }
     func handlerIntention() {
         if cards.count > 0 {
             cards.removeFirst()
-            cardIndex -= 1
+            cardIndex = max(0, cardIndex - 1)
         }
         
         if cards.count == 0 {
-            search()
+            DispatchQueue.main.asyncAfter(deadline: .now() + AppConfig.Animation.duration) {
+                self.search()
+            }
         }
     }
     private func impactFeedback(for option: MatchMakerOption) {
@@ -416,6 +448,7 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
     }
     func onSuperLikeSuccess() {
         viewSwipeable.swipeTopView(inDirection: .Up)
+        handlerIntention()
     }
     
     

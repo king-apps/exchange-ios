@@ -83,7 +83,7 @@ class ProfileListPresenter: ProfileListPresentationLogic {
             let boostRemainingMinutes = user.getBoostRemainingMinutes()
             let boostTotalMinutes = max(remote.getBoostProfileMinutes(), 1)
             let clampedRemainingMinutes = min(max(boostRemainingMinutes, 0), boostTotalMinutes)
-            let progress = 1 - (Float(clampedRemainingMinutes) / Float(boostTotalMinutes))
+            let progress = Float(clampedRemainingMinutes) / Float(boostTotalMinutes)
             rows.append(
                 .productProgress(
                     .init(

@@ -190,17 +190,23 @@ extension MainBaseViewController {
     }
 
     func setChatBadgeValue(value: Int) {
-        if let item = tabBarController?.tabBar.items?.filter({$0.tag == 0}).first {
-            item.badgeValue = value > 0 ? "\(value)" : nil
+        if let root = self.parent as? RootViewController {
+            root.setChatBadgeValue(value: value)
+        }
+        else {
+            if let root = self.parent?.parent as? RootViewController {
+                root.setChatBadgeValue(value: value)
+            }
         }
     }
     func addChatBadgeValue() {
-        guard let item = tabBarController?.tabBar.items?.first(where: { $0.tag == 2 }) else { return }
-
-        if let badgeValue = item.badgeValue, let value = Int(badgeValue) {
-            item.badgeValue = "\(value + 1)"
-        } else {
-            item.badgeValue = "1"
+        if let root = self.parent as? RootViewController {
+            root.addChatBadgeValue()
+        }
+        else {
+            if let root = self.parent?.parent as? RootViewController {
+                root.addChatBadgeValue()
+            }
         }
     }
 

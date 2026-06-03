@@ -34,6 +34,33 @@ class RootWorker {
         completion(list)
         
     }
+    
+    
+    // Handler fcm token
+    func fcmToken(completion: @escaping(_ error: String?) -> ()) {
+        
+        if let token = User.shared.getFcmToken() {
+            let api = UserApi()
+            api.fcmToken(request: .init(fcmToken: token)) { error in
+                completion(error)
+            }
+        }
+        else {
+            completion(nil)
+        }
+        
+    }
+    
+    
+    // Handler user profile
+    func userProfile(completion: @escaping(_ user: User?, _ error: String?) -> ()) {
+        
+        let api = UserApi()
+        api.profile { user, error in
+            completion(user, error)
+        }
+        
+    }
   
     
 }

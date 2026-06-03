@@ -175,6 +175,7 @@
 "Chat.Products.Title" = "Matchs";
 "Chat.Products.He.Name" = "Figurinhas de {$0}";
 "Chat.Products.He.Name.Unknow" = "Figurinhas de usuário desconhecido";
+"Chat.Products.Me.Name" = "Suas figurinhas";
 
 // PROFILE
 "Profile.Boost.Section" = "Em destaque";

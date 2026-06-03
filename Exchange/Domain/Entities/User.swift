@@ -17,6 +17,8 @@ class User {
     
     private var needUpdateAvatar: Bool
     private var boostRemainingMinutes: Int?
+    
+    private var fcmToken: String?
   
     
     
@@ -49,13 +51,14 @@ class User {
         self.init()
         
         id << dto.id
+        id << dto.userId
         name << dto.name
         email << dto.email
         avatarUrl << dto.avatarUrl
         notificationMatch << dto.notificationMatch
         notificationMessage << dto.notificationMsg
         notificationSuperLike << dto.notificationSuperLike
-        messagesNotViewed << dto.messagesNotViwed
+        messagesNotViewed << dto.messagesNotViewed
     }
     
     
@@ -136,6 +139,9 @@ class User {
     func getBoostRemainingMinutes() -> Int {
         return boostRemainingMinutes ?? 0
     }
+    func getFcmToken() -> String? {
+        return fcmToken
+    }
     
     // Set's
     func setNeedUpdateAvatar(_ value: Bool) {
@@ -144,5 +150,8 @@ class User {
     func setBoostRemainingMinutes(_ value: Int?) {
         self.boostRemainingMinutes = value
     }
-    
+    func setFcmToken(_ value: String) {
+        self.fcmToken = value
+    }
+     
 }

@@ -10,4 +10,5 @@ extension Notification.Name {
     static let reloadProfile = Notification.Name("kNotificationReloadProfile")
     
     static let reloadFilterList = Notification.Name("kNotificationReloadFilterList")
+    static let updateFcmToken = Notification.Name("kNotificationUpdateFcmToken")
 }

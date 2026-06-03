@@ -3,7 +3,6 @@ import FirebaseMessaging
 
 extension AppDelegate: MessagingDelegate {
     
-    
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         
         if let fcmToken = fcmToken {
@@ -13,7 +12,6 @@ extension AppDelegate: MessagingDelegate {
         subscribeToAppTopicIfPossible()
         
     }
-    
     func subscribe(toTopic: String) {
         Messaging.messaging().subscribe(toTopic: toTopic) { error in
             if let error {
@@ -25,7 +23,6 @@ extension AppDelegate: MessagingDelegate {
     func unsubscribe(fromTopic: String) {
         Messaging.messaging().unsubscribe(fromTopic: fromTopic)
     }
-
     func subscribeToAppTopicIfPossible() {
         guard Messaging.messaging().apnsToken != nil else {
             print("Skipping topic subscription until APNS token is available")
@@ -43,7 +40,6 @@ extension AppDelegate: MessagingDelegate {
         
         subscribe(toTopic: topic)
     }
-    
     func updateFcmTokenIfPossible(_ fcmToken: String) {
         let sanitizedToken = fcmToken.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !sanitizedToken.isEmpty else {
@@ -53,6 +49,9 @@ extension AppDelegate: MessagingDelegate {
             return
         }
         print("🔥 FCM Token:", sanitizedToken)
+        
+        User.shared.setFcmToken(sanitizedToken)
+        NotificationCenter.default.post(name: .updateFcmToken, object: nil)
     }
     
 }

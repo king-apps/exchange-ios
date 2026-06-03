@@ -4,6 +4,10 @@ import UIKit
 protocol RootDisplayLogic: AnyObject {
     func onLoad(viewModel: Root.Load.ViewModel)
     func onControllers(viewModel: Root.Controllers.ViewModel)
+    func onFcmToken(viewModel: Root.FcmToken.ViewModel)
+    func onFcmToken(error: String)
+    func onUserProfile(viewModel: Root.UserProfile.ViewModel)
+    func onUserProfile(error: String)
 }
 
 
@@ -58,9 +62,9 @@ class RootViewController: UITabBarController, RootDisplayLogic {
     func setupInputs() {
         
     }
-    
     func setupObservers() {
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(fcmToken), name: .updateFcmToken, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(userProfile), name: .reloadChatListBadge, object: nil)
     }
     
     
@@ -79,9 +83,16 @@ class RootViewController: UITabBarController, RootDisplayLogic {
         controllers()
         setChatBadgeValue(value: viewModel.messagesNotViewed)
     }
-    private func setChatBadgeValue(value: Int) {
-        if let item = tabBar.items?.filter({$0.tag == 2}).first {
-            item.badgeValue = value > 0 ? "\(value)" : nil
+    func setChatBadgeValue(value: Int) {
+        let item = tabBar.items?[2]
+        item?.badgeValue = value > 0 ? "\(value)" : nil
+    }
+    func addChatBadgeValue() {
+        let item = tabBar.items?[2]
+        if let badgeValue = item?.badgeValue, let value = Int(badgeValue) {
+            item?.badgeValue = "\(value + 1)"
+        } else {
+            item?.badgeValue = "1"
         }
     }
     
@@ -100,7 +111,7 @@ class RootViewController: UITabBarController, RootDisplayLogic {
                 controller.tabBarItem = UITabBarItem(
                     title: "", // c.title,
                     image: AppTheme.icon(c.icon).withRenderingMode(.alwaysTemplate),
-                    selectedImage: AppTheme.icon(c.icon).withRenderingMode(.alwaysTemplate)
+                    selectedImage: AppTheme.icon(c.icon).withRenderingMode(.alwaysTemplate),
                 )
                 array.append(controller)
             }
@@ -111,4 +122,33 @@ class RootViewController: UITabBarController, RootDisplayLogic {
         setNeedsStatusBarAppearanceUpdate()
     }
    
+    
+    // Handler fcm token
+    @objc
+    func fcmToken() {
+        let request = Root.FcmToken.Request()
+        interactor?.fcmToken(request: request)
+    }
+    func onFcmToken(viewModel: Root.FcmToken.ViewModel) {
+        
+    }
+    func onFcmToken(error: String) {
+        
+    }
+    
+    
+    // Handler user profile
+    @objc
+    func userProfile() {
+        let request = Root.UserProfile.Request()
+        interactor?.userProfile(request: request)
+    }
+    func onUserProfile(viewModel: Root.UserProfile.ViewModel) {
+        setChatBadgeValue(value: viewModel.messagesNotViewed)
+    }
+    func onUserProfile(error: String) {
+        
+    }
+    
+    
 }

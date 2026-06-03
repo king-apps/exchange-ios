@@ -60,7 +60,7 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Rlv-Kr-cDE">
-                                                <rect key="frame" x="48" y="0.0" width="225" height="40"/>
+                                                <rect key="frame" x="40" y="0.0" width="233" height="40"/>
                                                 <color key="textColor" name="TextOnSurface"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" returnKeyType="search"/>
@@ -72,7 +72,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Rlv-Kr-cDE" secondAttribute="trailing" constant="8" id="Dr8-uV-bmM"/>
                                             <constraint firstAttribute="bottom" secondItem="c3A-OF-emd" secondAttribute="bottom" constant="12" id="Lww-mC-8S8"/>
                                             <constraint firstItem="Rlv-Kr-cDE" firstAttribute="top" secondItem="PGO-eS-pmC" secondAttribute="top" id="YBK-Gh-Lxv"/>
-                                            <constraint firstItem="Rlv-Kr-cDE" firstAttribute="leading" secondItem="c3A-OF-emd" secondAttribute="trailing" constant="16" id="Zgq-Se-BtF"/>
+                                            <constraint firstItem="Rlv-Kr-cDE" firstAttribute="leading" secondItem="c3A-OF-emd" secondAttribute="trailing" constant="8" id="Zgq-Se-BtF"/>
                                             <constraint firstItem="c3A-OF-emd" firstAttribute="leading" secondItem="PGO-eS-pmC" secondAttribute="leading" constant="16" id="ptW-rE-ozb"/>
                                             <constraint firstAttribute="bottom" secondItem="Rlv-Kr-cDE" secondAttribute="bottom" id="wZW-vn-IAg"/>
                                         </constraints>
