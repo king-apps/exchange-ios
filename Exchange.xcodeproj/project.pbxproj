@@ -109,6 +109,7 @@
 		A50954842FBB7C6700F752B6 /* ProductDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509547D2FBB7C6700F752B6 /* ProductDetailWorker.swift */; };
 		A50A9A862FA0226C0059914A /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = A50A9A832FA0226C0059914A /* en.strings */; };
 		A50A9A872FA0226C0059914A /* pt.strings in Resources */ = {isa = PBXBuildFile; fileRef = A50A9A842FA0226C0059914A /* pt.strings */; };
+		A50A9A882FA0226C0059914A /* es.strings in Resources */ = {isa = PBXBuildFile; fileRef = A50A9A892FA0226C0059914A /* es.strings */; };
 		A50C1E202FBC9C4900A6080B /* ProfileListViewController+SwitchCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1E1F2FBC9C3E00A6080B /* ProfileListViewController+SwitchCellDelegate.swift */; };
 		A50C1E292FBD123700A6080B /* ProfileEmailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1E222FBD123700A6080B /* ProfileEmailConfigurator.swift */; };
 		A50C1E2A2FBD123700A6080B /* ProfileEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1E232FBD123700A6080B /* ProfileEmailInteractor.swift */; };
@@ -505,6 +506,7 @@
 		D13880DD3666785EEAE2A669 /* AuthTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780085ED3FD5B70563D1DEB /* AuthTrackingViewController.swift */; };
 		D25F4E8C8C824A1B9F39A001 /* pt_override.strings in Resources */ = {isa = PBXBuildFile; fileRef = D25F4E8C8C824A1B9F39A000 /* pt_override.strings */; };
 		D25F4E8C8C824A1B9F39A004 /* en_override.strings in Resources */ = {isa = PBXBuildFile; fileRef = D25F4E8C8C824A1B9F39A005 /* en_override.strings */; };
+		D25F4E8C8C824A1B9F39A008 /* es_override.strings in Resources */ = {isa = PBXBuildFile; fileRef = D25F4E8C8C824A1B9F39A007 /* es_override.strings */; };
 		DC51C24653F84CA37319FB89 /* AuthInputEmailViewController+InputTextCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8F74A42A0BEAA15617C581 /* AuthInputEmailViewController+InputTextCellDelegate.swift */; };
 		DF08DC0F76FD7F26BBB1C00A /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E650CE1FCFECB50EC01548C4 /* IntroViewController.swift */; };
 		DF207606F923D119C90D864E /* InAppPurchase+SKPaymentTransactionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EDDEC01CE69A3AD335D194 /* InAppPurchase+SKPaymentTransactionObserver.swift */; };
@@ -639,6 +641,7 @@
 		A50A9A822FA021750059914A /* pt_override.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = pt_override.strings; sourceTree = "<group>"; };
 		A50A9A832FA0226C0059914A /* en.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = en.strings; sourceTree = "<group>"; };
 		A50A9A842FA0226C0059914A /* pt.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = pt.strings; sourceTree = "<group>"; };
+		A50A9A892FA0226C0059914A /* es.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = es.strings; sourceTree = "<group>"; };
 		A50C1E1F2FBC9C3E00A6080B /* ProfileListViewController+SwitchCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileListViewController+SwitchCellDelegate.swift"; sourceTree = "<group>"; };
 		A50C1E222FBD123700A6080B /* ProfileEmailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEmailConfigurator.swift; sourceTree = "<group>"; };
 		A50C1E232FBD123700A6080B /* ProfileEmailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEmailInteractor.swift; sourceTree = "<group>"; };
@@ -757,6 +760,8 @@
 		A57BACE62FB7EE9000AC9928 /* ChatMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageRouter.swift; sourceTree = "<group>"; };
 		A57BACE72FB7EE9000AC9928 /* ChatMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewController.swift; sourceTree = "<group>"; };
 		A57BACE82FB7EE9000AC9928 /* ChatMessageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageWorker.swift; sourceTree = "<group>"; };
+		A5865BCB2FD0B1B3004E4004 /* en_override.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = en_override.strings; sourceTree = "<group>"; };
+		A5865BCC2FD0B1B3004E4004 /* es_override.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = es_override.strings; sourceTree = "<group>"; };
 		A5932DD32FC4BB7F008E6924 /* StickerListViewController+StickerFilterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StickerListViewController+StickerFilterDelegate.swift"; sourceTree = "<group>"; };
 		A5932DD52FC4CBD7008E6924 /* StickerFilterViewController+SwitchCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StickerFilterViewController+SwitchCellDelegate.swift"; sourceTree = "<group>"; };
 		A5932DD82FC50754008E6924 /* InputSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSelectCell.swift; sourceTree = "<group>"; };
@@ -1023,6 +1028,7 @@
 		CD0F0D51FFF578E732D54DAF /* ReusableCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		D25F4E8C8C824A1B9F39A000 /* pt_override.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = pt_override.strings; sourceTree = "<group>"; };
 		D25F4E8C8C824A1B9F39A005 /* en_override.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = en_override.strings; sourceTree = "<group>"; };
+		D25F4E8C8C824A1B9F39A007 /* es_override.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = es_override.strings; sourceTree = "<group>"; };
 		D806A82F1F66EAC2D72A62DF /* AppNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppNotification.swift; sourceTree = "<group>"; };
 		DBC590484601F78AB311F1DF /* AuthSuccessViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthSuccessViewController.swift; sourceTree = "<group>"; };
 		DBF39B00AF9318CF910B8786 /* CaptionSemibold.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CaptionSemibold.swift; sourceTree = "<group>"; };
@@ -1430,6 +1436,7 @@
 			children = (
 				A50A9A842FA0226C0059914A /* pt.strings */,
 				A50A9A832FA0226C0059914A /* en.strings */,
+				A50A9A892FA0226C0059914A /* es.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -2774,6 +2781,8 @@
 			isa = PBXGroup;
 			children = (
 				A50A9A822FA021750059914A /* pt_override.strings */,
+				A5865BCB2FD0B1B3004E4004 /* en_override.strings */,
+				A5865BCC2FD0B1B3004E4004 /* es_override.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -3027,6 +3036,7 @@
 			isa = PBXGroup;
 			children = (
 				D25F4E8C8C824A1B9F39A005 /* en_override.strings */,
+				D25F4E8C8C824A1B9F39A007 /* es_override.strings */,
 				D25F4E8C8C824A1B9F39A000 /* pt_override.strings */,
 			);
 			path = Localization;
@@ -3125,6 +3135,7 @@
 				9872BB088414F6209D72618B /* GoogleService-Info.plist in Resources */,
 				A510FDC02FB9534D0046CD47 /* ChatMessageAppCell.xib in Resources */,
 				D25F4E8C8C824A1B9F39A004 /* en_override.strings in Resources */,
+				D25F4E8C8C824A1B9F39A008 /* es_override.strings in Resources */,
 				A52715E22FBBD1CE0095C11C /* ProfileUserCell.xib in Resources */,
 				A5BED7682FA91D50008821DB /* Chat.storyboard in Resources */,
 				A5C41E552FA37C48003C8588 /* NewProduct.storyboard in Resources */,
@@ -3166,6 +3177,7 @@
 				A510FDC72FB958160046CD47 /* ChatMessageMeCell.xib in Resources */,
 				A5EF2F852FA0D96E0030697F /* DefaultCell.xib in Resources */,
 				A50A9A862FA0226C0059914A /* en.strings in Resources */,
+				A50A9A882FA0226C0059914A /* es.strings in Resources */,
 				A50A9A872FA0226C0059914A /* pt.strings in Resources */,
 				2DB0E0A72AA5C2F7F3A86065 /* CardView.xib in Resources */,
 				A53B4E1F2FCB1A8B0057A717 /* InputSliderCell.xib in Resources */,
@@ -3640,9 +3652,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AB31F611141D34E39E337D0 /* Base.xcconfig */;
 			buildSettings = {
+				APS_ENVIRONMENT = development;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = BrandPrimary500;
-				APS_ENVIRONMENT = development;
 				CODE_SIGN_ENTITLEMENTS = Exchange/SupportingFIles/exchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
@@ -3680,9 +3692,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AB31F611141D34E39E337D0 /* Base.xcconfig */;
 			buildSettings = {
+				APS_ENVIRONMENT = production;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = BrandPrimary500;
-				APS_ENVIRONMENT = production;
 				CODE_SIGN_ENTITLEMENTS = Exchange/SupportingFIles/exchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;

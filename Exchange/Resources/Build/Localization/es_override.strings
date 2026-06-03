@@ -1,0 +1,117 @@
+/* ==================================================================================================== */
+/* APP - IDENTIDAD DEL SCHEME                                                                           */
+/* ==================================================================================================== */
+"App.Name" = "Intercambio de Figuritas 2026";
+
+
+/* ==================================================================================================== */
+/* WELCOME - PRESENTACION INICIAL                                                                       */
+/* ==================================================================================================== */
+"Welcome.Title" = "Descubre. Intercambia.\nCompleta.";
+"Welcome.Description" = "Intercambia figuritas con personas cercanas de forma rápida, simple e inteligente.";
+
+
+/* ==================================================================================================== */
+/* AUTENTICACION - TEXTOS ESPECIFICOS DE FIGURITAS                                                      */
+/* ==================================================================================================== */
+"AuthHome.Description" = "Encuentra figuritas para intercambiar cerca de ti";
+"AuthInputName.Description" = "Crea tu cuenta para intercambiar figuritas y encontrar nuevas oportunidades.";
+"AuthLocation.Description" = "Permite el acceso a tu ubicación para descubrir figuritas y usuarios en tu zona.";
+"AuthSuccess.Description" = "Tu cuenta está activa. Ahora puedes descubrir, hacer match e intercambiar figuritas.";
+
+
+/* ==================================================================================================== */
+/* MATCH - FILTROS POR SELECCION                                                                        */
+/* ==================================================================================================== */
+"Match.Filter.Tags.Tip" = "Elige selecciones para filtrar las figuritas.";
+"Match.Filter.Tags.Title" = "Selecciones";
+"Match.Filter.Tags.Alert.Title" = "¿Borrar la selección?";
+"Match.Filter.Tags.Alert.Message" = "Al borrar la selección, se aplicará el filtro \"Todas\".";
+"Match.Filter.Tags.Alert.Yes" = "Borrar selección";
+
+
+/* ==================================================================================================== */
+/* MATCH - CONFIRMACION DE INTERES                                                                      */
+/* ==================================================================================================== */
+"ItsAMatch.Description" = "{$0} también tiene interés en tus figuritas";
+
+
+/* ==================================================================================================== */
+/* FIGURITA - REGISTRO                                                                                  */
+/* ==================================================================================================== */
+"NewProduct.Title" = "Nueva figurita";
+
+// Lista
+"MyProduct.List.Title" = "Mis figuritas";
+"MyProduct.List.Empty.Subtitle" = "Agrega tus figuritas repetidas para empezar a intercambiar.";
+
+// Numero
+"MyProduct.InputName.Title" = "Número de la figurita";
+"MyProduct.InputName.Placeholder" = "00";
+"MyProduct.InputName.Description" = "Ingresa el número\r\nque aparece al dorso de tu figurita.";
+"MyProduct.InputName.Error.Length" = "Ingresa el número de tu figurita.";
+
+// Seleccion
+"MyProduct.InputCategory.Title" = "¿De qué selección?";
+
+
+/* ==================================================================================================== */
+/* CHAT - FIGURITAS INVOLUCRADAS EN EL MATCH                                                            */
+/* ==================================================================================================== */
+"Chat.Products.He.Name" = "Figuritas de {$0}";
+"Chat.Products.He.Name.Unknow" = "Figuritas de usuario desconocido";
+"Chat.Products.Me.Name" = "Tus figuritas";
+
+
+/* ==================================================================================================== */
+/* KNOW MORE - BOOST DE PERFIL                                                                          */
+/* ==================================================================================================== */
+"KnowMore.BoostProfile.IsActive.Description" = "Tus figuritas ahora aparecen para más personas cercanas, aumentando tus posibilidades de intercambio.";
+
+
+/* ==================================================================================================== */
+/* KNOW MORE - FOTO DE LA FIGURITA                                                                      */
+/* ==================================================================================================== */
+"KnowMore.Stickers.Image.Title" = "Agrega una foto";
+"KnowMore.Stickers.Image.Subtitle" = "Muestra tu figurita a otros coleccionistas";
+"KnowMore.Stickers.Image.Description" = "La foto se mostrará a usuarios cercanos interesados en intercambiar figuritas iguales o compatibles con las tuyas.";
+"KnowMore.Stickers.Image.ButtonTitle" = "Tomar foto";
+
+
+/* ==================================================================================================== */
+/* KNOW MORE - ALBUM                                                                                    */
+/* ==================================================================================================== */
+"KnowMore.Stickers.Info.Title" = "Cómo funciona";
+"KnowMore.Stickers.Info.Subtitle" = "Tu álbum se volvió inteligente";
+"KnowMore.Stickers.Info.Description" = "Organiza tus figuritas y publica repetidas para intercambio.
+Al agregar una foto 📸, estarán disponibles para usuarios cercanos interesados en intercambiar.";
+"KnowMore.Stickers.Info.ButtonTitle" = "Entendido";
+
+
+/* ==================================================================================================== */
+/* KNOW MORE - FIGURITA NECESARIA PARA USAR EL MATCH                                                    */
+/* ==================================================================================================== */
+"KnowMore.MatchMaker.AddProduct.Title" = "Agrega una figurita";
+"KnowMore.MatchMaker.AddProduct.Subtitle" = "Necesitas algo para intercambiar";
+"KnowMore.MatchMaker.AddProduct.Description" = "Registra al menos una figurita repetida con foto para empezar a dar likes y encontrar oportunidades de intercambio.";
+"KnowMore.MatchMaker.AddProduct.Button" = "Agregar figurita";
+
+
+/* ==================================================================================================== */
+/* ALBUM - LISTA                                                                                        */
+/* ==================================================================================================== */
+"Sticker.List.Title" = "Mi álbum";
+"Sticker.List.Search.Placeholder" = "Buscar por figurita. Ej.: BRA 10";
+"Sticker.List.Collected" = "Coleccionadas";
+"Sticker.List.Duplicated" = "Repetidas";
+"Sticker.List.Empty.Filtered" = "No se encontraron figuritas. Ajusta la búsqueda o los filtros e inténtalo de nuevo.";
+
+
+/* ==================================================================================================== */
+/* ALBUM - FILTROS                                                                                      */
+/* ==================================================================================================== */
+"StickerFilter.Categories.Title" = "Selecciones";
+"StickerFilter.Categories.Placeholder" = "Todas las selecciones";
+"StickerFilter.OnlyCollected" = "Coleccionadas";
+"StickerFilter.OnlyMissing" = "Faltantes";
+"StickerFilter.OnlyDuplicated" = "Repetidas";

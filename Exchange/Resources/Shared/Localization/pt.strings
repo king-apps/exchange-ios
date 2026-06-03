@@ -1,9 +1,12 @@
 /* ==================================================================================================== */
-/* APP                                                                                                  */
+/* APP - IDENTIDADE                                                                                     */
 /* ==================================================================================================== */
 "App.Name" = "Exchange";
-"App.Item" = "Item";
-"App.Items" = "Itens";
+
+
+/* ==================================================================================================== */
+/* APP - ACOES E ESTADOS GLOBAIS                                                                        */
+/* ==================================================================================================== */
 "App.Loading" = "Carregando...";
 "App.Sending" = "Enviando...";
 "App.Search" = "Buscar";
@@ -16,8 +19,15 @@
 "App.Delete" = "Excluir";
 "App.Edit" = "Editar";
 "App.Done" = "Concluir";
-"App.Done" = "Concluir";
 "App.Others" = "Outros";
+"App.KnowMore" = "Saiba mais";
+
+
+/* ==================================================================================================== */
+/* APP - TERMOS COMPARTILHADOS                                                                          */
+/* ==================================================================================================== */
+"App.Item" = "Item";
+"App.Items" = "Itens";
 "App.You" = "Você";
 "App.Finalized" = "Finalizado";
 "App.Empty" = "Nada por aqui ainda";
@@ -25,7 +35,6 @@
 "App.Distance.Unavailable" = "Distância indisponível";
 "App.SuperLike" = "Super Like";
 "App.Matchs" = "Matchs";
-"App.KnowMore" = "Saiba mais";
 "App.Library" = "Galeria";
 "App.Camera" = "Câmera";
 "App.Camera.Unavailable" = "Câmera indisponível";
@@ -33,7 +42,7 @@
 
 
 /* ==================================================================================================== */
-/* WELCOME                                                                                              */
+/* WELCOME - APRESENTACAO INICIAL                                                                       */
 /* ==================================================================================================== */
 "Welcome.Title" = "Descubra. Troque.\nEconomize.";
 "Welcome.Description" = "Troque produtos com pessoas próximas de forma rápida, simples e inteligente.";
@@ -42,7 +51,7 @@
 
 
 /* ==================================================================================================== */
-/* INPUT                                                                                                */
+/* INPUT - CAMPOS REUTILIZAVEIS                                                                         */
 /* ==================================================================================================== */
 "Input.Name.Title" = "Nome";
 "Input.Name.Placeholder" = "Digite seu nome...";
@@ -54,8 +63,9 @@
 "Input.Token.Error.Wrong" = "Código inválido. Verifique e tente novamente.";
 "Input.Error.Empty" = "Campo obrigatório";
 
+
 /* ==================================================================================================== */
-/* ALERTAS                                                                                              */
+/* ALERTAS - MENSAGENS E ACOES GENERICAS                                                                */
 /* ==================================================================================================== */
 "Alert.Title.Warning" = "Aviso";
 "Alert.Action.TryAgain" = "Tentar novamente";
@@ -63,69 +73,71 @@
 "Alert.Action.Back" = "Voltar";
 "Alert.Generic.Error" = "Não foi possível concluir a ação. Tente novamente mais tarde.";
 
+
 /* ==================================================================================================== */
-/* AUTENTICACAO                                                                                         */
+/* AUTENTICACAO - ENTRADA E CRIACAO DE CONTA                                                            */
 /* ==================================================================================================== */
-// Name
+"AuthHome.Description" = "Encontre produtos para trocar perto de você";
+
+// Nome
 "AuthInputName.Title" = "Crie sua conta\ngratuita";
 "AuthInputName.Description" = "Crie sua conta para trocar produtos e encontrar novas oportunidades.";
+
 // Email
 "AuthInputEmail.Title" = "Informe seu\nmelhor email";
 "AuthInputEmail.Description" = "Usaremos seu email para proteger sua conta e enviar seu código de acesso.";
-// Token
+
+// Codigo de acesso
 "AuthInputToken.Title" = "Confirme seu\nacesso";
 "AuthInputToken.Description" = "Enviamos um código de 4 dígitos para o email {$0}";
 "AuthInputToken.Tag" = "Confira também a caixa de SPAM";
-// Notification
+
+// Permissoes
 "AuthNotification.Title" = "Não perca novas\noportunidades";
 "AuthNotification.Description" = "Receba alertas sobre matches, propostas e novas oportunidades em tempo real.";
-// Location
 "AuthLocation.Title" = "Encontre trocas\nperto de você";
 "AuthLocation.Description" = "Permita sua localização para descobrir produtos e usuários na sua região.";
-// Tracking
 "AuthTracking.Title" = "Tenha uma experiência \nmais relevante";
 "AuthTracking.Description" = "Personalize ofertas e melhore sua experiência com conteúdos relevantes.";
-// Success
+
+// Sucesso
 "AuthSuccess.Title" = "Tudo pronto para\ncomeçar";
 "AuthSuccess.Description" = "Sua conta está ativa. Agora é hora de descobrir, combinar e trocar.";
 "AuthSuccess.Tag" = "Perfil configurado";
 "AuthSuccess.Button.Continue" = "Vamos lá!";
 
 
-
-
-
-
-
-
-
-
-
 /* ==================================================================================================== */
-/* MATCH */
+/* MATCH - DESCOBERTA E FILTROS                                                                         */
 /* ==================================================================================================== */
 "Match.Maker.Loading" = "Buscando...";
 "Match.Maker.Empty.Title" = "Nada por aqui";
 "Match.Maker.Empty.Subtitle" = "Revise os filtros de busca\r\nou volte mais tarde para ver mais opções.";
+
+// Filtros
 "Match.Filter.Title" = "Filtros";
 "Match.Filter.Distance.Title" = "Distância";
-"Match.Filter.Tags.Tip" = "Escolha as seleções para filtrar as figurinhas.";
 "Match.Filter.Save" = "Fechar";
-"Match.Filter.Tags.Title" = "Seleções";
+"Match.Filter.Tags.Tip" = "Escolha as categorias para filtrar os produtos.";
+"Match.Filter.Tags.Title" = "Categorias";
 "Match.Filter.Tags.Description" = "Selecionar";
 "Match.Filter.Tags.All" = "Todas";
-"Match.Filter.Tags.Alert.Title" = "Limpar a seleção?";
-"Match.Filter.Tags.Alert.Message" = "Ao limpar a seleção, o filtro \"Todas\" será aplicado.";
-"Match.Filter.Tags.Alert.Yes" = "Limpar seleção";
+"Match.Filter.Tags.Alert.Title" = "Limpar categorias?";
+"Match.Filter.Tags.Alert.Message" = "Ao limpar as categorias, o filtro \"Todas\" será aplicado.";
+"Match.Filter.Tags.Alert.Yes" = "Limpar categorias";
 
 
-// ITS A MATCH
+/* ==================================================================================================== */
+/* MATCH - CONFIRMACAO DE INTERESSE                                                                     */
+/* ==================================================================================================== */
 "ItsAMatch.GoToChat" = "IR PARA O CHAT";
 "ItsAMatch.Continue" = "Continuar buscando";
 "ItsAMatch.Description" = "{$0} também tem interesse em seus produtos";
 
 
-// DENUNCIATE
+/* ==================================================================================================== */
+/* DENUNCIA                                                                                             */
+/* ==================================================================================================== */
 "Denunciate.Title" = "Denunciar usuário";
 "Denunciate.Message" = "Conte para a gente o que aconteceu.";
 "Denunciate.Option.Block" = "Bloquear usuário";
@@ -134,37 +146,46 @@
 "Denunciate.Option.Other" = "Outro motivo";
 
 
-// NEW PRODUCT
+/* ==================================================================================================== */
+/* PRODUTO - CADASTRO                                                                                   */
+/* ==================================================================================================== */
 "NewProduct.Title" = "Novo produto";
 
-
-// MY PRODUCT
+// Lista
 "MyProduct.List.Title" = "Meus produtos";
 "MyProduct.List.Empty.Title" = "Nada por aqui";
-"MyProduct.List.Empty.Subtitle" = "Adicione seus figurinhas repetidas para começar a trocar.";
+"MyProduct.List.Empty.Subtitle" = "Adicione seus produtos para começar a trocar.";
 
+// Detalhe
 "MyProduct.Detail.Title" = "";
 "MyProduct.Detail.Change" = "Toque para alterar ou remover";
 "MyProduct.Detail.Add" = "Toque para adicionar\r\numa foto";
 "MyProduct.Detail.Remove.Title" = "Tem certeza de que deseja excluir {$0}?";
 "MyProduct.Detail.Remove.Message" = "Esta ação não poderá ser desfeita.";
 
-"MyProduct.InputName.Title" = "Número da figurinha";
-"MyProduct.InputName.Placeholder" = "00";
-"MyProduct.InputName.Description" = "Informe o número\r\nque aparece no verso da sua figurinha.";
-"MyProduct.InputName.Error.Length" = "Informe o número da sua figurinha.";
+// Nome
+"MyProduct.InputName.Title" = "Nome do produto";
+"MyProduct.InputName.Placeholder" = "Digite o nome";
+"MyProduct.InputName.Description" = "Informe um nome\r\npara identificar seu produto.";
+"MyProduct.InputName.Error.Length" = "Informe o nome do seu produto.";
 
-"MyProduct.InputCategory.Title" = "De qual seleção?";
+// Categoria
+"MyProduct.InputCategory.Title" = "Qual categoria?";
 
+// Imagem
 "MyProduct.InputImage.Title" = "Adicionar fotos";
 "MyProduct.InputImage.Change" = "Toque para alterar ou remover";
 "MyProduct.InputImage.Add" = "Toque para adicionar\r\numa foto";
 "MyProduct.InputImage.Save" = "Salvar e publicar";
 
 
-// CHAT
+/* ==================================================================================================== */
+/* CHAT - LISTA, MENSAGENS E PRODUTOS                                                                   */
+/* ==================================================================================================== */
 "Chat.List.Title" = "Mensagens";
 "Chat.List.Empty" = "Nenhuma mensagem ainda";
+
+// Mensagem
 "Chat.Message.Title" = "Chat";
 "Chat.Message.Placeholder" = "Mensagem...";
 "Chat.Message.Date.Today" = "Hoje às {$0}";
@@ -172,55 +193,76 @@
 "Chat.Message.Date.Full" = "{$0} às {$1}";
 "Chat.Message.Date.Format.Time" = "HH:mm";
 "Chat.Message.Date.Format.Date" = "dd/MM/yyyy";
-"Chat.Products.Title" = "Matchs";
-"Chat.Products.He.Name" = "Figurinhas de {$0}";
-"Chat.Products.He.Name.Unknow" = "Figurinhas de usuário desconhecido";
-"Chat.Products.Me.Name" = "Suas figurinhas";
 
-// PROFILE
+// Produtos envolvidos no match
+"Chat.Products.Title" = "Matchs";
+"Chat.Products.He.Name" = "Produtos de {$0}";
+"Chat.Products.He.Name.Unknow" = "Produtos de usuário desconhecido";
+"Chat.Products.Me.Name" = "Seus produtos";
+
+
+/* ==================================================================================================== */
+/* PERFIL - SECOES E CONFIGURACOES                                                                      */
+/* ==================================================================================================== */
+// Destaque
 "Profile.Boost.Section" = "Em destaque";
 "Profile.Boost.Title" = "Seu perfil";
 "Profile.Boost.Time" = "{$0} minutos restantes";
 
+// Dados pessoais
 "Profile.My.Section" = "Meu perfil";
 "Profile.My.Photo" = "Alterar foto";
 "Profile.My.Name" = "Alterar nome";
+"Profile.Name.Title" = "Alterar nome";
+"Profile.Name.Description" = "Seu nome ficará visível para os outros usuários quando der Match";
 
+// Notificacoes
 "Profile.Notifications.Section" = "Notificações";
 "Profile.Notifications.Match" = "Novo match";
 "Profile.Notifications.Message" = "Mensagem";
 "Profile.Notifications.SuperLike" = "Super like";
 
+// Contato
 "Profile.Contact.Section" = "Contato";
 "Profile.Contact.Rating" = "Avalie o app";
 "Profile.Contact.Share" = "Compartilhar";
 
+// Legal
 "Profile.Legal.Section" = "Legal";
 "Profile.Legal.Terms" = "Termos de uso";
 "Profile.Legal.Privacy" = "Política de privacidade";
 
+// Conta anonima
+"Profile.Anonymous.Name" = "Anônimo";
+"Profile.Anonymous.SignIn" = "Verifique sua conta";
+
+
+/* ==================================================================================================== */
+/* PERFIL - ACOES DE CONTA                                                                              */
+/* ==================================================================================================== */
 "Profile.Actions.Section" = "Ações";
+
+// Excluir conta
 "Profile.Actions.Delete" = "Excluir conta";
 "Profile.Actions.Delete.Success.Title" = "Excluir conta";
 "Profile.Actions.Delete.Success.Message" = "Sua conta foi removida com sucesso.";
+
+// Logout
 "Profile.Actions.Logout" = "Sair";
 "Profile.Actions.Logout.Confirm.Title" = "Sair do aplicativo?";
 "Profile.Actions.Logout.Confirm.Message" = "Deseja fazer o logout da sua conta?";
 "Profile.Actions.Logout.Confirm.Action" = "Sair";
 
+// Recomeçar
 "Profile.Actions.Reset" = "Recomeçar no app";
 "Profile.Actions.Reset.Confirm.Title" = "Recomeçar no aplicativo?";
 "Profile.Actions.Reset.Confirm.Message" = "Deseja apagar seus dados e começar de novo?";
 "Profile.Actions.Reset.Confirm.Action" = "Recomeçar";
 
-"Profile.Anonymous.Name" = "Anônimo";
-"Profile.Anonymous.SignIn" = "Verifique sua conta";
 
-"Profile.Name.Title" = "Alterar nome";
-"Profile.Name.Description" = "Seu nome ficará visível para os outros usuários quando der Match";
-
-
-// SUPER LIKE
+/* ==================================================================================================== */
+/* SUPER LIKE - PROPOSTA DESTACADA                                                                      */
+/* ==================================================================================================== */
 "SuperLike.Title" = "Super Like";
 "SuperLike.Input.Title" = "Destaque sua oferta";
 "SuperLike.Input.Value" = "Seu item chamou minha atenção. Tenho interesse em negociar essa troca. Vamos conversar?";
@@ -228,7 +270,10 @@
 "SuperLike.Input.Description" = "Procure oferecer mais itens ou até mesmo um valor em dinheiro para facilitar a negociação.";
 "SuperLike.Purchase" = "Enviar proposta • {$0}";
 
-// KNOW MORE
+
+/* ==================================================================================================== */
+/* KNOW MORE - SUPER LIKE                                                                               */
+/* ==================================================================================================== */
 "KnowMore.SuperLike.Title" = "Super Like";
 "KnowMore.SuperLike.Subtitle" = "Chame atenção primeiro";
 "KnowMore.SuperLike.Description" = "Sua proposta recebe atenção especial, destacando seu interesse e melhorando sua chance de fechar negócio.";
@@ -239,6 +284,10 @@
 "KnowMore.SuperLike.Success.Description" = "Enviamos sua proposta com destaque especial para aumentar a chance de resposta e negociação.";
 "KnowMore.SuperLike.Success.ButtonTitle" = "Continuar navegando";
 
+
+/* ==================================================================================================== */
+/* KNOW MORE - BOOST DE PERFIL                                                                          */
+/* ==================================================================================================== */
 "KnowMore.BoostProfile.Title" = "Boost";
 "KnowMore.BoostProfile.Subtitle" = "Destaque seu perfil agora";
 "KnowMore.BoostProfile.Description" = "Boost coloca seu perfil em posição de destaque para usuários próximos durante 1 hora. Mais visualizações. Mais interesse. Mais chances de troca.";
@@ -249,11 +298,17 @@
 "KnowMore.BoostProfile.IsActive.Description" = "Seus produtos agora aparecem para mais pessoas próximas, aumentando suas chances de troca.";
 "KnowMore.BoostProfile.IsActive.ButtonTitle" = "Continuar navegando";
 
+
+/* ==================================================================================================== */
+/* KNOW MORE - CONTA E DENUNCIA                                                                         */
+/* ==================================================================================================== */
+// Excluir conta
 "KnowMore.DeleteAccount.Title" = "Excluir conta";
 "KnowMore.DeleteAccount.Subtitle" = "Atenção";
 "KnowMore.DeleteAccount.Description" = "Deseja realmente excluir sua conta? Essa ação não pode ser desfeita.";
 "KnowMore.DeleteAccount.ButtonTitle" = "Excluir";
 
+// Denuncia
 "KnowMore.Denunciate.Title" = "Denunciar usuário";
 "KnowMore.Denunciate.Subtitle" = "Denuncie comportamentos inadequados";
 "KnowMore.Denunciate.Description" = "Sua denúncia nos ajuda a identificar spam, conteúdos impróprios e usuários que violam as regras da plataforma.";
@@ -264,48 +319,61 @@
 "KnowMore.Denunciate.Success.Description" = "Nossa equipe irá analisar a denúncia para manter a plataforma mais segura para todos.";
 "KnowMore.Denunciate.Success.ButtonTitle" = "Continuar";
 
+
+/* ==================================================================================================== */
+/* KNOW MORE - PRODUTO E CATALOGO                                                                       */
+/* ==================================================================================================== */
+// Foto do produto
 "KnowMore.Stickers.Image.Title" = "Adicione uma foto";
-"KnowMore.Stickers.Image.Subtitle" = "Mostre sua figurinha para outros colecionadores";
-"KnowMore.Stickers.Image.Description" = "A foto será exibida para usuários próximos interessados em trocar figurinhas iguais ou compatíveis com as suas.";
+"KnowMore.Stickers.Image.Subtitle" = "Mostre seu produto para outras pessoas";
+"KnowMore.Stickers.Image.Description" = "A foto será exibida para usuários próximos interessados em trocar produtos iguais ou compatíveis com os seus.";
 "KnowMore.Stickers.Image.ButtonTitle" = "Tirar foto";
 
+// Funcionamento do catalogo
 "KnowMore.Stickers.Info.Title" = "Como funciona";
-"KnowMore.Stickers.Info.Subtitle" = "Seu álbum ficou inteligente";
-"KnowMore.Stickers.Info.Description" = "Organize suas figurinhas e publique repetidas para troca.
-Ao adicionar uma foto 📸, elas ficam disponíveis para usuários próximos interessados em trocar.";
+"KnowMore.Stickers.Info.Subtitle" = "Seu catálogo ficou inteligente";
+"KnowMore.Stickers.Info.Description" = "Organize seus produtos e publique itens para troca.
+Ao adicionar uma foto 📸, eles ficam disponíveis para usuários próximos interessados em trocar.";
 "KnowMore.Stickers.Info.ButtonTitle" = "Entendi";
 
-"KnowMore.MatchMaker.AddProduct.Title" = "Adicione uma figurinha";
+// Produto necessario para usar o match
+"KnowMore.MatchMaker.AddProduct.Title" = "Adicione um produto";
 "KnowMore.MatchMaker.AddProduct.Subtitle" = "Você precisa ter algo para trocar";
-"KnowMore.MatchMaker.AddProduct.Description" = "Cadastre pelo menos uma figurinha repetida com foto para começar a curtir e encontrar oportunidades de troca.";
-"KnowMore.MatchMaker.AddProduct.Button" = "Adicionar figurinha";
+"KnowMore.MatchMaker.AddProduct.Description" = "Cadastre pelo menos um produto com foto para começar a curtir e encontrar oportunidades de troca.";
+"KnowMore.MatchMaker.AddProduct.Button" = "Adicionar produto";
 
+// Localizacao necessaria para usar o match
 "KnowMore.MatchMaker.NeedLocation.Title" = "Ative sua localização";
 "KnowMore.MatchMaker.NeedLocation.Subtitle" = "Ela é necessária para encontrar trocas próximas";
 "KnowMore.MatchMaker.NeedLocation.Description" = "Permita o acesso à localização para descobrir usuários e oportunidades de troca na sua região.";
 "KnowMore.MatchMaker.NeedLocation.Button" = "Abrir ajustes";
 
 
-
-// STICKER
-"Sticker.List.Title" = "Meu álbum";
-"Sticker.List.Search.Placeholder" = "Buscar por figurinha. Ex: BRA 10";
-"Sticker.List.Collected" = "Coletadas";
-"Sticker.List.Duplicated" = "Repetidas";
-"Sticker.List.Empty.Filtered" = "Nenhuma figurinha encontrada. Ajuste a busca ou os filtros para tentar novamente.";
-
-
-// ERROR
-"Error.500" = "Erro 500";
+/* ==================================================================================================== */
+/* CATALOGO - LISTA                                                                                     */
+/* ==================================================================================================== */
+"Sticker.List.Title" = "Meu catálogo";
+"Sticker.List.Search.Placeholder" = "Buscar por produto";
+"Sticker.List.Collected" = "Itens salvos";
+"Sticker.List.Duplicated" = "Itens para troca";
+"Sticker.List.Empty.Filtered" = "Nenhum produto encontrado. Ajuste a busca ou os filtros para tentar novamente.";
 
 
-// Filter
-"StickerFilter.Categories.Title" = "Seleções";
-"StickerFilter.Categories.Placeholder" = "Todas as seleções";
+/* ==================================================================================================== */
+/* CATALOGO - FILTROS                                                                                   */
+/* ==================================================================================================== */
+"StickerFilter.Categories.Title" = "Categorias";
+"StickerFilter.Categories.Placeholder" = "Todas as categorias";
 "StickerFilter.Categories.Value" = "{$0} selecionado(s)";
 "StickerFilter.Only.Title" = "MOSTRAR APENAS";
-"StickerFilter.OnlyCollected" = "Coletadas";
-"StickerFilter.OnlyMissing" = "Faltando";
-"StickerFilter.OnlyDuplicated" = "Repetidas";
+"StickerFilter.OnlyCollected" = "Salvos";
+"StickerFilter.OnlyMissing" = "Não adicionados";
+"StickerFilter.OnlyDuplicated" = "Para troca";
 "StickerFilter.OnlyPublished" = "Anunciadas";
 "StickerFilter.Button.Clear" = "Limpar selecionados";
+
+
+/* ==================================================================================================== */
+/* ERROS                                                                                                */
+/* ==================================================================================================== */
+"Error.500" = "Erro 500";

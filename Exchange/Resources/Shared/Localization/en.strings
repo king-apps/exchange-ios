@@ -1,557 +1,379 @@
 /* ==================================================================================================== */
-/* APP */
+/* APP - IDENTITY                                                                                       */
 /* ==================================================================================================== */
-"App.Name" = "Simulados Pro";
-"App.Course" = "Exam";
+"App.Name" = "Exchange";
+
+
+/* ==================================================================================================== */
+/* APP - GLOBAL ACTIONS AND STATES                                                                      */
+/* ==================================================================================================== */
 "App.Loading" = "Loading...";
 "App.Sending" = "Sending...";
-"Exit" = "Exit";
+"App.Search" = "Search";
+"App.Send" = "Send";
+"App.Continue" = "Continue";
 "App.Back" = "Back";
-"Timer.Min" = "1 min";
-"Comment.Button" = "View comment";
-"Comment.Title" = "Comment";
 "App.Cancel" = "Cancel";
+"App.Close" = "Close";
+"App.Save" = "Save";
 "App.Delete" = "Delete";
 "App.Edit" = "Edit";
 "App.Done" = "Done";
-"App.Others" = "Others";
+"App.Others" = "Other";
+"App.KnowMore" = "Learn more";
+
+
+/* ==================================================================================================== */
+/* APP - SHARED TERMS                                                                                   */
+/* ==================================================================================================== */
+"App.Item" = "Item";
+"App.Items" = "Items";
 "App.You" = "You";
 "App.Finalized" = "Completed";
-"Questions.Count.Plural" = "{$0} questions";
-"Questions.Count.Singular" = "{$0} question";
+"App.Empty" = "Nothing here yet";
+"App.Radius.Code" = "km";
+"App.Distance.Unavailable" = "Distance unavailable";
+"App.SuperLike" = "Super Like";
+"App.Matchs" = "Matches";
+"App.Library" = "Gallery";
+"App.Camera" = "Camera";
+"App.Camera.Unavailable" = "Camera unavailable";
+"App.Statistics" = "Stats";
+
 
 /* ==================================================================================================== */
-/* DATE AND DAY OF WEEK */
+/* WELCOME - INTRO                                                                                      */
 /* ==================================================================================================== */
-"Sun" = "Sun";  // Sunday
-"Mon" = "Mon";  // Monday
-"Tue" = "Tue";  // Tuesday
-"Wed" = "Wed";  // Wednesday
-"Thu" = "Thu";  // Thursday
-"Fri" = "Fri";  // Friday
-"Sat" = "Sat";  // Saturday
+"Welcome.Title" = "Discover. Trade.\nSave.";
+"Welcome.Description" = "Trade products with people nearby in a fast, simple, and smart way.";
+"Welcome.Button.Auth.Email" = "Continue with email";
+"Welcome.Button.Auth.Skip" = "Maybe later";
+
 
 /* ==================================================================================================== */
-/* INPUT */
+/* INPUT - REUSABLE FIELDS                                                                              */
 /* ==================================================================================================== */
-"InputText.Error.Empty" = "Required field";
-"InputText.Error.Email.Invalid" = "Invalid email";
+"Input.Name.Title" = "Name";
+"Input.Name.Placeholder" = "Enter your name...";
+"Input.Name.Error.Invalid" = "Enter your full name";
+"Input.Email.Title" = "Email";
+"Input.Email.Placeholder" = "Enter your best email...";
+"Input.Email.Error.Invalid" = "Invalid email";
+"Input.Token.Title" = "Code";
+"Input.Token.Error.Wrong" = "Invalid code. Please check it and try again.";
+"Input.Error.Empty" = "Required field";
+
 
 /* ==================================================================================================== */
-/* AUTHENTICATION */
+/* ALERTS - GENERIC MESSAGES AND ACTIONS                                                                */
 /* ==================================================================================================== */
-"AuthHome.Description" = "Take realistic practice exams, track your\nprogress, and reach your goals";
-"AuthSelectCourse.Title" = "Choose the exam\nyou want to practice";
-"AuthSelectCourse.Description" = "You can change this option\nlater in Settings";
-"AuthNotification.Title" = "Stay on top of\nwhat's new";
-"AuthNotification.Description" = "Turn on notifications to receive exam reminders, tips, and personalized reviews";
-"AuthTracking.Title" = "Help keep the\napp free";
-"AuthTracking.Description" = "Your permission helps us show more relevant ads and keep practice tests free for you.";
-"AuthInputEmail.Title" = "Create your account\n(optional)";
-"AuthInputEmail.Description" = "Create your account to keep your progress saved across all your devices";
-"AuthInputEmail.Input.Placeholder" = "Your best email";
-"AuthInputEmail.Button.Continue" = "Continue with email";
-"AuthInputEmail.Button.Skip" = "Maybe later";
-"AuthInputToken.Title" = "Check your email";
-"AuthInputToken.Description" = "We sent a 4-digit code to {$0}";
-"AuthInputToken.Tag" = "Also check your spam folder";
-"AuthInputToken.Error.Incorrect" = "Invalid code. Please check it and try again.";
-"AuthSuccess.Title" = "Ready to get started?";
-"AuthSuccess.Description" = "You can now start your mock exams and track your performance";
-"AuthSuccess.Tag" = "Profile set up";
-"AuthSuccess.Button.Continue" = "Start now";
-
-/* ==================================================================================================== */
-/* HOME */
-/* ==================================================================================================== */
-"Home.Study.Title" = "Start studying";
-"Home.Exam.Access.Tag.TwoPerDay" = "2 free practice tests per day";
-"Home.Exam.Access.Tag.OneRemaining" = "1 free practice test left";
-"Home.Exam.Access.Tag.AdRequired" = "next practice test requires an ad";
-
-/* ==================================================================================================== */
-/* MOCK EXAM */
-/* ==================================================================================================== */
-/* ==================================================================================================== */
-/* STUDY */
-/* ==================================================================================================== */
-"Study.Title" = "Study";
-
-/* ==================================================================================================== */
-/* PROFILE */
-/* ==================================================================================================== */
-"Profile.Title" = "Profile";
-"Profile.Account.Title" = "Account";
-"Profile.Account.Sync.Tag" = "Data synced";
-"Profile.Account.Linked.Title" = "Linked account";
-"Profile.Account.Linked.Description" = "Your email is connected";
-"Profile.Account.Unlinked.Title" = "Link your email";
-"Profile.Account.Unlinked.Description" = "Sync your progress across any device";
-"Profile.Account.LinkEmail.Tag" = "Link email";
-"Profile.Settings.Title" = "Settings";
-"Profile.Settings.Course.Title" = "Course";
-"Profile.Settings.Course.Description" = "Select a course";
-"Profile.Settings.Course.Empty" = "No course found";
-"Profile.Settings.Theme.Title" = "Theme";
-"Profile.Settings.Theme.Description" = "Automatic";
-"Profile.Legal.Title" = "Legal";
-"Profile.Legal.Terms.Title" = "Terms";
-"Profile.Legal.Terms.Description" = "and conditions of use";
-"Profile.Legal.Privacy.Title" = "Privacy";
-"Profile.Legal.Privacy.Description" = "policy";
-"Profile.Contact.Title" = "Contact";
-"Profile.Contact.Review.Title" = "Enjoying the app?";
-"Profile.Contact.Review.Description" = "Rate us";
-"Profile.Contact.Share.Title" = "Share";
-"Profile.Contact.Share.Description" = "Send it to your friends";
-"Profile.Contact.Instagram.Title" = "Follow us on Instagram";
-"Profile.Contact.Website.Title" = "Visit our website";
-"Profile.Contact.Support.Whatsapp.Title" = "WhatsApp";
-"Profile.Contact.Support.Email.Title" = "Email";
-"Profile.Contact.Support.Website.Title" = "Help center";
-"Profile.Plans.Title" = "Plans";
-"Profile.Plans.Subscription.Title" = "Active subscription";
-"Profile.Plans.Subscription.Description" = "Learn how to cancel a subscription";
-"Profile.Actions.Title" = "Actions";
-"Profile.Actions.Delete.Title" = "Delete account";
-"Profile.Actions.Delete.Description" = "Permanently remove your account";
-"Profile.Actions.Delete.Confirm.Title" = "Delete account";
-"Profile.Actions.Delete.Confirm.Message" = "Do you really want to delete your account? This action cannot be undone.";
-"Profile.Actions.Delete.Success.Title" = "Account deleted";
-"Profile.Actions.Delete.Success.Message" = "Your account has been successfully removed.";
-"Profile.Actions.ResetGuest.Title" = "Start over in the app";
-"Profile.Actions.ResetGuest.Description" = "Erase your data and start again";
-"Profile.Actions.ResetGuest.Confirm.Title" = "Start over in the app";
-"Profile.Actions.ResetGuest.Confirm.Message" = "Do you want to erase your data and start over?";
-"Profile.Actions.ResetGuest.Success.Title" = "All set";
-"Profile.Actions.ResetGuest.Success.Message" = "Your data has been successfully erased.";
-"Profile.Actions.Logout.Title" = "Sign out of the app";
-"Profile.Actions.Logout.Description" = "Log out of your account";
-"Profile.Actions.Logout.Confirm.Title" = "Sign out of the app";
-"Profile.Actions.Logout.Confirm.Message" = "Do you want to sign out of your account on this device?";
-"Profile.Update.Title" = "Update profile";
-"Profile.Update.Name.Placeholder" = "Name";
-"Profile.Update.Email.Title" = "Email";
-"Profile.Update.Token.Confirm" = "Confirm";
-
-/* ==================================================================================================== */
-/* ADS */
-/* ==================================================================================================== */
-"Ad.Reward.Title" = "To continue, watch the ad until the end";
-"Ad.Reward.Button" = "Watch ad and continue";
-"Ad.Reward.Unavailable" = "Unavailable right now. Please try again later";
-"Ad.Reward.Unviewed" = "You need to watch the ad until the end to continue";
-
-/* ==================================================================================================== */
-/* EXAMS */
-/* ==================================================================================================== */
-"Exam.Title" = "Practice Tests";
-"Exam.Description" = "Test your knowledge right now";
-"Exam.Result.Time" = "Minutes";
-"Exam.Result.Questions" = "Questions";
-"Exam.Result.Score" = "Correct";
-"Exam.Result.Correct" = "Correct";
-"Exam.Result.Error" = "Incorrect";
-"Exam.Result.Empty" = "No answer";
-"Exam.Result.Approved.Hashtag" = "#passed";
-"Exam.Result.NotApproved.Hashtag" = "#oops";
-
-/* ==================================================================================================== */
-/* INSTRUCTIONS */
-/* ==================================================================================================== */
-"Instruction.Title" = "Instructions";
-"Instruction.Start" = "Start";
-"Instruction.Flow.Selected.Caption" = "You are in";
-"Instruction.Flow.Tag.FreeLimit" = "Up to 20 questions on the free plan";
-"Instruction.Mode.Select.Title" = "How do you want to answer?";
-"Instruction.Mode.Select.Description" = "Choose the ideal format for this practice session.";
-"Instruction.Mode.Select.Premium.Description" = "Premium users can choose the ideal format for this practice session.";
-
-/* ==================================================================================================== */
-/* INSTRUCTIONS - FLOW */
-/* ==================================================================================================== */
-"Instruction.Flow.Exam.Title" = "Official Practice Test";
-"Instruction.Flow.Exam.Description" = "A traditional exam-style experience, similar to test day.";
-"Instruction.Flow.Exam.Course.Title" = "{$0} Exam";
-"Instruction.Flow.Exam.Course.Title.Fallback" = "Exam overview";
-"Instruction.Flow.Exam.Course.Passing.Highlight" = "Passing goal: {$0}%";
-"Instruction.Flow.Exam.Course.Time.Value" = "{$0} min";
-"Instruction.Flow.Exam.Course.Time.Description" = "Total exam time.";
-"Instruction.Flow.Exam.Course.Questions.Value.Singular" = "1 question";
-"Instruction.Flow.Exam.Course.Questions.Value.Plural" = "{$0} questions";
-"Instruction.Flow.Exam.Course.Questions.Description" = "Total number of questions on the exam.";
-"Instruction.Flow.Exam.Course.Questions.Description.Partial" = "On the free plan, you answer 20 questions from this exam.";
-"Instruction.Flow.Exam.Course.Questions.Tag.FreeSample" = "free sample";
-"Instruction.Flow.Challenge.Title" = "Challenge";
-"Instruction.Flow.Challenge.Description" = "Practice mode to test your performance and consistency.";
-"Instruction.Flow.Challenge.Title.Fallback" = "Your challenge";
-"Instruction.Flow.Challenge.Result.Title" = "Results and Ranking";
-"Instruction.Flow.Challenge.Result.Description" = "The official ranking will be shown after the active period ends.";
-"Instruction.Flow.Study.Title" = "Study Mode";
-"Instruction.Flow.Study.Description" = "Learn at your own pace, with a focus on improving one question at a time.";
-"Instruction.Flow.Ia.Title" = "Learn with AI";
-"Instruction.Flow.Ia.Description" = "A personalized exam focused on the topics where you need the most improvement.";
-"Instruction.Flow.Saved.Title" = "Favorites";
-"Instruction.Flow.Saved.Description" = "Go back to questions you saved to reinforce key concepts.";
-"Instruction.Flow.Filter.Title" = "Questions by Filter";
-"Instruction.Flow.Filter.Description" = "Targeted practice based on the selected criteria.";
-"Instruction.Flow.Review.Title" = "Results Review";
-"Instruction.Flow.Review.Description" = "Analyze your answers and reinforce what you learned.";
-"Instruction.Flow.Undefined.Title" = "Question Session";
-"Instruction.Flow.Undefined.Description" = "Get ready to start your question sequence.";
-
-/* ==================================================================================================== */
-/* INSTRUCTIONS - MODES */
-/* ==================================================================================================== */
-"Instruction.Mode.Exam.Option.Title" = "Exam mode";
-"Instruction.Mode.Exam.Option.Description" = "Answer everything first and see the result only at the end.";
-"Instruction.Mode.Exam.Answers.Title" = "Answers";
-"Instruction.Mode.Exam.Answers.Description" = "You can review them before finishing.";
-"Instruction.Mode.Exam.Result.Title" = "Result and answer key";
-"Instruction.Mode.Exam.Result.Description" = "Available at the end of the exam.";
-"Instruction.Mode.Instant.Feedback.Title" = "Instant feedback";
-"Instruction.Mode.Instant.Feedback.Description" = "After confirming, you'll see whether you got it right or wrong.";
-"Instruction.Mode.Instant.Option.Title" = "Instant answer";
-"Instruction.Mode.Instant.Option.Description" = "See right away whether you got it right and access the comment afterward.";
-"Instruction.Mode.Instant.Lock.Title" = "Final confirmation";
-"Instruction.Mode.Instant.Lock.Description" = "Once you confirm, you won't be able to change your answer.";
-"Instruction.Mode.Instant.Explanation.Title" = "Explanation";
-"Instruction.Mode.Instant.Explanation.Description" = "The explanation will be shown right after confirmation.";
-"Instruction.Mode.Instant.Time.Title" = "No time limit";
-"Instruction.Mode.Instant.Time.Description" = "Move forward at your own pace.";
-"Instruction.Mode.UntilCorrect.Tries.Title" = "Attempts";
-"Instruction.Mode.UntilCorrect.Tries.Description" = "You receive instant feedback after each answer.";
-"Instruction.Mode.UntilCorrect.Option.Title" = "Until correct";
-"Instruction.Mode.UntilCorrect.Option.Description" = "Keep trying until you get it right to move on.";
-"Instruction.Mode.UntilCorrect.Progress.Title" = "Progress depends on it";
-"Instruction.Mode.UntilCorrect.Progress.Description" = "You only move on after answering the question correctly.";
-"Instruction.Mode.UntilCorrect.Fixation.Title" = "Content retention";
-"Instruction.Mode.UntilCorrect.Fixation.Description" = "Ideal for reinforcing topics and reducing repeated mistakes.";
-"Instruction.Mode.UntilCorrect.Time.Title" = "No time limit";
-"Instruction.Mode.UntilCorrect.Time.Description" = "Answer at your own pace, with full focus on learning.";
-"Instruction.Mode.Readonly.Review.Title" = "Review mode";
-"Instruction.Mode.Readonly.Review.Description" = "View your answers and the answer key for this session.";
-"Instruction.Mode.Readonly.Lock.Title" = "Read-only";
-"Instruction.Mode.Readonly.Lock.Description" = "You cannot change the answers.";
-"Instruction.Mode.Readonly.Analysis.Title" = "Analysis";
-"Instruction.Mode.Readonly.Analysis.Description" = "Review correct answers, mistakes, and use comments to improve.";
-"Instruction.Mode.Readonly.Comments.Title" = "Comments";
-"Instruction.Mode.Readonly.Comments.Description" = "Check the explanations to reinforce your learning.";
-
-/* ==================================================================================================== */
-/* INSTRUCTIONS - CAPTIONS */
-/* ==================================================================================================== */
-"Instruction.Caption.Exam" = "The mock exam must be completed in a single session. If you close the app, you'll need to start over.";
-"Instruction.Caption.InstantFeedback" = "Confirm each answer to see the result and explanation immediately.";
-"Instruction.Caption.UntilCorrect" = "You only move on after getting it right - ideal for retention and reinforcing topics.";
-"Instruction.Caption.Readonly" = "Review mode: this session is for reference only, with no answer changes.";
-
-/* ==================================================================================================== */
-/* TIP */
-/* ==================================================================================================== */
-"Tip.Title.Free" = "Your access for this exam";
-"Tip.Message.Free" = "On the free plan, you answer 20 questions. On premium, the full exam is unlocked and loads faster.";
-"Tip.Title.Premium" = "Everything's ready";
-"Tip.Message.Premium" = "We're preparing your full exam so you can get started.";
-
-/* ==================================================================================================== */
-/* FAVORITE QUESTIONS */
-/* ==================================================================================================== */
-"SavedQuestion.Title" = "Favorites";
-"SavedQuestion.Next" = "Start practice test";
-"SavedQuestion.Empty" = "No favorite questions yet";
-"SavedQuestion.Description" = "Retry the questions you've already marked as favorites";
-
-/* ==================================================================================================== */
-/* THEME */
-/* ==================================================================================================== */
-"ThemeList.Title" = "Select a theme";
-
-/* ==================================================================================================== */
-/* CATEGORY */
-/* ==================================================================================================== */
-"CategoryList.Title" = "Select a category";
-
-/* ==================================================================================================== */
-/* SUBCATEGORY */
-/* ==================================================================================================== */
-"SubcategoryList.Title" = "Select a subcategory";
-
-/* ==================================================================================================== */
-/* STUDY - FEATURES */
-/* ==================================================================================================== */
-"StudyMenu.Title" = "Lesson";
-"Study.List.Study.Title" = "Lessons";
-"Study.List.Study.Description" = "Structured content to make studying easier";
-"Study.List.Filter.Title" = "Question bank";
-"Study.List.Filter.Description" = "Find questions by topic, board, year, and more";
-"Study.List.Ia.Title" = "Learn with AI";
-"Study.List.Ia.Description" = "Smart study powered by your performance analysis";
-
-/* ==================================================================================================== */
-/* CHALLENGES */
-/* ==================================================================================================== */
-"Challenge.Title" = "Challenges";
-"Challenge.Description" = "Compare your performance with other learners";
-"Challenge.InProgress" = "LIVE";
-"Challenge.InProgress.Unavailable" = "Wait until the challenge ends";
-"Challenge.InProgress.Tag" = "Now";
-"Challenge.InProgress.Empty" = "No challenge is happening right now";
-"Challenge.InProgress.Time" = "Time remaining";
-"Challenge.InProgress.Time.Value" = "{$0} h";
-"Challenge.InProgress.Time.Value.Minutes" = "{$0} minutes";
-"Challenge.InProgress.Time.Value.Singular" = "{$0} day";
-"Challenge.InProgress.Time.Value.Plural" = "{$0} days";
-"Challenge.InProgress.Time.Value.Now" = "Now";
-"Challenge.WaitingStart" = "UP NEXT";
-"Challenge.WaitingStart.Time" = "Starts in";
-"Challenge.WaitingStart.Time.Value" = "{$0} h";
-"Challenge.WaitingStart.Time.Value.Minutes" = "{$0} minutes";
-"Challenge.WaitingStart.Time.Value.Singular" = "{$0} day";
-"Challenge.WaitingStart.Time.Value.Plural" = "{$0} days";
-"Challenge.WaitingStart.Time.Value.Now" = "Now";
-"Challenge.Finalized" = "ENDED";
-"Challenge.Finalized.Time.Singular" = "Ended {$0} day ago";
-"Challenge.Finalized.Time.Plural" = "Ended {$0} days ago";
-"Challenge.Finalized.Time.Hours" = "Ended {$0} hours ago";
-"Challenge.Finalized.Time.Minutes" = "Ended {$0} minutes ago";
-"Challenge.Finalized.Time.Now" = "Ended just now";
-"Challenge.Finalized.Available" = "You can still take it";
-"Challenge.Finalized.Result" = "Result available";
-"Challenge.Leaderboard.Title" = "Challenge results";
-"Challenge.Leaderboard.General" = "OVERALL LEADERBOARD";
-"Challenge.Leaderboard.Performance" = "PERFORMANCE";
-"Challenge.Leaderboard.Information" = "INFORMATION";
-"Challenge.Go" = "Join Challenge";
-"Leaderboard.Me.Delayed.Title" = "No official ranking available";
-"Leaderboard.Me.Delayed.Description" = "Check your score below and see what your ranking would have been if you had participated during the challenge's active period.";
-"Leaderboard.Me.Delayed.Tag" = "Participated after the challenge ended";
-"Leaderboard.Position" = "{$0}th place";
-"Leaderboard.Position.Delayed" = "Would have placed {$0}th";
-"Leaderboard.Performance.Hits" = "correct";
-"Leaderboard.Performance.Errors" = "incorrect";
-"Leaderboard.Performance.Percentage" = "accuracy";
-"Leaderboard.Performance.Time" = "duration";
-"Leaderboard.Information.StartDate" = "Start date:";
-"Leaderboard.Information.EndDate" = "End date:";
-"Leaderboard.Information.Students" = "Total enrolled:";
-"Leaderboard.Information.Questions" = "Number of questions:";
-"Leaderboard.Information.Highest" = "Highest score:";
-"Leaderboard.Information.Lowest" = "Lowest score:";
-"Challenge.InProgress.Empty" = "No challenge is happening right now. Please wait for new challenges.";
-"Challenge.Waiting.Empty" = "No challenges for the next few days.";
-"Challenge.Finished.Empty" = "There are no finished challenges yet.";
-
-/* ==================================================================================================== */
-/* STATISTICS */
-/* ==================================================================================================== */
-"Statistics.Title" = "Performance";
-"Statistic.Period" = "Period:";
-"Statistic.Period.Filter.Title" = "Filter by date";
-"Statistic.Period.Filter.Message" = "Select the desired period";
-"Statistic.Period.Days" = "{$0} days";
-"Statistic.Period.Today" = "Today";
-"Statistic.Period.Yesterday" = "Yesterday";
-"Statistics.YourStudyPace.Title" = "Your study pace";
-"Statistics.YourStudyPace.Description" = "Practice and achieve the perfect week";
-"Statistic.CourseSummary.Title" = "Total questions answered";
-"Statistic.CourseSummary.Description" = "See how many questions you've answered since you started.";
-"Statistic.CourseSummary.Total" = "Course total";
-"Statistic.LineChart.Title" = "Your progress";
-"Statistic.LineChart.Description" = "Your progress is calculated based on the selected period";
-"Statistic.LineChart.Legend.Approved" = "Passed";
-"Statistic.LineChart.Legend.BelowNeeded" = "Below target";
-"Statistic.Chart.NoData" = "No data";
-"Statistic.PieChart.Title" = "Keep studying";
-"Statistic.PieChart.Description" = "Keep practicing to improve your performance.";
-"Statistic.PieChart.Success.Title" = "Great job, keep it up";
-"Statistic.PieChart.Success.Description" = "Your performance is above the expected average.";
-"Statistic.PieChart.CenterText" = "Your average is";
-"Statistic.PieChart.Legend.AverageCorrect" = "Average correct answers";
-"Statistic.PieChart.Legend.TotalErrors" = "Total incorrect answers";
-"Statistic.AverageResult.Title" = "Average practice test score";
-"Statistic.AverageResult.NumberOfQuestions" = "Number of questions:";
-"Statistic.AverageResult.CorrectAnswers" = "Correct";
-"Statistic.AverageResult.Error" = "Incorrect";
-"Statistic.AverageResult.Performance" = "Performance";
-"Statistic.MostMistake.Title" = "Where are you missing the most questions?";
-"Statistic.MostMistake.Description" = "See your biggest weak spots below and focus your study time where you need it most";
-"Challenge.Leaderboard.Information.DateTimeFormat" = "MM/dd/yyyy '•' HH:mm";
-
-/* ==================================================================================================== */
-/* QUESTION FLOW */
-/* ==================================================================================================== */
-"Alert.Title.Warning" = "Warning";
-"Alert.Intro.Courses.Error" = "Error loading courses. Please try again later.";
+"Alert.Title.Warning" = "Heads up";
 "Alert.Action.TryAgain" = "Try again";
 "Alert.Action.Close" = "Close";
 "Alert.Action.Back" = "Back";
-"Loading.Questions.Empty" = "Error loading questions. Please try again later.";
-"Question.Next" = "Next question";
-"Question.IsLast" = "Finish";
-"Question.Confirm" = "Confirm";
-"Question.Answer.Correct.Tag" = "Correct answer";
-"Question.Answer.Error.Tag" = "Incorrect answer";
-"Question.Answer.Empty.Tag" = "Not answered";
-"Question.Exit.Title" = "Are you sure you want to leave?";
-"Question.Exit.Title.TimeIsOver" = "Time is up";
-"Question.Exit.Subtitle.Ads" = "To view and save your results, watch the ad until the end.";
-"Question.Exit.Minutes" = "minutes";
-"Question.Exit.Questions" = "questions";
-"Question.Exit.Answered" = "answered";
-"Question.Exit.Ads.Tag" = "Watch the ad to view your results";
-"Question.Exit.Ads.Button" = "Watch ad and view results";
-"Question.Exit.Save.Button" = "View results";
-"Question.Exit.Button" = "Leave and return home";
-"QuestionNavigation.Title" = "Answered questions";
-"Question.Result.Title" = "Results";
-"Question.Result.AnswerKey.Title" = "Answer key";
-"Question.Result.Theme.Most.Error.Title" = "Biggest difficulty";
-"Question.Result.Theme.Most.Error.Description" = "{$theme} • {$errors} errors";
-"Question.Result.SeeAll.Title" = "View questions";
-"Question.Result.SeeAll.Description" = "Review the questions and correct answers";
-"Question.Result.Back.Button" = "Back to home screen";
-"Question.Result.Loading.Title" = "Finishing your exam";
-"Question.Result.Loading.Message" = "We're calculating your performance and preparing your final result.";
-"Question.Result.Approved.Title" = "Congratulations!";
-"Question.Result.Approved.Description" = "Your effort is paying off! You're getting closer and closer to your goals.";
-"Question.Result.NotApproved.Title" = "Keep studying";
-"Question.Result.NotApproved.Description" = "With persistence and consistency, you can do it!";
+"Alert.Generic.Error" = "We couldn't complete that action. Please try again later.";
+
 
 /* ==================================================================================================== */
-/* FILTERS */
+/* AUTHENTICATION - SIGN IN AND ACCOUNT SETUP                                                           */
 /* ==================================================================================================== */
-"Filter.Title" = "Question bank";
-"Filter.Button" = "View questions";
-"Filter.Button.Free" = "Unlock with premium";
-"Filter.Search.Placeholder" = "Keywords";
-"Filter.Multiple" = "You can select multiple filters";
-"Filter.Themes.Title" = "Themes";
-"Filter.Themes.All" = "Select";
-"Filter.Themes.Selected.Singular" = "{$0} theme";
-"Filter.Themes.Selected.Plural" = "{$0} themes";
-"Filter.Categories.Title" = "Categories";
-"Filter.Categories.All" = "Select";
-"Filter.Categories.Selected.Singular" = "{$0} category";
-"Filter.Categories.Selected.Plural" = "{$0} categories";
-"Filter.Subcategories.Title" = "Subcategories";
-"Filter.Subcategories.All" = "Select";
-"Filter.Subcategories.Selected.Singular" = "{$0} subcategory";
-"Filter.Subcategories.Selected.Plural" = "{$0} subcategories";
-"Filter.Only" = "Show only";
-"Filter.Only.Unanswered" = "Unanswered";
-"Filter.Only.AnsweredWrong" = "Answered incorrectly";
-"Filter.Questions.Singular" = "{$0} question found";
-"Filter.Questions.Plural" = "{$0} questions found";
-"Filter.Questions.Zero" = "No questions found";
-"Filter.Year" = "Year";
-"Filter.Year.All" = "all";
-"Filter.Year.Empty" = "No year found";
-"Filter.Committee" = "Board";
-"Filter.Committee.All" = "all";
-"Filter.Committee.Empty" = "No board found";
+"AuthHome.Description" = "Find products to trade near you";
+
+// Name
+"AuthInputName.Title" = "Create your\nfree account";
+"AuthInputName.Description" = "Create your account to trade products and find new opportunities.";
+
+// Email
+"AuthInputEmail.Title" = "Enter your\nbest email";
+"AuthInputEmail.Description" = "We'll use your email to protect your account and send your access code.";
+
+// Access code
+"AuthInputToken.Title" = "Confirm your\naccess";
+"AuthInputToken.Description" = "We sent a 4-digit code to {$0}";
+"AuthInputToken.Tag" = "Also check your spam folder";
+
+// Permissions
+"AuthNotification.Title" = "Don't miss new\nopportunities";
+"AuthNotification.Description" = "Get real-time alerts about matches, offers, and new opportunities.";
+"AuthLocation.Title" = "Find trades\nnear you";
+"AuthLocation.Description" = "Allow location access to discover products and users in your area.";
+"AuthTracking.Title" = "Make your experience\nmore relevant";
+"AuthTracking.Description" = "Personalize offers and improve your experience with relevant content.";
+
+// Success
+"AuthSuccess.Title" = "You're ready\nto start";
+"AuthSuccess.Description" = "Your account is active. Now it's time to discover, match, and trade.";
+"AuthSuccess.Tag" = "Profile set up";
+"AuthSuccess.Button.Continue" = "Let's go!";
+
 
 /* ==================================================================================================== */
-/* THEME */
+/* MATCH - DISCOVERY AND FILTERS                                                                        */
 /* ==================================================================================================== */
-"Theme.List.Empty" = "No themes available right now.";
-"Theme.List.Questions.Singular" = "{$0} question available";
-"Theme.List.Questions.Plural" = "{$0} questions available";
+"Match.Maker.Loading" = "Searching...";
+"Match.Maker.Empty.Title" = "Nothing here";
+"Match.Maker.Empty.Subtitle" = "Review your search filters\r\nor check back later for more options.";
+
+// Filters
+"Match.Filter.Title" = "Filters";
+"Match.Filter.Distance.Title" = "Distance";
+"Match.Filter.Save" = "Close";
+"Match.Filter.Tags.Tip" = "Choose categories to filter products.";
+"Match.Filter.Tags.Title" = "Categories";
+"Match.Filter.Tags.Description" = "Select";
+"Match.Filter.Tags.All" = "All";
+"Match.Filter.Tags.Alert.Title" = "Clear categories?";
+"Match.Filter.Tags.Alert.Message" = "If you clear the categories, the \"All\" filter will be applied.";
+"Match.Filter.Tags.Alert.Yes" = "Clear categories";
+
 
 /* ==================================================================================================== */
-/* CATEGORY */
+/* MATCH - INTEREST CONFIRMATION                                                                        */
 /* ==================================================================================================== */
-"Categories.List.Empty" = "No categories found";
+"ItsAMatch.GoToChat" = "GO TO CHAT";
+"ItsAMatch.Continue" = "Keep searching";
+"ItsAMatch.Description" = "{$0} is also interested in your products";
+
 
 /* ==================================================================================================== */
-/* SUBCATEGORY */
+/* REPORT                                                                                               */
 /* ==================================================================================================== */
-"Subcategory.List.Empty" = "No subcategories found";
+"Denunciate.Title" = "Report user";
+"Denunciate.Message" = "Tell us what happened.";
+"Denunciate.Option.Block" = "Block user";
+"Denunciate.Option.Image" = "Inappropriate photo";
+"Denunciate.Option.Spam" = "Looks like spam";
+"Denunciate.Option.Other" = "Other reason";
+
 
 /* ==================================================================================================== */
-/* STUDY - FEATURES */
+/* PRODUCT - LISTING                                                                                    */
 /* ==================================================================================================== */
-"Study.Menu.Exercise.Title" = "Practice exercises";
+"NewProduct.Title" = "New product";
+
+// List
+"MyProduct.List.Title" = "My products";
+"MyProduct.List.Empty.Title" = "Nothing here";
+"MyProduct.List.Empty.Subtitle" = "Add your products to start trading.";
+
+// Details
+"MyProduct.Detail.Title" = "";
+"MyProduct.Detail.Change" = "Tap to change or remove";
+"MyProduct.Detail.Add" = "Tap to add\r\na photo";
+"MyProduct.Detail.Remove.Title" = "Are you sure you want to delete {$0}?";
+"MyProduct.Detail.Remove.Message" = "This action can't be undone.";
+
+// Name
+"MyProduct.InputName.Title" = "Product name";
+"MyProduct.InputName.Placeholder" = "Enter a name";
+"MyProduct.InputName.Description" = "Enter a name\r\nto identify your product.";
+"MyProduct.InputName.Error.Length" = "Enter your product name.";
+
+// Category
+"MyProduct.InputCategory.Title" = "Which category?";
+
+// Image
+"MyProduct.InputImage.Title" = "Add photos";
+"MyProduct.InputImage.Change" = "Tap to change or remove";
+"MyProduct.InputImage.Add" = "Tap to add\r\na photo";
+"MyProduct.InputImage.Save" = "Save and publish";
+
 
 /* ==================================================================================================== */
-/* PAYWALL */
+/* CHAT - LIST, MESSAGES, AND PRODUCTS                                                                  */
 /* ==================================================================================================== */
-"Premium.Description" = "Premium feature";
-"Premium.Fallback.Title" = "Go premium";
-"Premium.Fallback.Description" = "Get full access to practice tests, explanations, and detailed performance stats.";
-"Premium.Fallback.Cta" = "Subscribe now";
-"PayWall.Cta.Purchase" = "Continue with {$0}";
-"PayWall.Cta.Promotional" = "Continue with discounted plan";
-"PayWall.Cta.Purchase.Trial.Singular" = "Start your FREE 1-day trial";
-"PayWall.Cta.Purchase.Trial.Plural" = "Start your FREE {$0}-day trial";
-"PayWall.Purchase.Success.Title" = "Purchase completed";
-"PayWall.Purchase.Success.Message" = "Your premium access has been activated successfully.";
-"PayWall.Purchase.ProductRequired" = "Select a plan to continue.";
-"PayWall.Restore.Success.Title" = "Purchase restored";
-"PayWall.Restore.Success.Message" = "Your premium access has been restored successfully.";
-"PayWall.Restore.Empty.Message" = "No previous purchases were found for this Apple account.";
-"PayWall.Tag.BestOffer" = "best offer";
-"PayWall.Tag.SpecialOffer" = "special offer";
-"PayWall.Caption.CancelAnytime" = "* Auto-renewing subscription. Cancel anytime.";
-"PayWall.Footer.Terms" = "Terms";
-"PayWall.Footer.Restore" = "Restore";
-"PayWall.Footer.Privacy" = "Privacy";
-"PayWall.Intro.FreeTrial.Highlight" = "FREE for {$0}";
-"PayWall.Intro.RenewalPricePeriod" = "Then {$0}{$1}";
-"PayWall.Intro.RenewalEveryPeriod" = " every {$0}";
-"PayWall.Intro.RenewalSlashDay" = "/day";
-"PayWall.Intro.RenewalSlashWeek" = "/week";
-"PayWall.Intro.RenewalSlashMonth" = "/month";
-"PayWall.Intro.RenewalSlashYear" = "/year";
-"PayWall.Intro.PricePeriod" = "{$0} per {$1}";
-"PayWall.Period.Promotional" = "Monthly discount";
-"PayWall.Period.Weekly" = "Weekly";
-"PayWall.Period.Monthly" = "Monthly";
-"PayWall.Period.Bimonthly" = "Every 2 months";
-"PayWall.Period.Quarterly" = "Every 3 months";
-"PayWall.Period.Semiannual" = "Every 6 months";
-"PayWall.Period.Annual" = "Yearly";
-"PayWall.Period.Day.Singular" = "1 day";
-"PayWall.Period.Day.Plural" = "{$0} days";
-"PayWall.Period.Week.Singular" = "1 week";
-"PayWall.Period.Week.Plural" = "{$0} weeks";
-"PayWall.Period.Month.Singular" = "1 month";
-"PayWall.Period.Month.Plural" = "{$0} months";
-"PayWall.Period.Year.Singular" = "1 year";
-"PayWall.Period.Year.Plural" = "{$0} years";
+"Chat.List.Title" = "Messages";
+"Chat.List.Empty" = "No messages yet";
 
-/* ==================================================================================================== */
-/* TRAIL */
-/* ==================================================================================================== */
-"Trail.Exam.Started" = "Started a practice test";
-"Trail.Challenge.Started" = "Started a challenge";
-"Trail.Challenge.Started.WithTitle" = "Started the challenge: {$0}";
-"Trail.Study.Exercise.Started" = "Started a practice session";
-"Trail.Study.Exercise.Started.WithTitle" = "Started practice for: {$0}";
-"Trail.Filter.Questions.Started" = "Started a filtered question session";
-"Trail.Saved.Questions.Started" = "Started a favorites session";
-"Trail.Ia.Started" = "Started an AI learning session";
-"Trail.Study.Video.Viewed" = "Viewed a video lesson";
-"Trail.Study.Video.Viewed.WithTitle" = "Viewed the video lesson: {$0}";
-"Trail.Study.Pdf.Viewed" = "Opened a PDF";
-"Trail.Study.Pdf.Viewed.WithTitle" = "Viewed the PDF: {$0}";
-
-"Notification.Empty" = "You don't have any notifications yet.";
-"Notification.Delete.Single" = "Delete notification";
-"Notification.Delete.Multiple" = "Delete notifications ({$0})";
-"Notification.Title" = "Notifications";
-
-/* ==================================================================================================== */
-/* STICKER                                                                                              */
-/* ==================================================================================================== */
-"Sticker.List.Search.Placeholder" = "Search by sticker. Ex: BRA 10";
-"Sticker.List.Empty.Filtered" = "No stickers found. Adjust your search or filters and try again.";
-
-/* ==================================================================================================== */
-/* CHAT */
-/* ==================================================================================================== */
+// Message
+"Chat.Message.Title" = "Chat";
+"Chat.Message.Placeholder" = "Message...";
 "Chat.Message.Date.Today" = "Today at {$0}";
 "Chat.Message.Date.Yesterday" = "Yesterday at {$0}";
 "Chat.Message.Date.Full" = "{$0} at {$1}";
 "Chat.Message.Date.Format.Time" = "HH:mm";
 "Chat.Message.Date.Format.Date" = "MM/dd/yyyy";
+
+// Products involved in the match
+"Chat.Products.Title" = "Matches";
+"Chat.Products.He.Name" = "{$0}'s products";
+"Chat.Products.He.Name.Unknow" = "Unknown user's products";
+"Chat.Products.Me.Name" = "Your products";
+
+
+/* ==================================================================================================== */
+/* PROFILE - SECTIONS AND SETTINGS                                                                      */
+/* ==================================================================================================== */
+// Boost
+"Profile.Boost.Section" = "Featured";
+"Profile.Boost.Title" = "Your profile";
+"Profile.Boost.Time" = "{$0} minutes left";
+
+// Personal info
+"Profile.My.Section" = "My profile";
+"Profile.My.Photo" = "Change photo";
+"Profile.My.Name" = "Change name";
+"Profile.Name.Title" = "Change name";
+"Profile.Name.Description" = "Your name will be visible to other users when you get a match";
+
+// Notifications
+"Profile.Notifications.Section" = "Notifications";
+"Profile.Notifications.Match" = "New match";
+"Profile.Notifications.Message" = "Message";
+"Profile.Notifications.SuperLike" = "Super Like";
+
+// Contact
+"Profile.Contact.Section" = "Contact";
+"Profile.Contact.Rating" = "Rate the app";
+"Profile.Contact.Share" = "Share";
+
+// Legal
+"Profile.Legal.Section" = "Legal";
+"Profile.Legal.Terms" = "Terms of use";
+"Profile.Legal.Privacy" = "Privacy policy";
+
+// Anonymous account
+"Profile.Anonymous.Name" = "Anonymous";
+"Profile.Anonymous.SignIn" = "Verify your account";
+
+
+/* ==================================================================================================== */
+/* PROFILE - ACCOUNT ACTIONS                                                                            */
+/* ==================================================================================================== */
+"Profile.Actions.Section" = "Actions";
+
+// Delete account
+"Profile.Actions.Delete" = "Delete account";
+"Profile.Actions.Delete.Success.Title" = "Delete account";
+"Profile.Actions.Delete.Success.Message" = "Your account has been removed successfully.";
+
+// Logout
+"Profile.Actions.Logout" = "Sign out";
+"Profile.Actions.Logout.Confirm.Title" = "Sign out of the app?";
+"Profile.Actions.Logout.Confirm.Message" = "Do you want to sign out of your account?";
+"Profile.Actions.Logout.Confirm.Action" = "Sign out";
+
+// Start over
+"Profile.Actions.Reset" = "Start over in the app";
+"Profile.Actions.Reset.Confirm.Title" = "Start over in the app?";
+"Profile.Actions.Reset.Confirm.Message" = "Do you want to erase your data and start over?";
+"Profile.Actions.Reset.Confirm.Action" = "Start over";
+
+
+/* ==================================================================================================== */
+/* SUPER LIKE - FEATURED OFFER                                                                          */
+/* ==================================================================================================== */
+"SuperLike.Title" = "Super Like";
+"SuperLike.Input.Title" = "Make your offer stand out";
+"SuperLike.Input.Value" = "Your item caught my eye. I'm interested in working out this trade. Want to chat?";
+"SuperLike.Input.Placeholder" = "Write your offer here";
+"SuperLike.Input.Description" = "Try offering more items or even some cash to help make the trade happen.";
+"SuperLike.Purchase" = "Send offer • {$0}";
+
+
+/* ==================================================================================================== */
+/* KNOW MORE - SUPER LIKE                                                                               */
+/* ==================================================================================================== */
+"KnowMore.SuperLike.Title" = "Super Like";
+"KnowMore.SuperLike.Subtitle" = "Get noticed first";
+"KnowMore.SuperLike.Description" = "Your offer gets special attention, highlighting your interest and improving your chances of closing the deal.";
+"KnowMore.SuperLike.ButtonTitle" = "Send one";
+
+"KnowMore.SuperLike.Success.Title" = "All set";
+"KnowMore.SuperLike.Success.Subtitle" = "Your Super Like was delivered";
+"KnowMore.SuperLike.Success.Description" = "We sent your offer with a special highlight to increase your chances of getting a reply and making a deal.";
+"KnowMore.SuperLike.Success.ButtonTitle" = "Keep browsing";
+
+
+/* ==================================================================================================== */
+/* KNOW MORE - PROFILE BOOST                                                                            */
+/* ==================================================================================================== */
+"KnowMore.BoostProfile.Title" = "Boost";
+"KnowMore.BoostProfile.Subtitle" = "Feature your profile now";
+"KnowMore.BoostProfile.Description" = "Boost puts your profile in a featured spot for nearby users for 1 hour. More views. More interest. More chances to trade.";
+"KnowMore.BoostProfile.ButtonTitle" = "Activate Boost • {$0}";
+
+"KnowMore.BoostProfile.IsActive.Title" = "Boost activated";
+"KnowMore.BoostProfile.IsActive.Subtitle" = "You're featured";
+"KnowMore.BoostProfile.IsActive.Description" = "Your products are now shown to more nearby people, increasing your chances to trade.";
+"KnowMore.BoostProfile.IsActive.ButtonTitle" = "Keep browsing";
+
+
+/* ==================================================================================================== */
+/* KNOW MORE - ACCOUNT AND REPORT                                                                       */
+/* ==================================================================================================== */
+// Delete account
+"KnowMore.DeleteAccount.Title" = "Delete account";
+"KnowMore.DeleteAccount.Subtitle" = "Important";
+"KnowMore.DeleteAccount.Description" = "Are you sure you want to delete your account? This action can't be undone.";
+"KnowMore.DeleteAccount.ButtonTitle" = "Delete";
+
+// Report
+"KnowMore.Denunciate.Title" = "Report user";
+"KnowMore.Denunciate.Subtitle" = "Report inappropriate behavior";
+"KnowMore.Denunciate.Description" = "Your report helps us identify spam, inappropriate content, and users who violate the platform rules.";
+"KnowMore.Denunciate.ButtonTitle" = "Select reason";
+
+"KnowMore.Denunciate.Success.Title" = "Report sent";
+"KnowMore.Denunciate.Success.Subtitle" = "Thanks for helping the community";
+"KnowMore.Denunciate.Success.Description" = "Our team will review the report to help keep the platform safer for everyone.";
+"KnowMore.Denunciate.Success.ButtonTitle" = "Continue";
+
+
+/* ==================================================================================================== */
+/* KNOW MORE - PRODUCT AND CATALOG                                                                      */
+/* ==================================================================================================== */
+// Product photo
+"KnowMore.Stickers.Image.Title" = "Add a photo";
+"KnowMore.Stickers.Image.Subtitle" = "Show your product to other people";
+"KnowMore.Stickers.Image.Description" = "The photo will be shown to nearby users interested in trading products that match or complement yours.";
+"KnowMore.Stickers.Image.ButtonTitle" = "Take photo";
+
+// How the catalog works
+"KnowMore.Stickers.Info.Title" = "How it works";
+"KnowMore.Stickers.Info.Subtitle" = "Your catalog just got smarter";
+"KnowMore.Stickers.Info.Description" = "Organize your products and publish items for trade.
+Once you add a photo 📸, they'll be available to nearby users interested in trading.";
+"KnowMore.Stickers.Info.ButtonTitle" = "Got it";
+
+// Product required to use match
+"KnowMore.MatchMaker.AddProduct.Title" = "Add a product";
+"KnowMore.MatchMaker.AddProduct.Subtitle" = "You need something to trade";
+"KnowMore.MatchMaker.AddProduct.Description" = "Add at least one product with a photo to start liking and finding trade opportunities.";
+"KnowMore.MatchMaker.AddProduct.Button" = "Add product";
+
+// Location required to use match
+"KnowMore.MatchMaker.NeedLocation.Title" = "Turn on location";
+"KnowMore.MatchMaker.NeedLocation.Subtitle" = "Location is required to find nearby trades";
+"KnowMore.MatchMaker.NeedLocation.Description" = "Allow location access to discover users and trade opportunities in your area.";
+"KnowMore.MatchMaker.NeedLocation.Button" = "Open Settings";
+
+
+/* ==================================================================================================== */
+/* CATALOG - LIST                                                                                       */
+/* ==================================================================================================== */
+"Sticker.List.Title" = "My catalog";
+"Sticker.List.Search.Placeholder" = "Search by product";
+"Sticker.List.Collected" = "Saved items";
+"Sticker.List.Duplicated" = "Items for trade";
+"Sticker.List.Empty.Filtered" = "No products found. Adjust your search or filters and try again.";
+
+
+/* ==================================================================================================== */
+/* CATALOG - FILTERS                                                                                    */
+/* ==================================================================================================== */
+"StickerFilter.Categories.Title" = "Categories";
+"StickerFilter.Categories.Placeholder" = "All categories";
+"StickerFilter.Categories.Value" = "{$0} selected";
+"StickerFilter.Only.Title" = "SHOW ONLY";
+"StickerFilter.OnlyCollected" = "Saved";
+"StickerFilter.OnlyMissing" = "Not added";
+"StickerFilter.OnlyDuplicated" = "For trade";
+"StickerFilter.OnlyPublished" = "Published";
+"StickerFilter.Button.Clear" = "Clear selected";
+
+
+/* ==================================================================================================== */
+/* ERRORS                                                                                               */
+/* ==================================================================================================== */
+"Error.500" = "Error 500";
