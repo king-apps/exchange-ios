@@ -176,6 +176,13 @@
 		A53B4E212FCB1AE70057A717 /* InputSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53B4E202FCB1AE00057A717 /* InputSliderCell.swift */; };
 		A53B4E232FCB2B690057A717 /* MatchFilterViewController+InputSliderCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53B4E222FCB2B5A0057A717 /* MatchFilterViewController+InputSliderCellDelegate.swift */; };
 		A53B4E252FCDFC840057A717 /* StickerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53B4E242FCDFC840057A717 /* StickerListCell.xib */; };
+		A54BA9252FD305EB001DDFB3 /* StickerScanResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA9212FD305EB001DDFB3 /* StickerScanResultPresenter.swift */; };
+		A54BA9262FD305EB001DDFB3 /* StickerScanResultWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA9242FD305EB001DDFB3 /* StickerScanResultWorker.swift */; };
+		A54BA9272FD305EB001DDFB3 /* StickerScanResultConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA91E2FD305EB001DDFB3 /* StickerScanResultConfigurator.swift */; };
+		A54BA9282FD305EB001DDFB3 /* StickerScanResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA91F2FD305EB001DDFB3 /* StickerScanResultInteractor.swift */; };
+		A54BA9292FD305EB001DDFB3 /* StickerScanResultModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA9202FD305EB001DDFB3 /* StickerScanResultModels.swift */; };
+		A54BA92A2FD305EB001DDFB3 /* StickerScanResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA9222FD305EB001DDFB3 /* StickerScanResultRouter.swift */; };
+		A54BA92B2FD305EB001DDFB3 /* StickerScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA9232FD305EB001DDFB3 /* StickerScanResultViewController.swift */; };
 		A55026812FBDEEC200556E78 /* SuperLikeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550267B2FBDEEC200556E78 /* SuperLikeInteractor.swift */; };
 		A55026822FBDEEC200556E78 /* SuperLikePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550267D2FBDEEC200556E78 /* SuperLikePresenter.swift */; };
 		A55026832FBDEEC200556E78 /* SuperLikeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550267C2FBDEEC200556E78 /* SuperLikeModels.swift */; };
@@ -266,6 +273,8 @@
 		A5B694432FD2728E00005A1C /* StickerScanWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943E2FD2728E00005A1C /* StickerScanWorker.swift */; };
 		A5B694442FD2728E00005A1C /* StickerScanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943C2FD2728E00005A1C /* StickerScanRouter.swift */; };
 		A5B694452FD2728E00005A1C /* StickerScanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694392FD2728E00005A1C /* StickerScanInteractor.swift */; };
+		A5B694462FD2A6E70005A1C /* StickerScanViewController+DataScannerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694472FD2A6E70005A1C /* StickerScanViewController+DataScannerViewControllerDelegate.swift */; };
+		A5B694492FD30A940005A1C /* StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694482FD30A940005A1C /* StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift */; };
 		A5BB9B362FC9C03200E81B75 /* ProductBoostResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB9B352FC9C02900E81B75 /* ProductBoostResponseDTO.swift */; };
 		A5BED72D2FA903A9008821DB /* MyProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BED72C2FA903A2008821DB /* MyProductCell.swift */; };
 		A5BED72F2FA9044B008821DB /* MyProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BED72E2FA9044B008821DB /* MyProductCell.xib */; };
@@ -715,6 +724,13 @@
 		A53B4E202FCB1AE00057A717 /* InputSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSliderCell.swift; sourceTree = "<group>"; };
 		A53B4E222FCB2B5A0057A717 /* MatchFilterViewController+InputSliderCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchFilterViewController+InputSliderCellDelegate.swift"; sourceTree = "<group>"; };
 		A53B4E242FCDFC840057A717 /* StickerListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerListCell.xib; sourceTree = "<group>"; };
+		A54BA91E2FD305EB001DDFB3 /* StickerScanResultConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanResultConfigurator.swift; sourceTree = "<group>"; };
+		A54BA91F2FD305EB001DDFB3 /* StickerScanResultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanResultInteractor.swift; sourceTree = "<group>"; };
+		A54BA9202FD305EB001DDFB3 /* StickerScanResultModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanResultModels.swift; sourceTree = "<group>"; };
+		A54BA9212FD305EB001DDFB3 /* StickerScanResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanResultPresenter.swift; sourceTree = "<group>"; };
+		A54BA9222FD305EB001DDFB3 /* StickerScanResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanResultRouter.swift; sourceTree = "<group>"; };
+		A54BA9232FD305EB001DDFB3 /* StickerScanResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanResultViewController.swift; sourceTree = "<group>"; };
+		A54BA9242FD305EB001DDFB3 /* StickerScanResultWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanResultWorker.swift; sourceTree = "<group>"; };
 		A550267A2FBDEEC200556E78 /* SuperLikeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLikeConfigurator.swift; sourceTree = "<group>"; };
 		A550267B2FBDEEC200556E78 /* SuperLikeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLikeInteractor.swift; sourceTree = "<group>"; };
 		A550267C2FBDEEC200556E78 /* SuperLikeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLikeModels.swift; sourceTree = "<group>"; };
@@ -804,6 +820,8 @@
 		A5B6943C2FD2728E00005A1C /* StickerScanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanRouter.swift; sourceTree = "<group>"; };
 		A5B6943D2FD2728E00005A1C /* StickerScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanViewController.swift; sourceTree = "<group>"; };
 		A5B6943E2FD2728E00005A1C /* StickerScanWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanWorker.swift; sourceTree = "<group>"; };
+		A5B694472FD2A6E70005A1C /* StickerScanViewController+DataScannerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StickerScanViewController+DataScannerViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		A5B694482FD30A940005A1C /* StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift"; sourceTree = "<group>"; };
 		A5BB9B352FC9C02900E81B75 /* ProductBoostResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBoostResponseDTO.swift; sourceTree = "<group>"; };
 		A5BED72C2FA903A2008821DB /* MyProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductCell.swift; sourceTree = "<group>"; };
 		A5BED72E2FA9044B008821DB /* MyProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProductCell.xib; sourceTree = "<group>"; };
@@ -1673,6 +1691,20 @@
 			path = Slider;
 			sourceTree = "<group>";
 		};
+		A54BA91D2FD305DB001DDFB3 /* ScanResult */ = {
+			isa = PBXGroup;
+			children = (
+				A54BA91E2FD305EB001DDFB3 /* StickerScanResultConfigurator.swift */,
+				A54BA91F2FD305EB001DDFB3 /* StickerScanResultInteractor.swift */,
+				A54BA9202FD305EB001DDFB3 /* StickerScanResultModels.swift */,
+				A54BA9212FD305EB001DDFB3 /* StickerScanResultPresenter.swift */,
+				A54BA9222FD305EB001DDFB3 /* StickerScanResultRouter.swift */,
+				A54BA9232FD305EB001DDFB3 /* StickerScanResultViewController.swift */,
+				A54BA9242FD305EB001DDFB3 /* StickerScanResultWorker.swift */,
+			);
+			path = ScanResult;
+			sourceTree = "<group>";
+		};
 		A55026782FBDEE8A00556E78 /* SuperLike */ = {
 			isa = PBXGroup;
 			children = (
@@ -1909,6 +1941,8 @@
 				A5B6943B2FD2728E00005A1C /* StickerScanPresenter.swift */,
 				A5B6943C2FD2728E00005A1C /* StickerScanRouter.swift */,
 				A5B6943D2FD2728E00005A1C /* StickerScanViewController.swift */,
+				A5B694472FD2A6E70005A1C /* StickerScanViewController+DataScannerViewControllerDelegate.swift */,
+				A5B694482FD30A940005A1C /* StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift */,
 				A5B6943E2FD2728E00005A1C /* StickerScanWorker.swift */,
 			);
 			path = Scan;
@@ -2393,6 +2427,7 @@
 				A5E6D2572FC11CD100A984E7 /* List */,
 				A5DB480A2FC478D70043F93D /* Filter */,
 				A5B694372FD2727700005A1C /* Scan */,
+				A54BA91D2FD305DB001DDFB3 /* ScanResult */,
 				A503099D2FC7222D00D6A32F /* Category */,
 			);
 			path = Stickers;
@@ -3339,6 +3374,13 @@
 				E674DFB35B0DFAFED4AEBEF2 /* Button.swift in Sources */,
 				20DB92B39641603E5E372059 /* Caption.swift in Sources */,
 				45DBCFED4394CAE3FCB9DE46 /* CaptionSemibold.swift in Sources */,
+				A54BA9252FD305EB001DDFB3 /* StickerScanResultPresenter.swift in Sources */,
+				A54BA9262FD305EB001DDFB3 /* StickerScanResultWorker.swift in Sources */,
+				A54BA9272FD305EB001DDFB3 /* StickerScanResultConfigurator.swift in Sources */,
+				A54BA9282FD305EB001DDFB3 /* StickerScanResultInteractor.swift in Sources */,
+				A54BA9292FD305EB001DDFB3 /* StickerScanResultModels.swift in Sources */,
+				A54BA92A2FD305EB001DDFB3 /* StickerScanResultRouter.swift in Sources */,
+				A54BA92B2FD305EB001DDFB3 /* StickerScanResultViewController.swift in Sources */,
 				A5520DE02FB2533F004FB527 /* UIButtonFilled.swift in Sources */,
 				CA7D126358F2541D6884DC48 /* HeadingLg.swift in Sources */,
 				AA5ED0D7339F192C10FC07D0 /* HeadingMd.swift in Sources */,
@@ -3535,6 +3577,8 @@
 				A5E6D2602FC11CE500A984E7 /* StickerListModels.swift in Sources */,
 				A5B6943F2FD2728E00005A1C /* StickerScanConfigurator.swift in Sources */,
 				A5B694402FD2728E00005A1C /* StickerScanViewController.swift in Sources */,
+				A5B694462FD2A6E70005A1C /* StickerScanViewController+DataScannerViewControllerDelegate.swift in Sources */,
+				A5B694492FD30A940005A1C /* StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift in Sources */,
 				A5B694412FD2728E00005A1C /* StickerScanModels.swift in Sources */,
 				A5B694422FD2728E00005A1C /* StickerScanPresenter.swift in Sources */,
 				A5B694432FD2728E00005A1C /* StickerScanWorker.swift in Sources */,
@@ -3693,7 +3737,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = BrandPrimary500;
 				CODE_SIGN_ENTITLEMENTS = Exchange/SupportingFIles/exchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = VDK95CHZEP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Exchange/Resources/Shared/Info.plist;
@@ -3704,7 +3748,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Intro;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3733,7 +3777,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = BrandPrimary500;
 				CODE_SIGN_ENTITLEMENTS = Exchange/SupportingFIles/exchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = VDK95CHZEP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Exchange/Resources/Shared/Info.plist;
@@ -3744,7 +3788,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Intro;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

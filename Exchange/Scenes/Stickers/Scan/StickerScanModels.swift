@@ -11,6 +11,15 @@ import UIKit
 
 enum StickerScan {
   
+    struct Code {
+        let categoryCode: String
+        let number: Int
+        
+        var rawValue: String {
+            return "\(categoryCode) \(number)"
+        }
+    }
+    
     
     enum Load {
         struct Request {
@@ -21,6 +30,20 @@ enum StickerScan {
         }
         struct ViewModel {
             
+        }
+    }
+    
+    enum RecognizeText {
+        struct Request {
+            let texts: [String]
+        }
+        struct Response {
+            let code: Code?
+            let sticker: Sticker?
+        }
+        struct ViewModel {
+            let code: Code
+            let sticker: Sticker?
         }
     }
 

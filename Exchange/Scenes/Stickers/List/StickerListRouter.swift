@@ -14,6 +14,7 @@ import UIKit
     func routeToFilter(segue: UIStoryboardSegue?)
     func routeToStickerInfo()
     func routeToProduct(segue: UIStoryboardSegue?)
+    func routeToScan(segue: UIStoryboardSegue?)
 }
 
 
@@ -90,6 +91,18 @@ class StickerListRouter: NSObject, StickerListRoutingLogic, StickerListDataPassi
                 sheet.detents = [.large()]
                 sheet.prefersGrabberVisible = true
                 sheet.preferredCornerRadius = 24
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            }
+            
+        }
+    }
+    func routeToScan(segue: UIStoryboardSegue?) {
+        if let segue = segue, let destinationVC = segue.destination as? StickerScanViewController {
+            
+            if let sheet = destinationVC.sheetPresentationController {
+                sheet.detents = [.large()]
+                sheet.prefersGrabberVisible = true
+                sheet.preferredCornerRadius = AppTheme.Radius.lg
                 sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             }
             

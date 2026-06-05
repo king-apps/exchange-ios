@@ -30,6 +30,31 @@ class StickerDatabase {
         return try list(ids: [id]).first
     }
     
+    func get(title: String, description: String) throws -> Sticker? {
+        try db
+            .query(
+                """
+                SELECT
+                    \(Table.id),
+                    \(Table.idCategory),
+                    \(Table.idProduct),
+                    \(Table.title),
+                    \(Table.description),
+                    \(Table.collected)
+                FROM \(Table.raw)
+                WHERE UPPER(\(Table.title)) = ?
+                    AND \(Table.description) = ?
+                LIMIT 1
+                """,
+                parameters: [
+                    .text(title.uppercased()),
+                    .text(description)
+                ]
+            )
+            .map(mapSticker)
+            .first
+    }
+    
     func list(ids: [Int]? = nil, idCategory: Int? = nil) throws -> [Sticker] {
         var sql = """
         SELECT

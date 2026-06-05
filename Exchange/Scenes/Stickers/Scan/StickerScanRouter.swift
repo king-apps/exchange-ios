@@ -10,7 +10,7 @@ import UIKit
 
 
 @objc protocol StickerScanRoutingLogic {
-    
+    func routeToResult(segue: UIStoryboardSegue?)
 }
 
 
@@ -26,5 +26,28 @@ class StickerScanRouter: NSObject, StickerScanRoutingLogic, StickerScanDataPassi
     weak var viewController: StickerScanViewController?
     var dataStore: StickerScanDataStore?
   
+    
+    // Routing
+    func routeToResult(segue: UIStoryboardSegue?) {
+        if let segue = segue, let destinationVC = segue.destination as? StickerScanResultViewController {
+            destinationVC.delegate = viewController
+            
+            if let sheet = destinationVC.sheetPresentationController {
+                sheet.detents = [.medium()]
+                sheet.prefersGrabberVisible = true
+                sheet.preferredCornerRadius = AppTheme.Radius.lg
+                sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            }
+            
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataToResult(destination: &destinationDS)
+        }
+    }
+    
+    
+    // Passing data
+    func passDataToResult(destination: inout StickerScanResultDataStore) {
+        destination.sticker = dataStore?.sticker
+    }
     
 }

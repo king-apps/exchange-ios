@@ -115,3 +115,13 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 "StickerFilter.OnlyCollected" = "Collected";
 "StickerFilter.OnlyMissing" = "Missing";
 "StickerFilter.OnlyDuplicated" = "Duplicates";
+
+
+/* ==================================================================================================== */
+/* ALBUM - STICKER SCAN                                                                                 */
+/* ==================================================================================================== */
+"Sticker.Scan.Title" = "Sticker scanner";
+"Sticker.Scan.Subtitle" = "Point the camera at the back of the sticker";
+"Sticker.Scan.Result" = "Sticker detected";
+"Sticker.Scan.Result.Button.New" = "Add sticker";
+"Sticker.Scan.Result.Button.Duplicate" = "Add duplicate";

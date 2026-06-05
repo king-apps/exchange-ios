@@ -101,7 +101,7 @@ Al agregar una foto 📸, estarán disponibles para usuarios cercanos interesado
 /* ALBUM - LISTA                                                                                        */
 /* ==================================================================================================== */
 "Sticker.List.Title" = "Mi álbum";
-"Sticker.List.Search.Placeholder" = "Ej.: SPA 10";
+"Sticker.List.Search.Placeholder" = "Buscar por figurita. Ej.: BRA 10";
 "Sticker.List.Collected" = "Coleccionadas";
 "Sticker.List.Duplicated" = "Repetidas";
 "Sticker.List.Empty.Filtered" = "No se encontraron figuritas. Ajusta la búsqueda o los filtros e inténtalo de nuevo.";
@@ -115,3 +115,13 @@ Al agregar una foto 📸, estarán disponibles para usuarios cercanos interesado
 "StickerFilter.OnlyCollected" = "Coleccionadas";
 "StickerFilter.OnlyMissing" = "Faltantes";
 "StickerFilter.OnlyDuplicated" = "Repetidas";
+
+
+/* ==================================================================================================== */
+/* ALBUM - ESCANEO DE FIGURITA                                                                          */
+/* ==================================================================================================== */
+"Sticker.Scan.Title" = "Escáner de figuritas";
+"Sticker.Scan.Subtitle" = "Apunta la cámara al dorso de la figurita";
+"Sticker.Scan.Result" = "Figurita detectada";
+"Sticker.Scan.Result.Button.New" = "Agregar figurita";
+"Sticker.Scan.Result.Button.Duplicate" = "Agregar repetida";

@@ -75,6 +75,8 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
         inputTextKeywords.addTarget(self, action: #selector(textFieldDidEditingChanged(_:)), for: .editingChanged)
 
         viewFilterBadge.isHidden = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(fetch), name: .reloadProductList, object: nil)
     }
     
     
@@ -99,6 +101,7 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
     
     
     // Handler fetch
+    @objc
     func fetch() {
         let request = StickerList.Fetch.Request()
         interactor?.fetch(request: request)

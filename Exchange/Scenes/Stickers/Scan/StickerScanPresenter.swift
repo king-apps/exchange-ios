@@ -11,6 +11,7 @@ import UIKit
 
 protocol StickerScanPresentationLogic {
     func load(response: StickerScan.Load.Response)
+    func recognizeText(response: StickerScan.RecognizeText.Response)
 }
 
 
@@ -27,6 +28,16 @@ class StickerScanPresenter: StickerScanPresentationLogic {
         let viewModel = StickerScan.Load.ViewModel()
         viewController?.onLoad(viewModel: viewModel)
         
+    }
+    
+    func recognizeText(response: StickerScan.RecognizeText.Response) {
+        guard let code = response.code else { return }
+        
+        let viewModel = StickerScan.RecognizeText.ViewModel(
+            code: code,
+            sticker: response.sticker
+        )
+        viewController?.onRecognizeText(viewModel: viewModel)
     }
     
     

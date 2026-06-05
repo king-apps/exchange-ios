@@ -376,7 +376,12 @@ Ao adicionar uma foto 📸, eles ficam disponíveis para usuários próximos int
 /* ==================================================================================================== */
 /* CATALOGO - SCAN                                                                                      */
 /* ==================================================================================================== */
-"Sticker.Scan.Title" = "Scanner de figurinhas";
+"Sticker.Scan.Title" = "Scanner de itens";
+"Sticker.Scan.Subtitle" = "Aponte a câmera para o verso do item";
+"Sticker.Scan.Result" = "Item detectado";
+"Sticker.Scan.Result.Button.New" = "Adicionar item";
+"Sticker.Scan.Result.Button.Duplicate" = "Adicionar item repetido";
+
 
 
 /* ==================================================================================================== */

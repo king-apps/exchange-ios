@@ -374,6 +374,16 @@ Al agregar una foto 📸, estarán disponibles para usuarios cercanos interesado
 
 
 /* ==================================================================================================== */
+/* CATALOGO - ESCANEO                                                                                   */
+/* ==================================================================================================== */
+"Sticker.Scan.Title" = "Escáner de artículos";
+"Sticker.Scan.Subtitle" = "Apunta la cámara al dorso del artículo";
+"Sticker.Scan.Result" = "Artículo detectado";
+"Sticker.Scan.Result.Button.New" = "Agregar artículo";
+"Sticker.Scan.Result.Button.Duplicate" = "Agregar artículo repetido";
+
+
+/* ==================================================================================================== */
 /* ERRORES                                                                                              */
 /* ==================================================================================================== */
 "Error.500" = "Error 500";

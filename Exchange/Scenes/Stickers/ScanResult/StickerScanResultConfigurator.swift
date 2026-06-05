@@ -1,24 +1,24 @@
 //
-//  StickerScanConfigurator.swift
+//  StickerScanResultConfigurator.swift
 //  Exchange
 //
-//  Created by Douglas Cicarello on 04/06/26.
+//  Created by Douglas Cicarello on 05/06/26.
 //  Copyright (c) 2026 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
 
-extension StickerScanViewController {
+extension StickerScanResultViewController {
   
     
     // Setup
     func setup() {
    
         let viewController          = self
-        let interactor              = StickerScanInteractor()
-        let presenter               = StickerScanPresenter()
-        let router                  = StickerScanRouter()
+        let interactor              = StickerScanResultInteractor()
+        let presenter               = StickerScanResultPresenter()
+        let router                  = StickerScanResultRouter()
     
         viewController.interactor   = interactor
         viewController.router       = router
@@ -36,10 +36,6 @@ extension StickerScanViewController {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
             if let router = router, router.responds(to: selector) {
                 router.perform(selector, with: segue)
-            }
-            
-            if scene == "Result" {
-                segue.destination.presentationController?.delegate = self
             }
         }
     }

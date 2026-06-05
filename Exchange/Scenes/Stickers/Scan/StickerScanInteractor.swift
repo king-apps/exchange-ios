@@ -11,11 +11,12 @@ import UIKit
 
 protocol StickerScanBusinessLogic {
     func load(request: StickerScan.Load.Request)
+    func recognizeText(request: StickerScan.RecognizeText.Request)
 }
 
 
 protocol StickerScanDataStore {
-    
+    var sticker: Sticker? { get }
 }
 
 
@@ -25,6 +26,8 @@ class StickerScanInteractor: StickerScanBusinessLogic, StickerScanDataStore {
     // Var's
     var presenter: StickerScanPresentationLogic?
     var worker = StickerScanWorker()
+    
+    var sticker: Sticker?
   
     
     // Handler load
@@ -35,6 +38,21 @@ class StickerScanInteractor: StickerScanBusinessLogic, StickerScanDataStore {
             self.presenter?.load(response: response)
         }
         
+    }
+    
+    func recognizeText(request: StickerScan.RecognizeText.Request) {
+        let code = worker.recognize(texts: request.texts)
+        let foundSticker = code.flatMap(worker.findSticker)
+        
+        if let foundSticker {
+            sticker = foundSticker
+        }
+        
+        let response = StickerScan.RecognizeText.Response(
+            code: code,
+            sticker: foundSticker
+        )
+        presenter?.recognizeText(response: response)
     }
     
     

@@ -374,6 +374,16 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 
 
 /* ==================================================================================================== */
+/* CATALOG - SCAN                                                                                       */
+/* ==================================================================================================== */
+"Sticker.Scan.Title" = "Item scanner";
+"Sticker.Scan.Subtitle" = "Point the camera at the back of the item";
+"Sticker.Scan.Result" = "Item detected";
+"Sticker.Scan.Result.Button.New" = "Add item";
+"Sticker.Scan.Result.Button.Duplicate" = "Add duplicate item";
+
+
+/* ==================================================================================================== */
 /* ERRORS                                                                                               */
 /* ==================================================================================================== */
 "Error.500" = "Error 500";

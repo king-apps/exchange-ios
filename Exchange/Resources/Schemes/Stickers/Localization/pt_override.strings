@@ -115,3 +115,13 @@ Ao adicionar uma foto 📸, elas ficam disponíveis para usuários próximos int
 "StickerFilter.OnlyCollected" = "Coletadas";
 "StickerFilter.OnlyMissing" = "Faltando";
 "StickerFilter.OnlyDuplicated" = "Repetidas";
+
+
+/* ==================================================================================================== */
+/* ALBUM - SCAN DE FIGURINHA                                                                            */
+/* ==================================================================================================== */
+"Sticker.Scan.Title" = "Scanner de figurinhas";
+"Sticker.Scan.Subtitle" = "Aponte a câmera para o verso da figurinha";
+"Sticker.Scan.Result" = "Figurinha detectada";
+"Sticker.Scan.Result.Button.New" = "Adicionar figurinha";
+"Sticker.Scan.Result.Button.Duplicate" = "Adicionar repetida";
