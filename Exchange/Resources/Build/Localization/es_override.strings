@@ -101,7 +101,7 @@ Al agregar una foto 📸, estarán disponibles para usuarios cercanos interesado
 /* ALBUM - LISTA                                                                                        */
 /* ==================================================================================================== */
 "Sticker.List.Title" = "Mi álbum";
-"Sticker.List.Search.Placeholder" = "Buscar por figurita. Ej.: BRA 10";
+"Sticker.List.Search.Placeholder" = "Ej.: SPA 10";
 "Sticker.List.Collected" = "Coleccionadas";
 "Sticker.List.Duplicated" = "Repetidas";
 "Sticker.List.Empty.Filtered" = "No se encontraron figuritas. Ajusta la búsqueda o los filtros e inténtalo de nuevo.";

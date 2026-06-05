@@ -259,6 +259,13 @@
 		A5A2F1232FC8A41F00741582 /* UserLinkEmailValidadeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A2F1222FC8A41200741582 /* UserLinkEmailValidadeDTO.swift */; };
 		A5A2F1252FC8C05500741582 /* MatchProductSuperLikeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A2F1242FC8C04B00741582 /* MatchProductSuperLikeRequestDTO.swift */; };
 		A5A2F1272FC8CC8E00741582 /* ProductCountResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A2F1262FC8CC7F00741582 /* ProductCountResponseDTO.swift */; };
+		A5B6943F2FD2728E00005A1C /* StickerScanConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694382FD2728E00005A1C /* StickerScanConfigurator.swift */; };
+		A5B694402FD2728E00005A1C /* StickerScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943D2FD2728E00005A1C /* StickerScanViewController.swift */; };
+		A5B694412FD2728E00005A1C /* StickerScanModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943A2FD2728E00005A1C /* StickerScanModels.swift */; };
+		A5B694422FD2728E00005A1C /* StickerScanPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943B2FD2728E00005A1C /* StickerScanPresenter.swift */; };
+		A5B694432FD2728E00005A1C /* StickerScanWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943E2FD2728E00005A1C /* StickerScanWorker.swift */; };
+		A5B694442FD2728E00005A1C /* StickerScanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943C2FD2728E00005A1C /* StickerScanRouter.swift */; };
+		A5B694452FD2728E00005A1C /* StickerScanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694392FD2728E00005A1C /* StickerScanInteractor.swift */; };
 		A5BB9B362FC9C03200E81B75 /* ProductBoostResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB9B352FC9C02900E81B75 /* ProductBoostResponseDTO.swift */; };
 		A5BED72D2FA903A9008821DB /* MyProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BED72C2FA903A2008821DB /* MyProductCell.swift */; };
 		A5BED72F2FA9044B008821DB /* MyProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BED72E2FA9044B008821DB /* MyProductCell.xib */; };
@@ -790,6 +797,13 @@
 		A5A2F1222FC8A41200741582 /* UserLinkEmailValidadeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLinkEmailValidadeDTO.swift; sourceTree = "<group>"; };
 		A5A2F1242FC8C04B00741582 /* MatchProductSuperLikeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchProductSuperLikeRequestDTO.swift; sourceTree = "<group>"; };
 		A5A2F1262FC8CC7F00741582 /* ProductCountResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCountResponseDTO.swift; sourceTree = "<group>"; };
+		A5B694382FD2728E00005A1C /* StickerScanConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanConfigurator.swift; sourceTree = "<group>"; };
+		A5B694392FD2728E00005A1C /* StickerScanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanInteractor.swift; sourceTree = "<group>"; };
+		A5B6943A2FD2728E00005A1C /* StickerScanModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanModels.swift; sourceTree = "<group>"; };
+		A5B6943B2FD2728E00005A1C /* StickerScanPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanPresenter.swift; sourceTree = "<group>"; };
+		A5B6943C2FD2728E00005A1C /* StickerScanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanRouter.swift; sourceTree = "<group>"; };
+		A5B6943D2FD2728E00005A1C /* StickerScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanViewController.swift; sourceTree = "<group>"; };
+		A5B6943E2FD2728E00005A1C /* StickerScanWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanWorker.swift; sourceTree = "<group>"; };
 		A5BB9B352FC9C02900E81B75 /* ProductBoostResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBoostResponseDTO.swift; sourceTree = "<group>"; };
 		A5BED72C2FA903A2008821DB /* MyProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductCell.swift; sourceTree = "<group>"; };
 		A5BED72E2FA9044B008821DB /* MyProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProductCell.xib; sourceTree = "<group>"; };
@@ -1886,6 +1900,20 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		A5B694372FD2727700005A1C /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				A5B694382FD2728E00005A1C /* StickerScanConfigurator.swift */,
+				A5B694392FD2728E00005A1C /* StickerScanInteractor.swift */,
+				A5B6943A2FD2728E00005A1C /* StickerScanModels.swift */,
+				A5B6943B2FD2728E00005A1C /* StickerScanPresenter.swift */,
+				A5B6943C2FD2728E00005A1C /* StickerScanRouter.swift */,
+				A5B6943D2FD2728E00005A1C /* StickerScanViewController.swift */,
+				A5B6943E2FD2728E00005A1C /* StickerScanWorker.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
 		A5BED72A2FA90388008821DB /* MyProduct */ = {
 			isa = PBXGroup;
 			children = (
@@ -2364,6 +2392,7 @@
 				A5E6D2542FC11CC100A984E7 /* View */,
 				A5E6D2572FC11CD100A984E7 /* List */,
 				A5DB480A2FC478D70043F93D /* Filter */,
+				A5B694372FD2727700005A1C /* Scan */,
 				A503099D2FC7222D00D6A32F /* Category */,
 			);
 			path = Stickers;
@@ -3504,6 +3533,13 @@
 				A59948B62FB61D2E0014BBD2 /* AuthLoginResponseDTO.swift in Sources */,
 				A5E6D25F2FC11CE500A984E7 /* StickerListInteractor.swift in Sources */,
 				A5E6D2602FC11CE500A984E7 /* StickerListModels.swift in Sources */,
+				A5B6943F2FD2728E00005A1C /* StickerScanConfigurator.swift in Sources */,
+				A5B694402FD2728E00005A1C /* StickerScanViewController.swift in Sources */,
+				A5B694412FD2728E00005A1C /* StickerScanModels.swift in Sources */,
+				A5B694422FD2728E00005A1C /* StickerScanPresenter.swift in Sources */,
+				A5B694432FD2728E00005A1C /* StickerScanWorker.swift in Sources */,
+				A5B694442FD2728E00005A1C /* StickerScanRouter.swift in Sources */,
+				A5B694452FD2728E00005A1C /* StickerScanInteractor.swift in Sources */,
 				A5E6D2612FC11CE500A984E7 /* StickerListConfigurator.swift in Sources */,
 				A5E6D2622FC11CE500A984E7 /* StickerListRouter.swift in Sources */,
 				A5E6D2632FC11CE500A984E7 /* StickerListViewController.swift in Sources */,
