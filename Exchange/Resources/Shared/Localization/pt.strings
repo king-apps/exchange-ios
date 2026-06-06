@@ -336,6 +336,12 @@
 Ao adicionar uma foto 📸, eles ficam disponíveis para usuários próximos interessados em trocar.";
 "KnowMore.Stickers.Info.ButtonTitle" = "Entendi";
 
+// Catalogo bloqueado
+"KnowMore.Stickers.Locked.Title" = "Catálogo bloqueado";
+"KnowMore.Stickers.Locked.Subtitle" = "Alterações manuais estão desativadas";
+"KnowMore.Stickers.Locked.Description" = "O bloqueio evita adicionar ou remover itens por toque na lista. Desative essa opção nos filtros para editar o catálogo manualmente.";
+"KnowMore.Stickers.Locked.ButtonTitle" = "Entendi";
+
 // Produto necessario para usar o match
 "KnowMore.MatchMaker.AddProduct.Title" = "Adicione um produto";
 "KnowMore.MatchMaker.AddProduct.Subtitle" = "Você precisa ter algo para trocar";
@@ -366,6 +372,9 @@ Ao adicionar uma foto 📸, eles ficam disponíveis para usuários próximos int
 "StickerFilter.Categories.Placeholder" = "Todas as categorias";
 "StickerFilter.Categories.Value" = "{$0} selecionado(s)";
 "StickerFilter.Only.Title" = "MOSTRAR APENAS";
+"StickerFilter.Options.Title" = "OPÇÕES";
+"StickerFilter.SortByName" = "Ordem alfabética";
+"StickerFilter.Locked" = "Bloquear";
 "StickerFilter.OnlyCollected" = "Salvos";
 "StickerFilter.OnlyMissing" = "Não adicionados";
 "StickerFilter.OnlyDuplicated" = "Para troca";
@@ -379,6 +388,8 @@ Ao adicionar uma foto 📸, eles ficam disponíveis para usuários próximos int
 "Sticker.Scan.Title" = "Scanner de itens";
 "Sticker.Scan.Subtitle" = "Aponte a câmera para o verso do item";
 "Sticker.Scan.Result" = "Item detectado";
+"Sticker.Scan.Result.Title.New" = "Item novo";
+"Sticker.Scan.Result.Title.Duplicate" = "Item repetido";
 "Sticker.Scan.Result.Button.New" = "Adicionar item";
 "Sticker.Scan.Result.Button.Duplicate" = "Adicionar item repetido";
 

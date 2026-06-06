@@ -7,14 +7,16 @@ class StickerCategoryListCell: UITableViewCellBase, NibLoadableCell {
     // Var's
     @IBOutlet var imageViewIconLeft: UIImageView!
     @IBOutlet var labelName: UILabel!
-    @IBOutlet var imageViewIconRight: UIImageView!
+    @IBOutlet var labelCount: UILabel!
+    @IBOutlet var viewCount: UIView!
     
 
     // Model
     struct Model {
         var iconLeft: String
         var name: String
-        var iconRight: AppTheme.Icon
+        var count: String
+        var color: UIColor
     }
     
     
@@ -29,13 +31,9 @@ class StickerCategoryListCell: UITableViewCellBase, NibLoadableCell {
         }
         
         labelName.text = model.name.uppercased()
-        
-        if model.iconRight == .none {
-            imageViewIconRight.removeFromSuperview()
-        }
-        else {
-            imageViewIconRight.image = AppTheme.icon(model.iconRight)
-        }
+        labelCount.text = model.count
+        viewCount.backgroundColor = model.color
+        viewCount.layer.cornerRadius = AppTheme.Radius.lg
         
         
     }

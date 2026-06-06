@@ -44,6 +44,8 @@ enum StickerFilter {
             var missing: Bool
             var duplicated: Bool
             var published: Bool
+            var sortByName: Bool
+            var locked: Bool
         }
         struct Response {
             

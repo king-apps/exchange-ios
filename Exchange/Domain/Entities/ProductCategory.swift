@@ -8,6 +8,7 @@ struct ProductCategoryData {
     let name: String
     let logo: String
     let coverUrl: String?
+    let sort: Int
 }
 
 
@@ -19,6 +20,7 @@ class ProductCategory {
     private var code: String
     private var color: String
     private var coverUrl: String
+    private var sort: Int
     
     init() {
         id = -1
@@ -27,6 +29,7 @@ class ProductCategory {
         code = ""
         color = ""
         coverUrl = ""
+        sort = 0
     }
     
     convenience init(data: ProductCategoryData) {
@@ -38,6 +41,7 @@ class ProductCategory {
         code << data.code
         color << data.color
         coverUrl << data.coverUrl
+        sort << data.sort
     }
     
     convenience init(dto: ProductCategoryDTO) {
@@ -49,6 +53,7 @@ class ProductCategory {
         code << dto.code
         color << dto.color
         coverUrl << dto.logo
+        sort << dto.sort
     }
     
     func getId() -> Int { id }
@@ -57,6 +62,8 @@ class ProductCategory {
     func getCode() -> String { code }
     func getColor() -> String { color }
     func getCoverUrl() -> String { coverUrl }
+    func getSort() -> Int { sort }
+    
     
     func getPrimaryColor() -> UIColor {
         ProductCategory.primaryColor(forCode: code)
@@ -88,6 +95,8 @@ class ProductCategory {
         "KOR": UIColor(hex: "#003478"),
         "CIV": UIColor(hex: "#006B3F"),
         "ESP_CROMOS": UIColor(hex: "#4B5563"),
+        "FWC": UIColor(hex: "#475569"),
+        "CC": UIColor(hex: "#F40009"),
         "CRO": UIColor(hex: "#B31942"),
         "CUW": UIColor(hex: "#002B7F"),
         "EGY": UIColor(hex: "#CE1126"),

@@ -34,6 +34,9 @@ class StickerScanResultViewController: MainBaseViewController, StickerScanResult
     private var categoryUrl: String?
     
     
+    @IBOutlet var labelTitleResult: UILabel!
+    @IBOutlet var imageviewIcon: UIImageView!
+    
     @IBOutlet var viewCard: UIView!
     @IBOutlet var imageViewSticker: UIImageView!
     
@@ -92,6 +95,7 @@ class StickerScanResultViewController: MainBaseViewController, StickerScanResult
         imageViewSticker.backgroundColor = AppTheme.Colors.backgroundDisabled
         viewLabelCount.layer.cornerRadius = viewLabelCount.bounds.height / 2
         imageViewCategory.layer.cornerRadius = imageViewCategory.bounds.height / 2
+        imageviewIcon.contentMode = .scaleAspectFit
     }
     
     
@@ -117,8 +121,10 @@ class StickerScanResultViewController: MainBaseViewController, StickerScanResult
         interactor?.fetch(request: request)
     }
     func onFetch(viewModel: StickerScanResult.Fetch.ViewModel) {
+        
         stickerColor = viewModel.color
         categoryUrl = viewModel.categoryUrl
+        setupResultHeader(item: viewModel.item)
         setupSaveButton(item: viewModel.item)
         emitDetectedFeedback(item: viewModel.item)
         
@@ -147,6 +153,7 @@ class StickerScanResultViewController: MainBaseViewController, StickerScanResult
         }
         
         if let item = viewModel.item {
+            setupResultHeader(item: item)
             setupSaveButton(item: item)
             setupSticker(
                 item: item,
@@ -231,7 +238,7 @@ class StickerScanResultViewController: MainBaseViewController, StickerScanResult
         hasCollectedSticker(item) ? .white : AppTheme.Colors.textOnSurfaceSecondary
     }
     private func stickerCountColor(for item: StickerListCell.Item) -> UIColor {
-        item.collected > 1 ? .white : AppTheme.Colors.textOnSurfaceDisabled
+        item.collected > 1 ? .white : AppTheme.Colors.textOnSurface
     }
     private func setupCategoryImage(_ categoryUrl: String?) {
         guard let categoryUrl, categoryUrl.isEmpty == false else {
@@ -255,6 +262,18 @@ class StickerScanResultViewController: MainBaseViewController, StickerScanResult
         buttonSave.setTitle(title, for: .disabled)
         buttonSave.setTitleColor(.white, for: .normal)
         buttonSave.tintColor = .white
+    }
+    private func setupResultHeader(item: StickerListCell.Item) {
+        let hasSticker = hasCollectedSticker(item)
+        let title = hasSticker
+            ? "Sticker.Scan.Result.Title.Duplicate".localized
+            : "Sticker.Scan.Result.Title.New".localized
+        let icon: AppTheme.Icon = hasSticker ? .alertCircle : .checkCircle
+        let color = hasSticker ? AppTheme.Colors.error500 : AppTheme.Colors.success500
+        
+        labelTitleResult.text = title
+        imageviewIcon.image = AppTheme.icon(icon).withRenderingMode(.alwaysTemplate)
+        imageviewIcon.tintColor = color
     }
     private func emitDetectedFeedback(item: StickerListCell.Item) {
         if hasCollectedSticker(item) {

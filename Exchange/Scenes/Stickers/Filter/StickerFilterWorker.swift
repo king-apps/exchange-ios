@@ -34,6 +34,8 @@ class StickerFilterWorker {
         LocalConfig.shared.setStickerFilterOnlyMissing(request.missing)
         LocalConfig.shared.setstickerFilterOnlyDuplicated(request.duplicated)
         LocalConfig.shared.setStickerFilterOnlyPublished(request.published)
+        LocalConfig.shared.setStickerFilterSortByName(request.sortByName)
+        LocalConfig.shared.setStickerFilterLocked(request.locked)
         LocalConfig.shared.save()
         completion()
         

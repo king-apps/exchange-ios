@@ -113,12 +113,16 @@ class StickerFilterViewController: MainBaseViewController, StickerFilterDisplayL
         let missing = rows.switchValue(identifier: .missing)
         let duplicated = rows.switchValue(identifier: .duplicated)
         let published = rows.switchValue(identifier: .published)
+        let sortByName = rows.switchValue(identifier: .sortByName)
+        let locked = rows.switchValue(identifier: .locked)
         
         let request = StickerFilter.Save.Request(
             collected: collected,
             missing: missing,
             duplicated: duplicated,
-            published: published
+            published: published,
+            sortByName: sortByName,
+            locked: locked
         )
         interactor?.save(request: request)
         

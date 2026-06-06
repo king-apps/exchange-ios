@@ -14,6 +14,7 @@ enum KnowMoreOption {
     
     case stickerImage
     case stickerInfo
+    case stickerLocked
     
     case matchMakerAddProduct
     case matchMakerNeedLocation

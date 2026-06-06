@@ -89,6 +89,15 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 
 
 /* ==================================================================================================== */
+/* KNOW MORE - LOCKED ALBUM                                                                             */
+/* ==================================================================================================== */
+"KnowMore.Stickers.Locked.Title" = "Album locked";
+"KnowMore.Stickers.Locked.Subtitle" = "Manual changes are disabled";
+"KnowMore.Stickers.Locked.Description" = "The lock prevents adding or removing stickers by tapping the list. Turn this option off in filters to edit the album manually.";
+"KnowMore.Stickers.Locked.ButtonTitle" = "Got it";
+
+
+/* ==================================================================================================== */
 /* KNOW MORE - STICKER REQUIRED TO USE MATCH                                                            */
 /* ==================================================================================================== */
 "KnowMore.MatchMaker.AddProduct.Title" = "Add a sticker";
@@ -101,7 +110,7 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 /* ALBUM - LIST                                                                                         */
 /* ==================================================================================================== */
 "Sticker.List.Title" = "My album";
-"Sticker.List.Search.Placeholder" = "Search by sticker. Ex: BRA 10";
+"Sticker.List.Search.Placeholder" = "Ex: USA 10";
 "Sticker.List.Collected" = "Collected";
 "Sticker.List.Duplicated" = "Duplicates";
 "Sticker.List.Empty.Filtered" = "No stickers found. Adjust your search or filters and try again.";
@@ -112,6 +121,7 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 /* ==================================================================================================== */
 "StickerFilter.Categories.Title" = "Teams";
 "StickerFilter.Categories.Placeholder" = "All teams";
+"StickerFilter.Locked" = "Lock album";
 "StickerFilter.OnlyCollected" = "Collected";
 "StickerFilter.OnlyMissing" = "Missing";
 "StickerFilter.OnlyDuplicated" = "Duplicates";
@@ -123,5 +133,7 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 "Sticker.Scan.Title" = "Sticker scanner";
 "Sticker.Scan.Subtitle" = "Point the camera at the back of the sticker";
 "Sticker.Scan.Result" = "Sticker detected";
-"Sticker.Scan.Result.Button.New" = "Add sticker";
-"Sticker.Scan.Result.Button.Duplicate" = "Add duplicate";
+"Sticker.Scan.Result.Title.New" = "New sticker";
+"Sticker.Scan.Result.Title.Duplicate" = "Duplicate sticker";
+"Sticker.Scan.Result.Button.New" = "NEW sticker • add to album";
+"Sticker.Scan.Result.Button.Duplicate" = "Duplicate • add anyway";

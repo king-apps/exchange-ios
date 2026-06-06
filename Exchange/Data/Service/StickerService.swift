@@ -22,35 +22,20 @@ class StickerService {
             let stickerCategoryDatabase = try StickerCategoryDatabase()
             let list: [ProductCategory] = try stickerCategoryDatabase.list()
             
-            if list.isEmpty {
-                
-                let api = ProductApi()
-                api.categories { categories, error in
-                    
-                    if let categories = categories {
-                        
-                        for category in categories {
-                            let _ = try? stickerCategoryDatabase.insert(category)
-                            
-                            for i in 1...20 {
-                                let sticker = Sticker()
-                                sticker.setIdCategory(category.getId())
-                                sticker.setTitle(category.getCode())
-                                sticker.setDescription("\(i)")
-                                let _ = try? stickerDatabase.insert(sticker)
-                            }
-                        }
-                        
-                        completion(true)
-                    }
-                    else {
-                        completion(false)
-                    }
-            
+            let api = ProductApi()
+            api.categories { categories, error in
+                guard let categories else {
+                    completion(list.isEmpty == false)
+                    return
                 }
-    
-            }
-            else {
+                
+                self.saveCategories(
+                    categories,
+                    existingCategoryIds: Set(list.map { $0.getId() }),
+                    stickerDatabase: stickerDatabase,
+                    stickerCategoryDatabase: stickerCategoryDatabase
+                )
+                
                 completion(true)
             }
         } catch {
@@ -59,6 +44,55 @@ class StickerService {
         
     }
     
+    private func saveCategories(
+        _ categories: [ProductCategory],
+        existingCategoryIds: Set<Int>,
+        stickerDatabase: StickerDatabase,
+        stickerCategoryDatabase: StickerCategoryDatabase
+    ) {
+        for category in categories {
+            if existingCategoryIds.contains(category.getId()) {
+                let _ = try? stickerCategoryDatabase.update(category)
+                continue
+            }
+            
+            let _ = try? stickerCategoryDatabase.insert(category)
+            createDefaultStickers(for: category, stickerDatabase: stickerDatabase)
+        }
+    }
+    
+    private func createDefaultStickers(for category: ProductCategory, stickerDatabase: StickerDatabase) {
+        if category.getCode().uppercased() == "FWC" {
+            for i in 1...19 {
+                let sticker = Sticker()
+                sticker.setIdCategory(category.getId())
+                sticker.setTitle(category.getCode())
+                sticker.setDescription("\(i)")
+                let _ = try? stickerDatabase.insert(sticker)
+            }
+        }
+        else {
+            if category.getCode().uppercased() == "CC" {
+                for i in 1...14 {
+                    let sticker = Sticker()
+                    sticker.setIdCategory(category.getId())
+                    sticker.setTitle(category.getCode())
+                    sticker.setDescription("\(i)")
+                    let _ = try? stickerDatabase.insert(sticker)
+                }
+            }
+            else {
+                for i in 1...20 {
+                    let sticker = Sticker()
+                    sticker.setIdCategory(category.getId())
+                    sticker.setTitle(category.getCode())
+                    sticker.setDescription("\(i)")
+                    let _ = try? stickerDatabase.insert(sticker)
+                }
+            }
+        }
+        
+    }
+    
     
 }
-

@@ -24,6 +24,8 @@ class SwitchCell: UITableViewCell, NibLoadableCell {
         case missing
         case duplicated
         case published
+        case locked
+        case sortByName
     }
     
     

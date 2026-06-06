@@ -336,6 +336,12 @@
 Once you add a photo 📸, they'll be available to nearby users interested in trading.";
 "KnowMore.Stickers.Info.ButtonTitle" = "Got it";
 
+// Locked catalog
+"KnowMore.Stickers.Locked.Title" = "Catalog locked";
+"KnowMore.Stickers.Locked.Subtitle" = "Manual changes are disabled";
+"KnowMore.Stickers.Locked.Description" = "The lock prevents adding or removing items by tapping the list. Turn this option off in filters to edit the catalog manually.";
+"KnowMore.Stickers.Locked.ButtonTitle" = "Got it";
+
 // Product required to use match
 "KnowMore.MatchMaker.AddProduct.Title" = "Add a product";
 "KnowMore.MatchMaker.AddProduct.Subtitle" = "You need something to trade";
@@ -366,6 +372,9 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 "StickerFilter.Categories.Placeholder" = "All categories";
 "StickerFilter.Categories.Value" = "{$0} selected";
 "StickerFilter.Only.Title" = "SHOW ONLY";
+"StickerFilter.Options.Title" = "OPTIONS";
+"StickerFilter.SortByName" = "Alphabetical order";
+"StickerFilter.Locked" = "Lock";
 "StickerFilter.OnlyCollected" = "Saved";
 "StickerFilter.OnlyMissing" = "Not added";
 "StickerFilter.OnlyDuplicated" = "For trade";
@@ -379,6 +388,8 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 "Sticker.Scan.Title" = "Item scanner";
 "Sticker.Scan.Subtitle" = "Point the camera at the back of the item";
 "Sticker.Scan.Result" = "Item detected";
+"Sticker.Scan.Result.Title.New" = "New item";
+"Sticker.Scan.Result.Title.Duplicate" = "Duplicate item";
 "Sticker.Scan.Result.Button.New" = "Add item";
 "Sticker.Scan.Result.Button.Duplicate" = "Add duplicate item";
 

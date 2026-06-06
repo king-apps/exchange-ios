@@ -15,6 +15,8 @@ class LocalConfig {
     private var stickerFilterOnlyMissing: Bool
     private var stickerFilterOnlyDuplicated: Bool
     private var stickerFilterOnlyPublished: Bool
+    private var stickerFilterSortByName: Bool
+    private var stickerFilterLocked: Bool
     
     private var hasChanged: Bool
 
@@ -30,7 +32,9 @@ class LocalConfig {
         static let stickerFilterOnlyCollected = "LocalConfig.StickerFilterOnlyCollected"
         static let stickerFilterOnlyMissing = "LocalConfig.StickerFilterOnlyMissing"
         static let stickerFilterOnlyDuplicated = "LocalConfig.StickerFilterOnlyDuplicated"
-        static let stickerFilterOnlyPublished = "LocalConfig.FilterStickerOnlyPublished"
+        static let stickerFilterOnlyPublished = "LocalConfig.StickerFilterOnlyPublished"
+        static let stickerFilterSortByName = "LocalConfig.StickerFilterSortByName"
+        static let stickerFilterLocked = "LocalConfig.StickerFilterLocked"
     }
     
     
@@ -45,6 +49,8 @@ class LocalConfig {
         stickerFilterOnlyMissing = false
         stickerFilterOnlyDuplicated = false
         stickerFilterOnlyPublished = false
+        stickerFilterSortByName = false
+        stickerFilterLocked = false
         
         hasChanged = false
     }
@@ -62,6 +68,9 @@ class LocalConfig {
         defaults.set(stickerFilterOnlyMissing, forKey: Key.stickerFilterOnlyMissing)
         defaults.set(stickerFilterOnlyDuplicated, forKey: Key.stickerFilterOnlyDuplicated)
         defaults.set(stickerFilterOnlyPublished, forKey: Key.stickerFilterOnlyPublished)
+        defaults.set(stickerFilterSortByName, forKey: Key.stickerFilterSortByName)
+        defaults.set(stickerFilterLocked, forKey: Key.stickerFilterLocked)
+        
         defaults.synchronize()
     }
     
@@ -80,6 +89,8 @@ class LocalConfig {
         stickerFilterOnlyMissing << defaults.value(forKey: Key.stickerFilterOnlyMissing)
         stickerFilterOnlyDuplicated << defaults.value(forKey: Key.stickerFilterOnlyDuplicated)
         stickerFilterOnlyPublished << defaults.value(forKey: Key.stickerFilterOnlyPublished)
+        stickerFilterSortByName << defaults.value(forKey: Key.stickerFilterSortByName)
+        stickerFilterLocked << defaults.value(forKey: Key.stickerFilterLocked)
     }
     
     
@@ -94,6 +105,8 @@ class LocalConfig {
         stickerFilterOnlyMissing = false
         stickerFilterOnlyDuplicated = false
         stickerFilterOnlyPublished = false
+        stickerFilterSortByName = false
+        stickerFilterLocked = false
         
         hasChanged = true
         save()
@@ -126,6 +139,12 @@ class LocalConfig {
     func setStickerFilterOnlyPublished(_ value: Bool) {
         self.stickerFilterOnlyPublished = value
     }
+    func setStickerFilterSortByName(_ value: Bool) {
+        self.stickerFilterSortByName = value
+    }
+    func setStickerFilterLocked(_ value: Bool) {
+        self.stickerFilterLocked = value
+    }
     
     func setHasChanged(_ value: Bool) {
         hasChanged = value
@@ -157,6 +176,12 @@ class LocalConfig {
     }
     func getStickerFilterOnlyPublished() -> Bool {
         return stickerFilterOnlyPublished
+    }
+    func getStickerFilterSortByName() -> Bool {
+        return stickerFilterSortByName
+    }
+    func getStickerFilterLocked() -> Bool {
+        return stickerFilterLocked
     }
     
     func getHasChanged() -> Bool {

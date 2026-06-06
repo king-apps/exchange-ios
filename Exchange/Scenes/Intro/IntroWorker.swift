@@ -15,20 +15,21 @@ class IntroWorker {
     // Handler language
     @MainActor func language(completion: @escaping(_ language: String) -> ()) {
         
-        var language = LocalConfig.shared.getLanguage()
-        if language.isEmpty {
-            if let languageCode = Locale.preferredLanguages.first {
-                if languageCode.starts(with: "pt") {
-                    language = "pt"
-                } else if languageCode.starts(with: "en") {
-                    language = "en"
-                } else {
-                    language = "en"
-                }
+        var language = "en"
+        
+        if let languageCode = Locale.preferredLanguages.first {
+            if languageCode.starts(with: "pt") {
+                language = "pt"
+            } else if languageCode.starts(with: "en") {
+                language = "en"
+            } else if languageCode.starts(with: "es") {
+                language = "es"
             }
-            LocalConfig.shared.setLanguage(language)
-            LocalConfig.shared.save()
         }
+
+        LocalConfig.shared.setLanguage(language)
+        LocalConfig.shared.save()
+
         
         completion(language)
         

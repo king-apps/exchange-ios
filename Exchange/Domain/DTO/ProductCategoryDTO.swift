@@ -5,4 +5,5 @@ struct ProductCategoryDTO: Decodable {
     let color: String?
     let name: String?
     let logo: String?
+    let sort: Int?
 }

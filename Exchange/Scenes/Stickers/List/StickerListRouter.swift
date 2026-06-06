@@ -13,6 +13,7 @@ import UIKit
     func routeToStickerImage()
     func routeToFilter(segue: UIStoryboardSegue?)
     func routeToStickerInfo()
+    func routeToStickerLocked()
     func routeToProduct(segue: UIStoryboardSegue?)
     func routeToScan(segue: UIStoryboardSegue?)
 }
@@ -37,6 +38,9 @@ class StickerListRouter: NSObject, StickerListRoutingLogic, StickerListDataPassi
     }
     func routeToStickerInfo() {
         routeToKnowMore(.stickerInfo)
+    }
+    func routeToStickerLocked() {
+        routeToKnowMore(.stickerLocked)
     }
     private func routeToKnowMore(_ option: KnowMoreOption) {
         if let destinationVC = UIStoryboard(name: "KnowMore", bundle: nil).instantiateInitialViewController() as? KnowMoreViewController {

@@ -41,6 +41,7 @@ class StickerFilterPresenter: StickerFilterPresentationLogic {
         
         
         // Inputs
+        /*
         rows.append(
             .inputSelect(
                 .init(
@@ -62,6 +63,39 @@ class StickerFilterPresenter: StickerFilterPresentationLogic {
                 )
             )
         )
+        */
+        
+        // Options
+        /*
+        rows.append(
+            .textCaptionSemibold(
+                .init(
+                    color: .textOnSurfaceSecondary,
+                    icon: .none,
+                    title: "StickerFilter.Options.Title".localized
+                )
+            )
+        )*/
+        rows.append(
+            .switch(
+                .init(
+                    title: "StickerFilter.SortByName".localized,
+                    isOn: config.getStickerFilterSortByName(),
+                    identifier: .sortByName
+                )
+            )
+        )
+        rows.append(
+            .switch(
+                .init(
+                    title: "StickerFilter.Locked".localized,
+                    isOn: config.getStickerFilterLocked(),
+                    identifier: .locked
+                )
+            )
+        )
+        rows.append(.spacing(.init(size: .lg)))
+        
         
         // Only
         rows.append(

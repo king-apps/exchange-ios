@@ -131,7 +131,11 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
             return
         }
         
-        let indexPaths = uniqueIndexPaths(indexPathsForStatisticRows() + [stickerIndexPath])
+        let indexPaths = uniqueIndexPaths(
+            indexPathsForStatisticRows()
+                + [stickerIndexPath]
+                + indexPathsForStickerCategoryHeader(id: viewModel.id)
+        )
         guard previousRowCount == rows.count, indexPaths.allSatisfy({ $0.row < previousRowCount }) else {
             tableView?.reloadData()
             return
@@ -176,6 +180,25 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
         }
         
         return nil
+    }
+    
+    private func indexPathsForStickerCategoryHeader(id: Int) -> [IndexPath] {
+        var categoryHeaderIndexPath: IndexPath?
+        
+        for (index, row) in rows.enumerated() {
+            switch row {
+            case .stickerCategoryList:
+                categoryHeaderIndexPath = IndexPath(row: index, section: 0)
+            case .stickerList(let model):
+                if model.items.contains(where: { $0.id == id }) {
+                    return categoryHeaderIndexPath.map { [$0] } ?? []
+                }
+            default:
+                break
+            }
+        }
+        
+        return []
     }
     
     

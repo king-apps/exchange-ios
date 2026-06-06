@@ -141,8 +141,9 @@ class StickerListPresenter: StickerListPresentationLogic {
                     .stickerCategoryList(
                         .init(
                             iconLeft: stickerCategory.category.getLogo(),
-                            name: stickerCategory.category.getCode()+" • "+stickerCategory.category.getName(),
-                            iconRight: .arrowDown
+                            name: stickerCategory.category.getCode(),
+                            count: makeCategoryCount(stickerCategory),
+                            color: stickerCategory.category.getPrimaryColor()
                         )
                     )
                 )
@@ -224,6 +225,13 @@ class StickerListPresenter: StickerListPresentationLogic {
             Float(collected) / Float(total),
             owned > 0 ? min(Float(duplicated) / Float(owned), 1) : 0
         )
+    }
+    
+    private func makeCategoryCount(_ stickerCategory: StickerCategory) -> String {
+        let total = stickerCategory.stickers.count
+        let collected = stickerCategory.stickers.filter { $0.getCollected() > 0 }.count
+        
+        return "\(collected)/\(total)"
     }
     
     

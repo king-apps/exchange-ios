@@ -10,10 +10,22 @@ extension StickerListViewController: StickerListCellDelegate {
         product(id: id)
     }
     func stickerListCellDidTapSticker(id: Int) {
+        guard LocalConfig.shared.getStickerFilterLocked() == false else {
+            AppHaptics.warning()
+            router?.routeToStickerLocked()
+            return
+        }
+        
         updateCollected(id: id, operation: .add)
     }
     
     func stickerListCellDidLongPressSticker(id: Int) {
+        guard LocalConfig.shared.getStickerFilterLocked() == false else {
+            AppHaptics.warning()
+            router?.routeToStickerLocked()
+            return
+        }
+        
         updateCollected(id: id, operation: .remove)
     }
     

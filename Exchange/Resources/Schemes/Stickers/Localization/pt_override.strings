@@ -89,6 +89,15 @@ Ao adicionar uma foto 📸, elas ficam disponíveis para usuários próximos int
 
 
 /* ==================================================================================================== */
+/* KNOW MORE - ALBUM BLOQUEADO                                                                          */
+/* ==================================================================================================== */
+"KnowMore.Stickers.Locked.Title" = "Álbum bloqueado";
+"KnowMore.Stickers.Locked.Subtitle" = "Alterações manuais estão desativadas";
+"KnowMore.Stickers.Locked.Description" = "O bloqueio evita adicionar ou remover figurinhas por toque na lista. Desative essa opção nos filtros para editar o álbum manualmente.";
+"KnowMore.Stickers.Locked.ButtonTitle" = "Entendi";
+
+
+/* ==================================================================================================== */
 /* KNOW MORE - FIGURINHA NECESSARIA PARA USAR O MATCH                                                   */
 /* ==================================================================================================== */
 "KnowMore.MatchMaker.AddProduct.Title" = "Adicione uma figurinha";
@@ -101,7 +110,7 @@ Ao adicionar uma foto 📸, elas ficam disponíveis para usuários próximos int
 /* ALBUM - LISTA                                                                                        */
 /* ==================================================================================================== */
 "Sticker.List.Title" = "Meu álbum";
-"Sticker.List.Search.Placeholder" = "Buscar por figurinha. Ex: BRA 10";
+"Sticker.List.Search.Placeholder" = "Ex: BRA 10";
 "Sticker.List.Collected" = "Coletadas";
 "Sticker.List.Duplicated" = "Repetidas";
 "Sticker.List.Empty.Filtered" = "Nenhuma figurinha encontrada. Ajuste a busca ou os filtros para tentar novamente.";
@@ -112,6 +121,7 @@ Ao adicionar uma foto 📸, elas ficam disponíveis para usuários próximos int
 /* ==================================================================================================== */
 "StickerFilter.Categories.Title" = "Seleções";
 "StickerFilter.Categories.Placeholder" = "Todas as seleções";
+"StickerFilter.Locked" = "Bloquear álbum";
 "StickerFilter.OnlyCollected" = "Coletadas";
 "StickerFilter.OnlyMissing" = "Faltando";
 "StickerFilter.OnlyDuplicated" = "Repetidas";
@@ -122,6 +132,7 @@ Ao adicionar uma foto 📸, elas ficam disponíveis para usuários próximos int
 /* ==================================================================================================== */
 "Sticker.Scan.Title" = "Scanner de figurinhas";
 "Sticker.Scan.Subtitle" = "Aponte a câmera para o verso da figurinha";
-"Sticker.Scan.Result" = "Figurinha detectada";
-"Sticker.Scan.Result.Button.New" = "Adicionar figurinha";
-"Sticker.Scan.Result.Button.Duplicate" = "Adicionar repetida";
+"Sticker.Scan.Result.Title.New" = "Figurinha nova";
+"Sticker.Scan.Result.Title.Duplicate" = "Figurinha repetida";
+"Sticker.Scan.Result.Button.New" = "Figurinha NOVA • adicionar ao álbum";
+"Sticker.Scan.Result.Button.Duplicate" = "Repetida • adicionar mesmo assim";

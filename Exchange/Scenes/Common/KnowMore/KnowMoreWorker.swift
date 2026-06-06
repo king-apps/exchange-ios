@@ -116,6 +116,15 @@ class KnowMoreWorker {
                 buttonTitle = "KnowMore.Stickers.Info.ButtonTitle".localized
                 buttonIsEnabled = true
                 break
+            case .stickerLocked:
+                icon = .lock
+                iconColor = .warning500
+                title = "KnowMore.Stickers.Locked.Title".localized
+                subtitle = "KnowMore.Stickers.Locked.Subtitle".localized
+                description = "KnowMore.Stickers.Locked.Description".localized
+                buttonTitle = "KnowMore.Stickers.Locked.ButtonTitle".localized
+                buttonIsEnabled = true
+                break
             case .matchMakerAddProduct:
                 icon = .plus
                 iconColor = .brandPrimary500
@@ -177,8 +186,6 @@ class KnowMoreWorker {
     // Handler purchase
     func purchase(product: SKProduct?, completion: @escaping(_ error: String?) -> ()) {
         
-        completion(nil)
-        return 
         guard let product else {
             completion("Alert.Generic.Error".localized)
             return

@@ -22,7 +22,10 @@ class StickerCategoryListWorker {
     func fetch(completion: @escaping(_ categories: [ProductCategory]?, _ localConfig: LocalConfig) -> ()) {
         
         let db = try? StickerCategoryDatabase()
-        let categories = try? db?.list()
+        let sortOrder: StickerCategoryDatabase.SortOrder = LocalConfig.shared.getStickerFilterSortByName()
+            ? .code
+            : .sort
+        let categories = try? db?.list(sortOrder: sortOrder)
         let localConfig = LocalConfig.shared
         completion(categories, localConfig)
         

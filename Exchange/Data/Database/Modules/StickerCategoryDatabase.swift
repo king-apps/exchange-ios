@@ -3,6 +3,11 @@ import Foundation
 
 class StickerCategoryDatabase {
     
+    enum SortOrder {
+        case sort
+        case code
+    }
+    
     private enum Table {
         static let raw = "category"
         
@@ -12,6 +17,7 @@ class StickerCategoryDatabase {
         static let name = "name"
         static let logo = "logo"
         static let coverUrl = "cover_url"
+        static let sort = "sort"
     }
     
     // Var's
@@ -30,7 +36,7 @@ class StickerCategoryDatabase {
         return try list(ids: [id]).first
     }
     
-    func list(ids: [Int]? = nil) throws -> [ProductCategory] {
+    func list(ids: [Int]? = nil, sortOrder: SortOrder = .sort) throws -> [ProductCategory] {
         var sql = """
         SELECT
             \(Table.id),
@@ -38,7 +44,8 @@ class StickerCategoryDatabase {
             \(Table.color),
             \(Table.name),
             \(Table.logo),
-            \(Table.coverUrl)
+            \(Table.coverUrl),
+            \(Table.sort)
         FROM \(Table.raw)
         """
         var parameters: [SQLiteValue] = []
@@ -51,7 +58,7 @@ class StickerCategoryDatabase {
             parameters = ids.map { .integer(Int64($0)) }
         }
         
-        sql += " ORDER BY \(Table.code)"
+        sql += " \(orderClause(for: sortOrder))"
         
         return try db
             .query(sql, parameters: parameters)
@@ -68,8 +75,9 @@ class StickerCategoryDatabase {
                 \(Table.color),
                 \(Table.name),
                 \(Table.logo),
-                \(Table.coverUrl)
-            ) VALUES (?, ?, ?, ?, ?, ?)
+                \(Table.coverUrl),
+                \(Table.sort)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
             parameters: values(for: category)
         )
@@ -85,7 +93,8 @@ class StickerCategoryDatabase {
                 \(Table.color) = ?,
                 \(Table.name) = ?,
                 \(Table.logo) = ?,
-                \(Table.coverUrl) = ?
+                \(Table.coverUrl) = ?,
+                \(Table.sort) = ?
             WHERE \(Table.id) = ?
             """,
             parameters: [
@@ -94,6 +103,7 @@ class StickerCategoryDatabase {
                 .text(category.getName()),
                 .text(category.getLogo()),
                 .text(category.getCoverUrl()),
+                .integer(Int64(category.getSort())),
                 .integer(Int64(category.getId()))
             ]
         )
@@ -106,8 +116,18 @@ class StickerCategoryDatabase {
             .text(category.getColor()),
             .text(category.getName()),
             .text(category.getLogo()),
-            .text(category.getCoverUrl())
+            .text(category.getCoverUrl()),
+            .integer(Int64(category.getSort()))
         ]
+    }
+    
+    private func orderClause(for sortOrder: SortOrder) -> String {
+        switch sortOrder {
+        case .sort:
+            return "ORDER BY \(Table.sort), \(Table.code) COLLATE NOCASE"
+        case .code:
+            return "ORDER BY \(Table.code) COLLATE NOCASE"
+        }
     }
     
     private func mapCategory(row: SQLiteRow) -> ProductCategory {
@@ -117,7 +137,8 @@ class StickerCategoryDatabase {
             color: row.string(Table.color),
             name: row.string(Table.name) ?? "",
             logo: row.string(Table.logo) ?? "",
-            coverUrl: row.string(Table.coverUrl)
+            coverUrl: row.string(Table.coverUrl),
+            sort: row.int(Table.sort) ?? 0
         ))
     }
 }

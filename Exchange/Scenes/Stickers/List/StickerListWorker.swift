@@ -187,7 +187,10 @@ class StickerListWorker {
     private func fetchLocalStickerCategories() throws -> [StickerCategory] {
         let stickerDatabase = try StickerDatabase()
         let stickerCategoryDatabase = try StickerCategoryDatabase()
-        let listProductCategory: [ProductCategory] = try stickerCategoryDatabase.list()
+        let sortOrder: StickerCategoryDatabase.SortOrder = LocalConfig.shared.getStickerFilterSortByName()
+            ? .code
+            : .sort
+        let listProductCategory: [ProductCategory] = try stickerCategoryDatabase.list(sortOrder: sortOrder)
         
         var listResponse = [StickerCategory]()
         
