@@ -10,7 +10,9 @@
 	<string>$(AD_REWARD)</string>
 	<key>CFBundleLocalizations</key>
 	<array>
-		<string>$(EX_BUNDLE_LOCALIZATION)</string>
+		<string>pt-BR</string>
+		<string>en</string>
+		<string>es</string>
 	</array>
 	<key>EX_API_BASE_URL</key>
 	<string>$(EX_API_BASE_URL)</string>

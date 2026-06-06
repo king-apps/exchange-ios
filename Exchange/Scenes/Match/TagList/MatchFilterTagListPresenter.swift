@@ -78,9 +78,9 @@ class MatchFilterTagListPresenter: MatchFilterTagListPresentationLogic {
                             iconLeft: .none,
                             iconLeftUrl: category.getLogo(),
                             iconRight: isSelected ? .checkCircle : .circle,
-                            title: category.getName(),
-                            titleNumberOfLines: nil,
-                            description: category.getCode(),
+                            title: category.getCode(),
+                            titleNumberOfLines: 1,
+                            description: nil, // category.getCode(),
                             style: isSelected ? .selected : .normal,
                             identifier: .generic,
                             tag: nil

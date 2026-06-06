@@ -97,14 +97,15 @@
                                     <constraint firstItem="POp-va-dfp" firstAttribute="leading" secondItem="F0M-4b-UP6" secondAttribute="trailing" constant="16" id="7gF-6e-QSv"/>
                                     <constraint firstAttribute="trailing" secondItem="Lzo-xQ-19R" secondAttribute="trailing" priority="999" constant="16" id="EAP-Pj-dnw"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="POp-va-dfp" secondAttribute="bottom" constant="16" id="Fe4-O7-03I"/>
-                                    <constraint firstItem="Lzo-xQ-19R" firstAttribute="top" secondItem="qZt-Ol-fg1" secondAttribute="top" constant="16" id="GeI-bF-nde"/>
+                                    <constraint firstItem="F0M-4b-UP6" firstAttribute="top" secondItem="qZt-Ol-fg1" secondAttribute="top" constant="16" id="KsL-OV-f2x"/>
                                     <constraint firstItem="yWk-yh-9Gb" firstAttribute="centerY" secondItem="qZt-Ol-fg1" secondAttribute="centerY" id="Ljo-9b-F9I"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="F0M-4b-UP6" secondAttribute="bottom" constant="16" id="PlF-yq-XHj"/>
-                                    <constraint firstItem="POp-va-dfp" firstAttribute="top" secondItem="Lzo-xQ-19R" secondAttribute="bottom" priority="750" constant="4" id="VXa-Yh-Tjz"/>
+                                    <constraint firstItem="POp-va-dfp" firstAttribute="top" secondItem="Lzo-xQ-19R" secondAttribute="bottom" priority="250" constant="4" id="VXa-Yh-Tjz"/>
                                     <constraint firstItem="Lzo-xQ-19R" firstAttribute="leading" secondItem="qZt-Ol-fg1" secondAttribute="leading" priority="999" constant="16" id="aHt-u1-BmC"/>
                                     <constraint firstItem="d9z-GZ-e93" firstAttribute="top" secondItem="qZt-Ol-fg1" secondAttribute="top" id="cta-ib-Tq0"/>
                                     <constraint firstItem="ahI-VS-32w" firstAttribute="leading" secondItem="Lzo-xQ-19R" secondAttribute="leading" id="eDt-1s-mEj"/>
                                     <constraint firstItem="yWk-yh-9Gb" firstAttribute="leading" secondItem="Lzo-xQ-19R" secondAttribute="trailing" constant="16" id="eK6-A6-OgY"/>
+                                    <constraint firstItem="Lzo-xQ-19R" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qZt-Ol-fg1" secondAttribute="top" constant="15.999999999999998" id="fjV-NZ-wbh"/>
                                     <constraint firstItem="Lzo-xQ-19R" firstAttribute="leading" secondItem="F0M-4b-UP6" secondAttribute="trailing" constant="16" id="htw-Cn-SDx"/>
                                     <constraint firstItem="POp-va-dfp" firstAttribute="top" secondItem="ahI-VS-32w" secondAttribute="bottom" constant="8" id="jyi-XJ-BUz"/>
                                     <constraint firstItem="F0M-4b-UP6" firstAttribute="leading" secondItem="qZt-Ol-fg1" secondAttribute="leading" constant="16" id="kA4-Ca-eci"/>
@@ -113,7 +114,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ahI-VS-32w" secondAttribute="trailing" priority="999" constant="16" id="rR0-5W-5IV"/>
                                     <constraint firstAttribute="trailing" secondItem="d9z-GZ-e93" secondAttribute="trailing" id="stt-yE-bot"/>
                                     <constraint firstItem="d9z-GZ-e93" firstAttribute="leading" secondItem="qZt-Ol-fg1" secondAttribute="leading" id="tfJ-Zt-NpY"/>
-                                    <constraint firstItem="F0M-4b-UP6" firstAttribute="top" secondItem="Lzo-xQ-19R" secondAttribute="top" id="vhc-9L-43H"/>
+                                    <constraint firstItem="Lzo-xQ-19R" firstAttribute="top" secondItem="F0M-4b-UP6" secondAttribute="top" id="vhc-9L-43H"/>
                                     <constraint firstAttribute="bottom" secondItem="d9z-GZ-e93" secondAttribute="bottom" id="xv8-JF-cT3"/>
                                 </constraints>
                             </view>
@@ -136,6 +137,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="constraintTitleToTop" destination="vhc-9L-43H" id="G7E-ah-NWo"/>
                 <outlet property="effectView" destination="d9z-GZ-e93" id="Llj-Zq-Y8O"/>
                 <outlet property="imageViewIconLeft" destination="fF8-kw-lg3" id="Ej0-EW-cW3"/>
                 <outlet property="imageViewIconRight" destination="yWk-yh-9Gb" id="rXa-lO-tJe"/>

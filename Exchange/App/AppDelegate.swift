@@ -52,6 +52,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         InAppPurchase.shared.start()
     
         
+        #if DEBUG
+        let kingOSDebug = true
+        #else
+        let kingOSDebug = false
+        #endif
+        
         // King OS
         KingOS.configure(
             configuration: .init(
@@ -60,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 appSlug: AppEnvironment.appKey
             ),
             options: .init(
-                debug: true,
+                debug: kingOSDebug,
                 autoload: true
             )
         )

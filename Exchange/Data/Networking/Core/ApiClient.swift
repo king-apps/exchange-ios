@@ -19,7 +19,11 @@ class ApiClient {
         configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         
         let interceptor = ApiRequestInterceptor()
+        #if DEBUG
         let eventMonitors: [EventMonitor] = [ApiLogger()]
+        #else
+        let eventMonitors: [EventMonitor] = []
+        #endif
     
         session = Session(
             configuration: configuration,

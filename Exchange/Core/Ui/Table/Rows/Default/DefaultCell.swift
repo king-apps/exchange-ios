@@ -16,6 +16,7 @@ class DefaultCell: UITableViewCellBase, NibLoadableCell {
     @IBOutlet var viewTag: UIView!
     @IBOutlet var imageViewIconTag: UIImageView!
     @IBOutlet var labelTitleTag: UILabel!
+    @IBOutlet var constraintTitleToTop: NSLayoutConstraint!
     
     private var viewIconLeftConstraints = [NSLayoutConstraint]()
     private var imageViewIconRightConstraints = [NSLayoutConstraint]()
@@ -88,6 +89,10 @@ class DefaultCell: UITableViewCellBase, NibLoadableCell {
     func setup(model: DefaultCell.Model) {
         
         self.model = model
+        if model.description == nil {
+            constraintTitleToTop.constant = 12
+            layoutIfNeeded()
+        }
         
         // Icon Left
         if model.iconLeft == .none {

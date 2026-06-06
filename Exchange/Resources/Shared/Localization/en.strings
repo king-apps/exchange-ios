@@ -15,7 +15,9 @@
 "App.Back" = "Back";
 "App.Cancel" = "Cancel";
 "App.Close" = "Close";
+"App.Change" = "Change";
 "App.Save" = "Save";
+"App.Remove" = "Remove";
 "App.Delete" = "Delete";
 "App.Edit" = "Edit";
 "App.Done" = "Done";
@@ -72,6 +74,7 @@
 "Alert.Action.Close" = "Close";
 "Alert.Action.Back" = "Back";
 "Alert.Generic.Error" = "We couldn't complete that action. Please try again later.";
+"App.Error.500" = "We couldn't load the information. Please try again later.";
 
 
 /* ==================================================================================================== */
@@ -125,6 +128,7 @@
 "Match.Filter.Tags.Alert.Title" = "Clear categories?";
 "Match.Filter.Tags.Alert.Message" = "If you clear the categories, the \"All\" filter will be applied.";
 "Match.Filter.Tags.Alert.Yes" = "Clear categories";
+"Match.Filter.Tags.Empty" = "No teams available for this filter.";
 
 
 /* ==================================================================================================== */
@@ -198,6 +202,7 @@
 "Chat.Products.Title" = "Matches";
 "Chat.Products.He.Name" = "{$0}'s products";
 "Chat.Products.He.Name.Unknow" = "Unknown user's products";
+"Chat.Products.He.Title.Unknow" = "Unknown user";
 "Chat.Products.Me.Name" = "Your products";
 
 

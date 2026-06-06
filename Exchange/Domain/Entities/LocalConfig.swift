@@ -96,7 +96,6 @@ class LocalConfig {
     
     // Clear
     func clear() {
-        language = ""
         radius = RemoteConfig.shared.getMatchFilterRadiusMax()
         categories = []
         

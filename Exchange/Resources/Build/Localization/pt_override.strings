@@ -1,7 +1,7 @@
 /* ==================================================================================================== */
 /* APP - IDENTIDADE DO SCHEME                                                                           */
 /* ==================================================================================================== */
-"App.Name" = "Troca Figurinhas 2026";
+"App.Name" = "Troca Figurinhas";
 
 
 /* ==================================================================================================== */
@@ -132,6 +132,7 @@ Ao adicionar uma foto 📸, elas ficam disponíveis para usuários próximos int
 /* ==================================================================================================== */
 "Sticker.Scan.Title" = "Scanner de figurinhas";
 "Sticker.Scan.Subtitle" = "Aponte a câmera para o verso da figurinha";
+"Sticker.Scan.Result" = "Figurinha detectada";
 "Sticker.Scan.Result.Title.New" = "Figurinha nova";
 "Sticker.Scan.Result.Title.Duplicate" = "Figurinha repetida";
 "Sticker.Scan.Result.Button.New" = "Figurinha NOVA • adicionar ao álbum";

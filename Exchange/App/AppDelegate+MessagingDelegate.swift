@@ -15,7 +15,9 @@ extension AppDelegate: MessagingDelegate {
     func subscribe(toTopic: String) {
         Messaging.messaging().subscribe(toTopic: toTopic) { error in
             if let error {
+                #if DEBUG
                 print("Failed to subscribe to topic \(toTopic): \(error.localizedDescription)")
+                #endif
                 return
             }
         }
@@ -25,7 +27,9 @@ extension AppDelegate: MessagingDelegate {
     }
     func subscribeToAppTopicIfPossible() {
         guard Messaging.messaging().apnsToken != nil else {
+            #if DEBUG
             print("Skipping topic subscription until APNS token is available")
+            #endif
             return
         }
         
@@ -48,7 +52,9 @@ extension AppDelegate: MessagingDelegate {
             #endif
             return
         }
-        print("🔥 FCM Token:", sanitizedToken)
+        #if DEBUG
+        print("FCM Token:", sanitizedToken)
+        #endif
         
         User.shared.setFcmToken(sanitizedToken)
         NotificationCenter.default.post(name: .updateFcmToken, object: nil)

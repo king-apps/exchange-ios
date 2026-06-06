@@ -15,7 +15,9 @@
 "App.Back" = "Volver";
 "App.Cancel" = "Cancelar";
 "App.Close" = "Cerrar";
+"App.Change" = "Cambiar";
 "App.Save" = "Guardar";
+"App.Remove" = "Quitar";
 "App.Delete" = "Eliminar";
 "App.Edit" = "Editar";
 "App.Done" = "Listo";
@@ -72,6 +74,7 @@
 "Alert.Action.Close" = "Cerrar";
 "Alert.Action.Back" = "Volver";
 "Alert.Generic.Error" = "No pudimos completar la acción. Inténtalo de nuevo más tarde.";
+"App.Error.500" = "No pudimos cargar la información. Inténtalo de nuevo más tarde.";
 
 
 /* ==================================================================================================== */
@@ -125,6 +128,7 @@
 "Match.Filter.Tags.Alert.Title" = "¿Borrar categorías?";
 "Match.Filter.Tags.Alert.Message" = "Al borrar las categorías, se aplicará el filtro \"Todas\".";
 "Match.Filter.Tags.Alert.Yes" = "Borrar categorías";
+"Match.Filter.Tags.Empty" = "No hay selecciones disponibles para este filtro.";
 
 
 /* ==================================================================================================== */
@@ -198,6 +202,7 @@
 "Chat.Products.Title" = "Matches";
 "Chat.Products.He.Name" = "Productos de {$0}";
 "Chat.Products.He.Name.Unknow" = "Productos de usuario desconocido";
+"Chat.Products.He.Title.Unknow" = "Usuario desconocido";
 "Chat.Products.Me.Name" = "Tus productos";
 
 
