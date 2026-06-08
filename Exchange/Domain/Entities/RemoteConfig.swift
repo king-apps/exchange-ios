@@ -74,7 +74,7 @@ final class RemoteConfig {
     
     
     // Get's
-    func getIsFeatureAdsEnabled() -> Bool {
+    func getFeatureAdsEnabled() -> Bool {
         return isFeatureAdsEnabled
     }
     func getChatLoopTime() -> Int {

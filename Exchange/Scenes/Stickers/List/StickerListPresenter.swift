@@ -48,7 +48,9 @@ class StickerListPresenter: StickerListPresentationLogic {
     // Handler fetch
     func fetch(response: StickerList.Fetch.Response) {
     
-        let viewModel = StickerList.Fetch.ViewModel(rows: makeRows(list: response.list))
+        let viewModel = StickerList.Fetch.ViewModel(
+            rows: makeRows(list: response.list, showAds: response.showAds)
+        )
         viewController?.onFetch(viewModel: viewModel)
         
     }
@@ -59,7 +61,7 @@ class StickerListPresenter: StickerListPresentationLogic {
         
         let viewModel = StickerList.UpdateCollected.ViewModel(
             id: response.id,
-            rows: makeRows(list: response.list),
+            rows: makeRows(list: response.list, showAds: response.showAds),
             error: response.error
         )
         viewController?.onUpdateCollected(viewModel: viewModel)
@@ -75,14 +77,16 @@ class StickerListPresenter: StickerListPresentationLogic {
             return
         }
         
-        let viewModel = StickerList.CreateProduct.ViewModel(rows: makeRows(list: response.list))
+        let viewModel = StickerList.CreateProduct.ViewModel(
+            rows: makeRows(list: response.list, showAds: response.showAds)
+        )
         viewController?.onCreateProduct(viewModel: viewModel)
         
     }
     
     
     // Rows
-    private func makeRows(list: [StickerCategory]?) -> [MainTableRow] {
+    private func makeRows(list: [StickerCategory]?, showAds: Bool) -> [MainTableRow] {
         
         var rows = [MainTableRow]()
         let stats = makeStats(list: list)
@@ -131,6 +135,16 @@ class StickerListPresenter: StickerListPresentationLogic {
             )
         }
         
+        /*
+        if showAds {
+            rows.append(.spacing(.init(size: .xl)))
+            rows.append(
+                .adBanner(
+                    .init(placement: .stickerListBanner)
+                )
+            )
+        }
+        */
         
         // Categories
         if let list, list.count > 0 {

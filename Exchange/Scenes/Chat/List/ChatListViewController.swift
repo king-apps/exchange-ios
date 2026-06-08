@@ -37,6 +37,7 @@ class ChatListViewController: MainBaseViewController, ChatListDisplayLogic {
         super.viewDidLoad()
         setupInputs()
         setupNotifications()
+        setupAd()
         load()
     }
   
@@ -76,6 +77,14 @@ class ChatListViewController: MainBaseViewController, ChatListDisplayLogic {
     // Setup notifications
     func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(fetch), name: .reloadChatList, object: nil)
+    }
+    
+    
+    // Setup ad
+    func setupAd() {
+        if hasAd() {
+            adBannerView?.load(.chatListBanner, viewController: self)
+        }
     }
     
     

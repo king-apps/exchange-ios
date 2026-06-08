@@ -47,12 +47,16 @@ class ChatListInteractor: ChatListBusinessLogic, ChatListDataStore {
     // Handler fecth
     func fetch(request: ChatList.Fetch.Request) {
         
-        worker.fetch { chats, error in
+        worker.fetch { chats, error, showAds in
             
             // Store in memory
             self.chats = chats
             
-            let response = ChatList.Fetch.Response(chats: chats, error: error)
+            let response = ChatList.Fetch.Response(
+                chats: chats,
+                error: error,
+                showAds: showAds
+            )
             self.presenter?.fetch(response: response)
         }
         

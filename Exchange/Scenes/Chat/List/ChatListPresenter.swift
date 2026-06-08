@@ -113,7 +113,16 @@ class ChatListPresenter: ChatListPresentationLogic {
                     )
                 )
             }
-            
+            /*
+            if response.showAds {
+                rows.append(.spacing(.init(size: .xl)))
+                rows.append(
+                    .adBanner(
+                        .init(placement: .chatListBanner)
+                    )
+                )
+            }
+            */
             let viewModel = ChatList.Fetch.ViewModel(
                 rows: rows,
                 unreadCount: unreadCount

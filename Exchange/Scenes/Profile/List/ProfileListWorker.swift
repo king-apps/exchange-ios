@@ -31,12 +31,13 @@ class ProfileListWorker {
     
     
     // Handler fetch
-    func fetch(completion: @escaping(_ auth: Auth, _ user: User, _ remote: RemoteConfig) -> ()) {
+    func fetch(completion: @escaping(_ auth: Auth, _ user: User, _ remote: RemoteConfig, _ showAds: Bool) -> ()) {
         
         let auth = Auth.shared
         let user = User.shared
         let remote = RemoteConfig.shared
-        completion(auth, user, remote)
+        let showAds = AppAdPolicy.shouldShowAds()
+        completion(auth, user, remote, showAds)
         
     }
     

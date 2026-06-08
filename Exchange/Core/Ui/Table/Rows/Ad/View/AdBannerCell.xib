@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AdBannerCell" rowHeight="100" id="rMR-4O-aJT" customClass="AdBannerCell" customModule="simulados_pro" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AdBannerCell" rowHeight="100" id="rMR-4O-aJT" customClass="AdBannerCell" customModule="Exchange" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rMR-4O-aJT" id="ODn-k1-Zyq">
@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THR-l9-gqW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC3-Je-r0F" customClass="AdBannerView" customModule="simulados_pro" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC3-Je-r0F" customClass="AdBannerView" customModule="Exchange" customModuleProvider="target">
                                 <rect key="frame" x="16" y="16" width="361" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

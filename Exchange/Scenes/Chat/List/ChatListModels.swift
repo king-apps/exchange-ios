@@ -32,6 +32,7 @@ enum ChatList {
         struct Response {
             var chats: [Chat]?
             var error: String?
+            var showAds: Bool
         }
         struct ViewModel {
             var rows: [MainTableRow]

@@ -257,6 +257,14 @@ class ProfileListPresenter: ProfileListPresentationLogic {
             )
         )
         
+        if response.showAds {
+            rows.append(.spacing(.init(size: .xl)))
+            rows.append(
+                .adBanner(
+                    .init(placement: .profileListBanner)
+                )
+            )
+        }
         
         
         // Actions

@@ -21,9 +21,9 @@ NS_USER_TRACKING_USAGE_DESCRIPTION = $(DISPLAY_NAME) usa sua permissão para per
 // ADS / GENERAL
 // ------------------------------------------------------------
 AD_APP_ID = ca-app-pub-5763600816948550~5846036354
-AD_APP_OPEN =
-AD_REWARD =
-AD_BANNER =
+AD_APP_OPEN = ca-app-pub-5763600816948550/2489624040
+AD_REWARD = ca-app-pub-5763600816948550/6237297366
+AD_BANNER = ca-app-pub-5763600816948550/1139363446
 
 // ------------------------------------------------------------
 // STORE / IN-APP PURCHASES

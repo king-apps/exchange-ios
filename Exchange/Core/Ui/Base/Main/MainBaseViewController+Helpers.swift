@@ -4,7 +4,11 @@ import UIKit
 enum AppAdPolicy {
     
     static func shouldShowAds() -> Bool {
-        let isAdsEnabled = RemoteConfig.shared.getIsFeatureAdsEnabled()
+        if AppPreviewMode.hideAds {
+            return false
+        }
+        
+        let isAdsEnabled = RemoteConfig.shared.getFeatureAdsEnabled()
         let isPremiumUser = InAppPurchase.shared.isPremium()
         let shouldShowAd = isAdsEnabled && !isPremiumUser
         return shouldShowAd

@@ -7,6 +7,9 @@ class AdBannerView: UIView {
     // Var's
     private var placement: AdPlacement?
     private var buffer: UIView?
+    private weak var viewController: UIViewController?
+    private var heightConstraint: NSLayoutConstraint?
+    private var lastLoadedWidth: CGFloat = 0
     
     
     // Init
@@ -17,7 +20,12 @@ class AdBannerView: UIView {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         guard window != nil else { return }
-        attachIfNeeded()
+        loadIfNeeded()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        loadIfNeeded()
     }
 
     
@@ -25,8 +33,32 @@ class AdBannerView: UIView {
     // Load
     func load(_ placement: AdPlacement, viewController: UIViewController) {
         self.placement = placement
+        self.viewController = viewController
         
-        AdBannerService.shared.load(placement, viewController: viewController)
+        loadIfNeeded()
+    }
+    
+    private func loadIfNeeded() {
+        guard
+            let placement,
+            let viewController,
+            bounds.width > 0
+        else {
+            return
+        }
+        
+        let width = bounds.width
+        let didLoadWidth = abs(lastLoadedWidth - width) <= 1
+        if didLoadWidth == false {
+            let height = AdBannerService.shared.load(
+                placement,
+                width: width,
+                viewController: viewController
+            )
+            updateHeight(height)
+            lastLoadedWidth = width
+        }
+        
         attachIfNeeded()
     }
     
@@ -57,5 +89,15 @@ class AdBannerView: UIView {
         
     }
     
+    private func updateHeight(_ height: CGFloat) {
+        let constraint = heightConstraint ?? constraints.first {
+            $0.firstAttribute == .height && $0.secondItem == nil
+        }
+        
+        constraint?.constant = height
+        heightConstraint = constraint
+        invalidateIntrinsicContentSize()
+        setNeedsLayout()
+    }
     
 }

@@ -502,6 +502,9 @@
 		A5EF2FA62FA0DA050030697F /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF2FA02FA0DA050030697F /* AdBannerView.swift */; };
 		A5EF2FA72FA0DA050030697F /* AdPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF2F9E2FA0DA050030697F /* AdPlacement.swift */; };
 		A5EF2FA82FA0DA050030697F /* AdPlacementResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF2F9F2FA0DA050030697F /* AdPlacementResolver.swift */; };
+		A5AD10042FD781AA00AD0001 /* AdAppOpenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10012FD781AA00AD0001 /* AdAppOpenService.swift */; };
+		A5AD10052FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10022FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift */; };
+		A5AD10062FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10032FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift */; };
 		A5EF2FAD2FA0DA3F0030697F /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF2FAB2FA0DA3F0030697F /* TagCell.swift */; };
 		A5EF2FAE2FA0DA3F0030697F /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EF2FA92FA0DA3F0030697F /* TagCell.xib */; };
 		A9700E5F030D3BCB584AA5E1 /* MainTableRow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91016FEFB8A562B149FB5A30 /* MainTableRow+Extension.swift */; };
@@ -1048,6 +1051,9 @@
 		A5EF2FA02FA0DA050030697F /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
 		A5EF2FA12FA0DA050030697F /* AdBannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerService.swift; sourceTree = "<group>"; };
 		A5EF2FA22FA0DA050030697F /* AdRewardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdRewardService.swift; sourceTree = "<group>"; };
+		A5AD10012FD781AA00AD0001 /* AdAppOpenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdAppOpenService.swift; sourceTree = "<group>"; };
+		A5AD10022FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdRewardService+FullScreenContentDelegate.swift"; sourceTree = "<group>"; };
+		A5AD10032FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdAppOpenService+FullScreenContentDelegate.swift"; sourceTree = "<group>"; };
 		A5EF2FA92FA0DA3F0030697F /* TagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
 		A5EF2FAB2FA0DA3F0030697F /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		A8F3672D7EC05DFA6D9F5E7B /* AppContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
@@ -2821,6 +2827,9 @@
 				A5EF2FA02FA0DA050030697F /* AdBannerView.swift */,
 				A5EF2FA12FA0DA050030697F /* AdBannerService.swift */,
 				A5EF2FA22FA0DA050030697F /* AdRewardService.swift */,
+				A5AD10022FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift */,
+				A5AD10012FD781AA00AD0001 /* AdAppOpenService.swift */,
+				A5AD10032FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift */,
 			);
 			path = Ad;
 			sourceTree = "<group>";
@@ -3562,6 +3571,9 @@
 				A5E6D23B2FC092A500A984E7 /* ProfileNameWorker.swift in Sources */,
 				A5E467542FB7315400BA0392 /* UserFcmTokenRequestDTO.swift in Sources */,
 				A5EF2FA52FA0DA050030697F /* AdRewardService.swift in Sources */,
+				A5AD10052FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift in Sources */,
+				A5AD10042FD781AA00AD0001 /* AdAppOpenService.swift in Sources */,
+				A5AD10062FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift in Sources */,
 				A5EF2FA62FA0DA050030697F /* AdBannerView.swift in Sources */,
 				A5EF2FA72FA0DA050030697F /* AdPlacement.swift in Sources */,
 				A5EF2FA82FA0DA050030697F /* AdPlacementResolver.swift in Sources */,

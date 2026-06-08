@@ -38,6 +38,7 @@ enum StickerList {
         struct Response {
             var list: [StickerCategory]?
             var error: String?
+            var showAds: Bool
         }
         struct ViewModel {
             var rows: [MainTableRow]
@@ -53,6 +54,7 @@ enum StickerList {
             var id: Int
             var list: [StickerCategory]?
             var error: String?
+            var showAds: Bool
         }
         struct ViewModel {
             var id: Int
@@ -70,6 +72,7 @@ enum StickerList {
             var list: [StickerCategory]?
             var product: Product?
             var error: String?
+            var showAds: Bool
         }
         struct ViewModel {
             var rows: [MainTableRow]

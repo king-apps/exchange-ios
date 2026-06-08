@@ -46,6 +46,7 @@ enum ProfileList {
             var auth: Auth
             var user: User
             var remote: RemoteConfig
+            var showAds: Bool
         }
         struct ViewModel {
             var rows: [MainTableRow]

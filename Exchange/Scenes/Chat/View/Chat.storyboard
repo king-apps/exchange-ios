@@ -42,22 +42,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDf-Ri-PbN" userLabel="Ads">
+                                <rect key="frame" x="24" y="150" width="366" height="90"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPI-XM-hAY" customClass="AdBannerView" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xSf-5e-epN"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq2-h5-S5G" customClass="UIButtonBase" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="366" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="A1b-2U-dKU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <color key="tintColor" name="BrandPrimary300"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ads.Button">
+                                            <color key="titleColor" name="BrandPrimary100"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rPI-XM-hAY" secondAttribute="trailing" id="7NH-vK-FcN"/>
+                                    <constraint firstItem="rPI-XM-hAY" firstAttribute="leading" secondItem="BDf-Ri-PbN" secondAttribute="leading" id="BT6-CM-Q5n"/>
+                                    <constraint firstItem="Dq2-h5-S5G" firstAttribute="leading" secondItem="BDf-Ri-PbN" secondAttribute="leading" id="DEb-P3-MKK"/>
+                                    <constraint firstItem="rPI-XM-hAY" firstAttribute="top" secondItem="BDf-Ri-PbN" secondAttribute="top" id="MGv-JR-p5L"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dq2-h5-S5G" secondAttribute="trailing" id="ZrE-qA-OKL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dq2-h5-S5G" secondAttribute="bottom" id="mMy-XH-nFz"/>
+                                    <constraint firstItem="Dq2-h5-S5G" firstAttribute="top" secondItem="rPI-XM-hAY" secondAttribute="bottom" id="nd5-cz-ZSw"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="151-g4-1dq">
-                                <rect key="frame" x="0.0" y="150" width="414" height="746"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="656"/>
                                 <color key="backgroundColor" name="BackgroundBase"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BrandPrimary500"/>
                         <constraints>
+                            <constraint firstItem="BDf-Ri-PbN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="3lM-WW-eMI"/>
                             <constraint firstAttribute="trailing" secondItem="151-g4-1dq" secondAttribute="trailing" id="LHf-em-fbp"/>
+                            <constraint firstItem="BDf-Ri-PbN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="UZw-V2-q9S"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BDf-Ri-PbN" secondAttribute="trailing" constant="24" id="V0F-5h-InX"/>
+                            <constraint firstItem="151-g4-1dq" firstAttribute="top" secondItem="BDf-Ri-PbN" secondAttribute="bottom" id="b8x-kB-C0a"/>
                             <constraint firstAttribute="bottom" secondItem="151-g4-1dq" secondAttribute="bottom" id="cqC-e4-UJ9"/>
-                            <constraint firstItem="151-g4-1dq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="il0-OU-l0j"/>
-                            <constraint firstItem="151-g4-1dq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="u3S-Vz-g2i"/>
+                            <constraint firstItem="151-g4-1dq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="top" id="il0-OU-l0j"/>
+                            <constraint firstItem="151-g4-1dq" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="u3S-Vz-g2i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat.List.Title" id="eqr-a6-IIs"/>
                     <connections>
+                        <outlet property="adBannerView" destination="rPI-XM-hAY" id="gDS-ol-t0b"/>
                         <outlet property="tableView" destination="151-g4-1dq" id="blO-OE-zZL"/>
                         <segue destination="Hbv-4D-9hB" kind="show" identifier="ChatMessage" id="u2g-0N-OZd"/>
                     </connections>
@@ -296,6 +335,9 @@
         </namedColor>
         <namedColor name="BrandPrimary100">
             <color red="0.7803921568627451" green="0.84705882352941175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPrimary300">
+            <color red="0.49803921568627452" green="0.66274509803921566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandPrimary500">
             <color red="0.14509803921568629" green="0.43137254901960786" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

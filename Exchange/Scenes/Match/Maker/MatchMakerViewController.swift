@@ -43,6 +43,11 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
     @IBOutlet var viewEmpty: UIView!
     @IBOutlet var buttonBoost: UIButtonBase!
     @IBOutlet var viewFilterBadge: UIView!
+    
+    @IBOutlet var buttonAds: UIButtonBase!
+    @IBOutlet var constraintMatchButtonsTop: NSLayoutConstraint!
+    @IBOutlet var constraintMatchButtonsBottom: NSLayoutConstraint!
+    
     let locationManager = CLLocationManager()
     var locationHasSended = false
     var cards = [CardModel]()
@@ -75,6 +80,7 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
         super.viewDidLoad()
         setupInputs()
         setupNotifications()
+        setupAd()
         load()
         ad()
     }
@@ -139,6 +145,21 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
     }
     
     
+    // Setup ad
+    func setupAd() {
+        if hasAd() {
+            adBannerView?.load(.matchMakerBanner, viewController: self)
+            constraintMatchButtonsTop.constant = 16
+            constraintMatchButtonsBottom.constant = 16
+        }
+        else {
+            constraintMatchButtonsTop.constant = 64
+            constraintMatchButtonsBottom.constant = 64
+        }
+        self.view.layoutIfNeeded()
+    }
+    
+    
     // Handler load
     func load() {
         let request = MatchMaker.Load.Request()
@@ -164,6 +185,7 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
         if status != .loading {
             status = .loading
             UIView.animate(withDuration: AppConfig.Animation.duration, delay: 0.0, options: .curveEaseInOut) {
+                self.adBannerView?.superview?.alpha = 0.0
                 self.viewSwipeable.alpha = 0.0
                 self.viewButtons.alpha = 0.0
                 self.viewLoading.alpha = 1.0
@@ -215,6 +237,7 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
             UIView.animate(withDuration: AppConfig.Animation.duration, delay: 0.0, options: .curveEaseInOut) {
                 self.viewSwipeable.alpha = 1.0
                 self.viewButtons.alpha = 1.0
+                self.adBannerView?.superview?.alpha = 1.0
             } completion: { (finished) in
                 completion()
             }

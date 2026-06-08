@@ -30,6 +30,7 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
     
     @IBOutlet var inputTextKeywords: UITextField!
     @IBOutlet var viewFilterBadge: UIView!
+    @IBOutlet var buttonAds: UIButtonBase!
     var timer: Timer?
 
   
@@ -48,6 +49,7 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInputs()
+        setupAd()
         load()
     }
   
@@ -77,6 +79,14 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
         viewFilterBadge.isHidden = true
         
         NotificationCenter.default.addObserver(self, selector: #selector(fetch), name: .reloadProductList, object: nil)
+    }
+    
+    
+    // Setup ad
+    func setupAd() {
+        if hasAd() {
+            adBannerView?.load(.stickerListBanner, viewController: self)
+        }
     }
     
     

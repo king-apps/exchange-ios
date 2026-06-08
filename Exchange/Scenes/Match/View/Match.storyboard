@@ -125,8 +125,42 @@
                                     <constraint firstItem="DYW-ib-vLM" firstAttribute="centerY" secondItem="7b8-YN-mQs" secondAttribute="centerY" id="y2S-Xh-RTh"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgo-fs-TQQ" userLabel="Ads">
+                                <rect key="frame" x="24" y="155.5" width="366" height="90"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Tg-P9-2ta" customClass="AdBannerView" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aiV-40-PSl"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiV-aY-v7S" customClass="UIButtonBase" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="366" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="hlN-J5-KH7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                        <color key="tintColor" name="BrandPrimary100"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ads.Button">
+                                            <color key="titleColor" name="BrandPrimary100"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yiV-aY-v7S" secondAttribute="trailing" id="0Jo-pz-VB9"/>
+                                    <constraint firstItem="yiV-aY-v7S" firstAttribute="top" secondItem="7Tg-P9-2ta" secondAttribute="bottom" id="7yk-Gn-Zqy"/>
+                                    <constraint firstItem="7Tg-P9-2ta" firstAttribute="leading" secondItem="Rgo-fs-TQQ" secondAttribute="leading" id="D45-4D-p35"/>
+                                    <constraint firstItem="7Tg-P9-2ta" firstAttribute="top" secondItem="Rgo-fs-TQQ" secondAttribute="top" id="dcM-K7-6MB"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Tg-P9-2ta" secondAttribute="trailing" id="sWh-Pg-acY"/>
+                                    <constraint firstAttribute="bottom" secondItem="yiV-aY-v7S" secondAttribute="bottom" id="uZ1-wR-jkj"/>
+                                    <constraint firstItem="yiV-aY-v7S" firstAttribute="leading" secondItem="Rgo-fs-TQQ" secondAttribute="leading" id="zP6-F3-OQ9"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-Tz-vTv" customClass="ZLSwipeableView" customModule="ZLSwipeableViewSwift">
-                                <rect key="frame" x="0.0" y="190" width="414" height="442"/>
+                                <rect key="frame" x="0.0" y="245.5" width="414" height="386.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hde-L7-snL">
@@ -229,9 +263,11 @@
                         <viewLayoutGuide key="safeArea" id="ks6-6V-FG0"/>
                         <color key="backgroundColor" name="BackgroundBase"/>
                         <constraints>
+                            <constraint firstItem="Rgo-fs-TQQ" firstAttribute="leading" secondItem="ks6-6V-FG0" secondAttribute="leading" constant="24" id="0SR-K4-a23"/>
                             <constraint firstItem="ks6-6V-FG0" firstAttribute="bottom" secondItem="8s2-za-t0D" secondAttribute="bottom" id="0g2-dE-Nft"/>
                             <constraint firstItem="JBU-Nf-BZ2" firstAttribute="top" secondItem="lRn-sZ-ppx" secondAttribute="top" id="1fi-Ds-Jfc"/>
                             <constraint firstItem="JBU-Nf-BZ2" firstAttribute="height" secondItem="lRn-sZ-ppx" secondAttribute="height" multiplier="0.2" priority="750" id="5pi-qd-PhB"/>
+                            <constraint firstItem="ks6-6V-FG0" firstAttribute="trailing" secondItem="Rgo-fs-TQQ" secondAttribute="trailing" constant="24" id="7jQ-PM-2IF"/>
                             <constraint firstItem="pcj-ap-Mlz" firstAttribute="leading" secondItem="ks6-6V-FG0" secondAttribute="leading" constant="16" id="Gxd-45-6UH"/>
                             <constraint firstItem="8uD-5O-lhS" firstAttribute="centerY" secondItem="hde-L7-snL" secondAttribute="centerY" multiplier="1.05" id="J6B-nl-qHg"/>
                             <constraint firstItem="ks6-6V-FG0" firstAttribute="trailing" secondItem="8s2-za-t0D" secondAttribute="trailing" id="Jac-CM-hwj"/>
@@ -251,8 +287,10 @@
                             <constraint firstItem="hde-L7-snL" firstAttribute="centerX" secondItem="ks6-6V-FG0" secondAttribute="centerX" id="duq-6o-ghh"/>
                             <constraint firstItem="ks6-6V-FG0" firstAttribute="trailing" secondItem="mRR-Tz-vTv" secondAttribute="trailing" id="fKT-u3-GY5"/>
                             <constraint firstAttribute="trailing" secondItem="JBU-Nf-BZ2" secondAttribute="trailing" id="lC4-6K-HHt"/>
+                            <constraint firstItem="mRR-Tz-vTv" firstAttribute="top" secondItem="Rgo-fs-TQQ" secondAttribute="bottom" id="lcG-xl-fFu"/>
                             <constraint firstItem="2Vv-iL-7jy" firstAttribute="centerX" secondItem="4C4-Te-P9D" secondAttribute="centerX" constant="10" id="mSo-qv-iR1"/>
-                            <constraint firstItem="mRR-Tz-vTv" firstAttribute="top" secondItem="4C4-Te-P9D" secondAttribute="bottom" constant="44" id="obP-kI-iQd"/>
+                            <constraint firstItem="Rgo-fs-TQQ" firstAttribute="top" secondItem="ooO-Sm-GLG" secondAttribute="bottom" constant="24" id="nUU-bt-oym"/>
+                            <constraint firstItem="mRR-Tz-vTv" firstAttribute="top" secondItem="4C4-Te-P9D" secondAttribute="bottom" priority="250" constant="32" id="obP-kI-iQd"/>
                             <constraint firstItem="4C4-Te-P9D" firstAttribute="centerY" secondItem="2Vv-iL-7jy" secondAttribute="centerY" constant="10" id="ySE-uf-Vqu"/>
                         </constraints>
                     </view>
@@ -261,8 +299,12 @@
                     </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="adBannerView" destination="7Tg-P9-2ta" id="17S-n8-E1t"/>
+                        <outlet property="buttonAds" destination="yiV-aY-v7S" id="FhE-wz-tT3"/>
                         <outlet property="buttonBoost" destination="DYW-ib-vLM" id="m5X-hw-5TY"/>
                         <outlet property="constraintFullHeightCircle" destination="Z3d-e5-RBl" id="btI-Og-RqD"/>
+                        <outlet property="constraintMatchButtonsBottom" destination="elc-YW-zPs" id="L49-o8-N18"/>
+                        <outlet property="constraintMatchButtonsTop" destination="MUA-QH-z3P" id="2WZ-DV-Bjt"/>
                         <outlet property="imageViewCircle" destination="JBU-Nf-BZ2" id="RId-U7-jNF"/>
                         <outlet property="viewButtons" destination="8s2-za-t0D" id="2eu-hf-X4k"/>
                         <outlet property="viewEmpty" destination="8uD-5O-lhS" id="Ahg-Qj-gpQ"/>
@@ -637,6 +679,9 @@
         <namedColor name="BaseWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="BrandPrimary100">
+            <color red="0.7803921568627451" green="0.84705882352941175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BrandPrimary500">
             <color red="0.14509803921568629" green="0.43137254901960786" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -662,16 +707,16 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="placeholderTextColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

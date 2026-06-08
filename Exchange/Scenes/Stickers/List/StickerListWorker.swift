@@ -19,21 +19,22 @@ class StickerListWorker {
     
     
     // Handler fetch
-    func fetch(completion: @escaping(_ products: [Product]?, _ list: [StickerCategory]?, _ error: String?) -> ()) {
+    func fetch(completion: @escaping(_ products: [Product]?, _ list: [StickerCategory]?, _ error: String?, _ showAds: Bool) -> ()) {
         
         do {
             let listResponse = try fetchLocalStickerCategories()
+            let showAds = AppAdPolicy.shouldShowAds()
             
             ProductApi().list { products, error in
                 if let products {
                     self.applyProductImages(products: products, to: listResponse)
                 }
                 
-                completion(products, self.applyStickerFilters(to: listResponse), error)
+                completion(products, self.applyStickerFilters(to: listResponse), error, showAds)
             }
         }
         catch {
-            completion(nil, nil, "Error.500".localized)
+            completion(nil, nil, "Error.500".localized, AppAdPolicy.shouldShowAds())
         }
        
     }

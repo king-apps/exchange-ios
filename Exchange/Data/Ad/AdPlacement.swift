@@ -6,40 +6,17 @@ enum AdPlacement: String {
     // General
     case appOpen
     case reward
-    case loadingBanner
-    case instructionListBanner
     
-    // Home
-    case homeFooterBanner
+    // Match
+    case matchMakerBanner
     
-    // Questions
-    case questionListBanner
-    case savedQuestion
+    // Stickers
+    case stickerListBanner
     
-    // Study
-    case study
-    case themeListBanner
-    case categoryListBanner
-    case subcategoryListBanner
-    case studyMenu
-    case supportMaterialFileBanner
-    case supportMaterialVideoBanner
-    
-    // Statistic
-    case statisticListBanner
-    
-    // Notification
-    case notificationListBanner
-    
-    // Challenge
-    case challengeListBanner
-    case challengeLeaderboardBanner
-    
-    // Filter
-    case filterListBanner
+    // Chat
+    case chatListBanner
     
     // Profile
     case profileListBanner
-    
     
 }

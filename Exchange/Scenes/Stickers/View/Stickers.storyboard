@@ -43,11 +43,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hNq-Vx-WrV">
-                                <rect key="frame" x="0.0" y="228" width="393" height="624"/>
+                                <rect key="frame" x="0.0" y="318" width="393" height="534"/>
                                 <color key="backgroundColor" name="BackgroundBase"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdE-rk-wWa">
-                                <rect key="frame" x="0.0" y="172" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="172" width="393" height="146"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGO-eS-pmC" customClass="UIViewBase" customModule="Exchange" customModuleProvider="target">
                                         <rect key="frame" x="16" y="0.0" width="241" height="40"/>
@@ -126,21 +126,58 @@
                                             <action selector="didInfo" destination="HNG-mg-rP9" eventType="touchUpInside" id="7Kl-6j-YRA"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hf7-cx-6pM" userLabel="Ads">
+                                        <rect key="frame" x="16" y="56" width="361" height="90"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twE-3O-SrU" customClass="AdBannerView" customModule="Exchange" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="cWA-wK-hv6"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-Xe-R6C" customClass="UIButtonBase" customModule="Exchange" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="361" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="vH0-d8-oBc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <color key="tintColor" name="BrandPrimary100"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Ads.Button">
+                                                    <color key="titleColor" name="BrandPrimary100"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="twE-3O-SrU" secondAttribute="trailing" id="1CB-jU-MbV"/>
+                                            <constraint firstItem="j0k-Xe-R6C" firstAttribute="leading" secondItem="hf7-cx-6pM" secondAttribute="leading" id="86v-DG-tF2"/>
+                                            <constraint firstItem="twE-3O-SrU" firstAttribute="top" secondItem="hf7-cx-6pM" secondAttribute="top" id="Jbv-r6-GWV"/>
+                                            <constraint firstAttribute="bottom" secondItem="j0k-Xe-R6C" secondAttribute="bottom" id="VlE-Fu-Ywn"/>
+                                            <constraint firstItem="j0k-Xe-R6C" firstAttribute="top" secondItem="twE-3O-SrU" secondAttribute="bottom" id="dQK-Rx-Nte"/>
+                                            <constraint firstAttribute="trailing" secondItem="j0k-Xe-R6C" secondAttribute="trailing" id="gXe-I2-hpH"/>
+                                            <constraint firstItem="twE-3O-SrU" firstAttribute="leading" secondItem="hf7-cx-6pM" secondAttribute="leading" id="xKj-Td-RGP"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="BrandPrimary500"/>
                                 <constraints>
+                                    <constraint firstItem="hf7-cx-6pM" firstAttribute="trailing" secondItem="jqi-ls-xmT" secondAttribute="trailing" id="4lM-y7-vYv"/>
                                     <constraint firstItem="URJ-OO-C4B" firstAttribute="top" secondItem="PGO-eS-pmC" secondAttribute="top" id="5m7-Ds-HgD"/>
                                     <constraint firstItem="jqi-ls-xmT" firstAttribute="bottom" secondItem="PGO-eS-pmC" secondAttribute="bottom" id="6Ua-Fn-HLf"/>
                                     <constraint firstItem="7eX-0G-A0f" firstAttribute="top" secondItem="PGO-eS-pmC" secondAttribute="top" id="9cY-st-NyP"/>
                                     <constraint firstAttribute="trailing" secondItem="jqi-ls-xmT" secondAttribute="trailing" constant="16" id="9vQ-qz-v1Y"/>
+                                    <constraint firstItem="hf7-cx-6pM" firstAttribute="top" secondItem="PGO-eS-pmC" secondAttribute="bottom" constant="16" id="F9o-8o-JRf"/>
                                     <constraint firstItem="PGO-eS-pmC" firstAttribute="leading" secondItem="IdE-rk-wWa" secondAttribute="leading" constant="16" id="RDL-Q4-9g9"/>
                                     <constraint firstItem="7eX-0G-A0f" firstAttribute="bottom" secondItem="PGO-eS-pmC" secondAttribute="bottom" id="TOx-V3-p4e"/>
+                                    <constraint firstAttribute="bottom" secondItem="hf7-cx-6pM" secondAttribute="bottom" id="UbI-L2-X8i"/>
                                     <constraint firstItem="7eX-0G-A0f" firstAttribute="leading" secondItem="PGO-eS-pmC" secondAttribute="trailing" id="boM-w4-ESY"/>
                                     <constraint firstItem="URJ-OO-C4B" firstAttribute="bottom" secondItem="PGO-eS-pmC" secondAttribute="bottom" id="dQC-bx-Tlh"/>
                                     <constraint firstItem="jqi-ls-xmT" firstAttribute="leading" secondItem="URJ-OO-C4B" secondAttribute="trailing" id="eC0-hW-Nb7"/>
-                                    <constraint firstAttribute="bottom" secondItem="PGO-eS-pmC" secondAttribute="bottom" constant="16" id="evG-hR-IFr"/>
                                     <constraint firstItem="BBp-Pp-Ifz" firstAttribute="trailing" secondItem="URJ-OO-C4B" secondAttribute="trailing" id="fWA-2O-uv2"/>
                                     <constraint firstItem="jqi-ls-xmT" firstAttribute="top" secondItem="PGO-eS-pmC" secondAttribute="top" id="kP7-w5-We6"/>
+                                    <constraint firstItem="hf7-cx-6pM" firstAttribute="leading" secondItem="PGO-eS-pmC" secondAttribute="leading" id="mdN-J5-8gg"/>
                                     <constraint firstItem="URJ-OO-C4B" firstAttribute="leading" secondItem="7eX-0G-A0f" secondAttribute="trailing" id="ogf-uQ-6Jf"/>
                                     <constraint firstItem="URJ-OO-C4B" firstAttribute="centerY" secondItem="BBp-Pp-Ifz" secondAttribute="centerY" constant="10" id="qaJ-5U-uzz"/>
                                     <constraint firstItem="PGO-eS-pmC" firstAttribute="top" secondItem="IdE-rk-wWa" secondAttribute="top" id="weC-rk-U9S"/>
@@ -161,6 +198,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="fxK-1E-AuU"/>
                     <connections>
+                        <outlet property="adBannerView" destination="twE-3O-SrU" id="lMT-oz-ky3"/>
+                        <outlet property="buttonAds" destination="j0k-Xe-R6C" id="1Bs-Ch-AqM"/>
                         <outlet property="inputTextKeywords" destination="Rlv-Kr-cDE" id="Xar-KZ-IS2"/>
                         <outlet property="tableView" destination="hNq-Vx-WrV" id="gNO-AR-jE0"/>
                         <outlet property="viewFilterBadge" destination="BBp-Pp-Ifz" id="eJD-NC-j4D"/>
@@ -763,6 +802,9 @@
         </namedColor>
         <namedColor name="BaseWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPrimary100">
+            <color red="0.7803921568627451" green="0.84705882352941175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandPrimary500">
             <color red="0.14509803921568629" green="0.43137254901960786" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

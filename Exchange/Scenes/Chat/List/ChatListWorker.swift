@@ -19,11 +19,12 @@ class ChatListWorker {
     
     
     // Handler fetch
-    func fetch(completion: @escaping(_ chats: [Chat]?, _ error: String?) -> ()) {
+    func fetch(completion: @escaping(_ chats: [Chat]?, _ error: String?, _ showAds: Bool) -> ()) {
         
+        let showAds = AppAdPolicy.shouldShowAds()
         let api = MatchApi()
         api.chat { chats, error in
-            completion(chats, error)
+            completion(chats, error, showAds)
         }
         
     }

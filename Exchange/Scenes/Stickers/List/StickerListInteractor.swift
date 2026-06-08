@@ -53,13 +53,17 @@ class StickerListInteractor: StickerListBusinessLogic, StickerListDataStore {
     // Handler fetch
     func fetch(request: StickerList.Fetch.Request) {
         
-        worker.fetch { products, list, error in
+        worker.fetch { products, list, error, showAds in
             
             // Store in memory
             self.products = products
             self.list = list
             
-            let response = StickerList.Fetch.Response(list: list, error: error)
+            let response = StickerList.Fetch.Response(
+                list: list,
+                error: error,
+                showAds: showAds
+            )
             self.presenter?.fetch(response: response)
         }
         
@@ -74,7 +78,12 @@ class StickerListInteractor: StickerListBusinessLogic, StickerListDataStore {
             // Store in memory
             self.list = list
             
-            let response = StickerList.UpdateCollected.Response(id: request.id, list: list, error: error)
+            let response = StickerList.UpdateCollected.Response(
+                id: request.id,
+                list: list,
+                error: error,
+                showAds: AppAdPolicy.shouldShowAds()
+            )
             self.presenter?.updateCollected(response: response)
         }
         
@@ -98,7 +107,12 @@ class StickerListInteractor: StickerListBusinessLogic, StickerListDataStore {
                 }
             }
             
-            let response = StickerList.CreateProduct.Response(list: list, product: product, error: error)
+            let response = StickerList.CreateProduct.Response(
+                list: list,
+                product: product,
+                error: error,
+                showAds: AppAdPolicy.shouldShowAds()
+            )
             self.presenter?.createProduct(response: response)
         }
         

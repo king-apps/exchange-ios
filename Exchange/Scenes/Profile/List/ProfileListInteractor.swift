@@ -58,8 +58,13 @@ class ProfileListInteractor: ProfileListBusinessLogic, ProfileListDataStore {
     // Handler fetch
     func fetch(request: ProfileList.Fetch.Request) {
         
-        worker.fetch { auth, user, remote in
-            let response = ProfileList.Fetch.Response(auth: auth, user: user, remote: remote)
+        worker.fetch { auth, user, remote, showAds in
+            let response = ProfileList.Fetch.Response(
+                auth: auth,
+                user: user,
+                remote: remote,
+                showAds: showAds
+            )
             self.presenter?.fetch(response: response)
         }
         
