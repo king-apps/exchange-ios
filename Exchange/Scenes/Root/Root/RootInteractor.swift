@@ -14,6 +14,7 @@ protocol RootBusinessLogic {
     func controllers(request: Root.Controllers.Request)
     func fcmToken(request: Root.FcmToken.Request)
     func userProfile(request: Root.UserProfile.Request)
+    func appStoreReview(request: Root.AppStoreReview.Request)
 }
 
 
@@ -69,6 +70,17 @@ class RootInteractor: RootBusinessLogic, RootDataStore {
         worker.userProfile { user, error in
             let response = Root.UserProfile.Response(user: user, error: error)
             self.presenter?.userProfile(response: response)
+        }
+        
+    }
+    
+    
+    // Handler app store review
+    func appStoreReview(request: Root.AppStoreReview.Request) {
+        
+        worker.appStoreReview { shouldRequestReview in
+            let response = Root.AppStoreReview.Response(shouldRequestReview: shouldRequestReview)
+            self.presenter?.appStoreReview(response: response)
         }
         
     }

@@ -1,4 +1,5 @@
 import UIKit
+import StoreKit
 
 
 protocol RootDisplayLogic: AnyObject {
@@ -8,6 +9,7 @@ protocol RootDisplayLogic: AnyObject {
     func onFcmToken(error: String)
     func onUserProfile(viewModel: Root.UserProfile.ViewModel)
     func onUserProfile(error: String)
+    func onAppStoreView(viewModel: Root.AppStoreReview.ViewModel)
 }
 
 
@@ -20,6 +22,7 @@ class RootViewController: UITabBarController, RootDisplayLogic {
     
     private var chatTabIndex: Int?
     private var isRefreshingNotificationBadge = false
+    private var hasCheckedAppStoreReview = false
     override var childForStatusBarStyle: UIViewController? {
         return selectedViewController
     }
@@ -51,6 +54,7 @@ class RootViewController: UITabBarController, RootDisplayLogic {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupAnalytics()
+        appStoreReviewIfNeeded()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -148,6 +152,35 @@ class RootViewController: UITabBarController, RootDisplayLogic {
     }
     func onUserProfile(error: String) {
         
+    }
+    
+    
+    // Handler appstore review
+    func appStoreReviewIfNeeded() {
+        guard hasCheckedAppStoreReview == false else {
+            return
+        }
+        
+        hasCheckedAppStoreReview = true
+        appStoreReview()
+    }
+    func appStoreReview() {
+        let request = Root.AppStoreReview.Request()
+        interactor?.appStoreReview(request: request)
+    }
+    func onAppStoreView(viewModel: Root.AppStoreReview.ViewModel) {
+        guard viewModel.shouldRequestReview else {
+            return
+        }
+        
+        showAppStoreReview()
+    }
+    func showAppStoreReview() {
+        guard let windowScene = view.window?.windowScene ?? UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+            return
+        }
+        
+        SKStoreReviewController.requestReview(in: windowScene)
     }
     
     

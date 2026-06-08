@@ -13,6 +13,7 @@ protocol IntroDisplayLogic: AnyObject {
     func onLoad(viewModel: Intro.Load.ViewModel)
     func onLanguage(viewModel: Intro.Language.ViewModel)
     func onRemote(viewModel: Intro.Remote.ViewModel)
+    func onAppOpen(viewModel: Intro.AppOpen.ViewModel)
     func onAuth(viewModel: Intro.Auth.ViewModel)
     func onRedirect(viewModel: Intro.Redirect.ViewModel)
 }
@@ -94,6 +95,16 @@ class IntroViewController: MainBaseViewController, IntroDisplayLogic {
         interactor?.remote(request: request)
     }
     func onRemote(viewModel: Intro.Remote.ViewModel) {
+        appOpen()
+    }
+    
+    
+    // Handler app open
+    func appOpen() {
+        let request = Intro.AppOpen.Request()
+        interactor?.appOpen(request: request)
+    }
+    func onAppOpen(viewModel: Intro.AppOpen.ViewModel) {
         auth()
     }
     

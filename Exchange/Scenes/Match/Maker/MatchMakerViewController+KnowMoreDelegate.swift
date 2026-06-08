@@ -19,7 +19,7 @@ extension MatchMakerViewController: knowMoreDelegate {
                 onDenunciateSuccess()
                 break
             case .matchMakerAddProduct:
-                setTabBarSelectedIndex(index: 1)
+                setTabBarSelectedIndex(index: 0)
             case .matchMakerNeedLocation:
                 openSeetingsLocation()
                 break

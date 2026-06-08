@@ -70,4 +70,17 @@ enum Root {
     }
     
     
+    enum AppStoreReview {
+        struct Request {
+            
+        }
+        struct Response {
+            var shouldRequestReview: Bool
+        }
+        struct ViewModel {
+            var shouldRequestReview: Bool
+        }
+    }
+    
+    
 }

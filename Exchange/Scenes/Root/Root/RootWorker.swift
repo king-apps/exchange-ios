@@ -62,6 +62,13 @@ class RootWorker {
         }
         
     }
+    
+    
+    // Handler appstore review
+    func appStoreReview(completion: @escaping(_ shouldRequestReview: Bool) -> ()) {
+        let shouldRequestReview = AppStoreReviewService.shared.consumePendingReviewRequest()
+        completion(shouldRequestReview)
+    }
   
     
 }

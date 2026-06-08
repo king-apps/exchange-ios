@@ -52,6 +52,13 @@ class IntroWorker {
     }
     
     
+    // Handler app open
+    func appOpen(completion: @escaping() -> ()) {
+        AppStoreReviewService.shared.registerAppOpen()
+        completion()
+    }
+    
+    
     // Handler auth
     func auth(completion: @escaping() ->()) {
         Auth.shared.load()

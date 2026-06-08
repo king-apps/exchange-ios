@@ -396,6 +396,7 @@
 		A5D9308C2FA3C914007C6113 /* ProductCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9308B2FA3C90C007C6113 /* ProductCategoryCell.swift */; };
 		A5D9308E2FA3C996007C6113 /* UIViewBaseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9308D2FA3C996007C6113 /* UIViewBaseWidget.swift */; };
 		A5DB48092FC469BF0043F93D /* StickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB48082FC469BA0043F93D /* StickerService.swift */; };
+		A5F0A1012FD5A10000D6A32F /* AppStoreReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F0A1002FD5A10000D6A32F /* AppStoreReviewService.swift */; };
 		A5DB48122FC478F40043F93D /* StickerFilterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB48112FC478F40043F93D /* StickerFilterWorker.swift */; };
 		A5DB48132FC478F40043F93D /* StickerFilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB480F2FC478F40043F93D /* StickerFilterRouter.swift */; };
 		A5DB48142FC478F40043F93D /* StickerFilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB480C2FC478F40043F93D /* StickerFilterInteractor.swift */; };
@@ -944,6 +945,7 @@
 		A5D9308B2FA3C90C007C6113 /* ProductCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryCell.swift; sourceTree = "<group>"; };
 		A5D9308D2FA3C996007C6113 /* UIViewBaseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBaseWidget.swift; sourceTree = "<group>"; };
 		A5DB48082FC469BA0043F93D /* StickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerService.swift; sourceTree = "<group>"; };
+		A5F0A1002FD5A10000D6A32F /* AppStoreReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewService.swift; sourceTree = "<group>"; };
 		A5DB480B2FC478F40043F93D /* StickerFilterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerFilterConfigurator.swift; sourceTree = "<group>"; };
 		A5DB480C2FC478F40043F93D /* StickerFilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerFilterInteractor.swift; sourceTree = "<group>"; };
 		A5DB480D2FC478F40043F93D /* StickerFilterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerFilterModels.swift; sourceTree = "<group>"; };
@@ -2352,6 +2354,7 @@
 			isa = PBXGroup;
 			children = (
 				A5DB48082FC469BA0043F93D /* StickerService.swift */,
+				A5F0A1002FD5A10000D6A32F /* AppStoreReviewService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -3412,6 +3415,7 @@
 				07A80EE11F3B0A107CF732C6 /* ApiRequestInterceptor.swift in Sources */,
 				A5EF2F3B2FA0D64B0030697F /* EmptyCell.swift in Sources */,
 				A5DB48092FC469BF0043F93D /* StickerService.swift in Sources */,
+				A5F0A1012FD5A10000D6A32F /* AppStoreReviewService.swift in Sources */,
 				A5EF2F682FA0D6600030697F /* InputTokenCell.swift in Sources */,
 				A5BB9B362FC9C03200E81B75 /* ProductBoostResponseDTO.swift in Sources */,
 				A5D9308C2FA3C914007C6113 /* ProductCategoryCell.swift in Sources */,

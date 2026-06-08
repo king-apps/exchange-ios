@@ -14,6 +14,7 @@ protocol RootPresentationLogic {
     func controllers(response: Root.Controllers.Response)
     func fcmToken(response: Root.FcmToken.Response)
     func userProfile(response: Root.UserProfile.Response)
+    func appStoreReview(response: Root.AppStoreReview.Response)
 }
 
 
@@ -69,6 +70,15 @@ class RootPresenter: RootPresentationLogic {
             let error = response.error ?? "Error.500".localized
             viewController?.onUserProfile(error: error)
         }
+    }
+    
+    
+    // Handler appstore review
+    func appStoreReview(response: Root.AppStoreReview.Response) {
+        
+        let viewModel = Root.AppStoreReview.ViewModel(shouldRequestReview: response.shouldRequestReview)
+        viewController?.onAppStoreView(viewModel: viewModel)
+        
     }
     
     

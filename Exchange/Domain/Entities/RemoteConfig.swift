@@ -26,6 +26,8 @@ final class RemoteConfig {
     
     private var boostProfileMinutes: Int
     
+    private var storeReviewAfterAppOpen: Int
+    
     
     // Construct
     private init() {
@@ -46,6 +48,8 @@ final class RemoteConfig {
         productImageMaxHeight = 500
         
         boostProfileMinutes = 60
+        
+        storeReviewAfterAppOpen = 4
     }
     func load(kingRC: KingRC) {
         isFeatureAdsEnabled << kingRC.bool("feature_ads_enabled")
@@ -65,6 +69,7 @@ final class RemoteConfig {
         productImageMaxHeight << kingRC.int("product_image_max_height")
         
         boostProfileMinutes << kingRC.int("boost_profile_minutes")
+        storeReviewAfterAppOpen << kingRC.int( "store_review_after_app_open")
     }
     
     
@@ -104,5 +109,8 @@ final class RemoteConfig {
     }
     func getBoostProfileMinutes() -> Int {
         return boostProfileMinutes
+    }
+    func getStoreReviewAfterAppOpen() -> Int {
+        return storeReviewAfterAppOpen
     }
 }

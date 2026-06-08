@@ -51,6 +51,19 @@ enum Intro {
     }
     
     
+    enum AppOpen {
+        struct Request {
+            
+        }
+        struct Response {
+            
+        }
+        struct ViewModel {
+            
+        }
+    }
+    
+    
     enum Auth {
         struct Request {
             

@@ -13,6 +13,7 @@ protocol IntroPresentationLogic {
     func load(response: Intro.Load.Response)
     func language(response: Intro.Language.Response)
     func remote(response: Intro.Remote.Response)
+    func appOpen(response: Intro.AppOpen.Response)
     func auth(response: Intro.Auth.Response)
     func redirect(response: Intro.Redirect.Response)
     
@@ -49,6 +50,15 @@ class IntroPresenter: IntroPresentationLogic {
      
         let viewModel = Intro.Remote.ViewModel()
         viewController?.onRemote(viewModel: viewModel)
+        
+    }
+    
+    
+    // Handler app open
+    func appOpen(response: Intro.AppOpen.Response) {
+        
+        let viewModel = Intro.AppOpen.ViewModel()
+        viewController?.onAppOpen(viewModel: viewModel)
         
     }
     

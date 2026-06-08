@@ -13,6 +13,7 @@ protocol IntroBusinessLogic {
     func load(request: Intro.Load.Request)
     func language(request: Intro.Language.Request)
     func remote(request: Intro.Remote.Request)
+    func appOpen(request: Intro.AppOpen.Request)
     func auth(request: Intro.Auth.Request)
     func redirect(request: Intro.Redirect.Request)
 }
@@ -59,6 +60,17 @@ class IntroInteractor: IntroBusinessLogic, IntroDataStore {
         worker.remote {
             let response = Intro.Remote.Response()
             self.presenter?.remote(response: response)
+        }
+        
+    }
+    
+    
+    // Handler app open
+    func appOpen(request: Intro.AppOpen.Request) {
+        
+        worker.appOpen {
+            let response = Intro.AppOpen.Response()
+            self.presenter?.appOpen(response: response)
         }
         
     }
