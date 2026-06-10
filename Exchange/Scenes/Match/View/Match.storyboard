@@ -146,6 +146,9 @@
                                         <state key="normal" title="Ads.Button">
                                             <color key="titleColor" name="BrandPrimary100"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="h9b-8e-DyL" kind="presentation" id="QqG-lN-9Bc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -337,7 +340,15 @@
                 <viewControllerPlaceholder storyboardName="SuperLike" id="XkI-Ph-IlD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sh-fb-0jZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="570"/>
+            <point key="canvasLocation" x="514" y="565"/>
+        </scene>
+        <!--Paywall-->
+        <scene sceneID="lYt-6r-GnN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Paywall" id="h9b-8e-DyL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvA-AE-t66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378" y="565"/>
         </scene>
         <!--Match.Filter.Title-->
         <scene sceneID="9KR-Ge-FjD">
@@ -663,7 +674,7 @@
         <image name="gradient-full" width="414" height="717"/>
         <image name="its-a" width="66" height="19"/>
         <image name="layers" width="24" height="24"/>
-        <image name="logo_on_primary" width="82" height="153"/>
+        <image name="logo_on_primary" width="161" height="208.5"/>
         <image name="match" width="195" height="38"/>
         <image name="match-boost" width="68" height="68"/>
         <image name="match-half" width="190" height="20"/>

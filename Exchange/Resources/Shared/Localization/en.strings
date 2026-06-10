@@ -403,6 +403,8 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 /* PAYWALL                                                                                              */
 /* ==================================================================================================== */
 "Premium.Fallback.Cta" = "Subscribe now";
+"PayWall.Header.Cta" = "Trade more, promote better";
+"PayWall.Header.Description" = "Unlock premium tools and use the app ad-free.";
 "PayWall.Cta.Purchase" = "Continue with {$0}";
 "PayWall.Cta.OneTime.2026" = "Buy 2026 access";
 "PayWall.Cta.Promotional" = "Continue with discount";
@@ -416,7 +418,7 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 "PayWall.Restore.Empty.Message" = "No previous purchase was found for this Apple account.";
 "PayWall.Tag.BestOffer" = "best offer";
 "PayWall.Tag.SpecialOffer" = "special offer";
-"PayWall.Section.OneTime" = "2026 SEASON";
+"PayWall.Section.OneTime" = "ONE-TIME PAYMENT";
 "PayWall.Section.Subscription" = "SUBSCRIPTIONS";
 "PayWall.Caption.CancelAnytime" = "* Auto-renewable subscription. Cancel anytime.";
 "PayWall.Caption.OneTime.2026" = "* One-time payment. Premium access valid during the 2026 season.";
@@ -455,3 +457,9 @@ Once you add a photo 📸, they'll be available to nearby users interested in tr
 /* ERRORS                                                                                               */
 /* ==================================================================================================== */
 "Error.500" = "Error 500";
+
+
+/* ==================================================================================================== */
+/* ADS                                                                                                  */
+/* ==================================================================================================== */
+"Ads.Button" = "Remove ads with Premium";

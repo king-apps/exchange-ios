@@ -36,6 +36,10 @@ class PaywallV1Presenter: PaywallV1PresentationLogic {
         static let renderedProductIdentifiers = "Paywall rendered product identifiers"
         static let selectedProductIdentifier = "Paywall selected/highlighted product identifier"
     }
+    
+    private enum PaywallValue {
+        static let seasonWeeks = Decimal(13)
+    }
   
     
     // Var's
@@ -81,27 +85,34 @@ class PaywallV1Presenter: PaywallV1PresentationLogic {
         )
         
 
-        if let cta = response.abAssignment?.payloadString(ABPayloadKey.cta) {
+        let cta = nonEmptyPayloadString(
+            response.abAssignment?.payloadString(ABPayloadKey.cta),
+            fallback: "PayWall.Header.Cta".localized
+        )
+        let description = nonEmptyPayloadString(
+            response.abAssignment?.payloadString(ABPayloadKey.description),
+            fallback: "PayWall.Header.Description".localized
+        )
+        
+        rows.append(.spacing(.init(size: .sm)))
+        rows.append(
+            .textHeadingMd(
+                .init(
+                    text: cta
+                )
+            )
+        )
+        if !description.isEmpty {
             rows.append(.spacing(.init(size: .sm)))
             rows.append(
-                .textHeadingMd(
+                .textBodySmall(
                     .init(
-                        text: cta
+                        text: description
                     )
                 )
             )
-            if let description = response.abAssignment?.payloadString(ABPayloadKey.description) {
-                rows.append(
-                    .textBodySmall(
-                        .init(
-                            text: description
-                        )
-                    )
-                )
-                
-            }
-            rows.append(.spacing(.init(size: .xl)))
         }
+        rows.append(.spacing(.init(size: .xl)))
         
         
         let products = sortProducts(response.products, catalog: response.catalog)
@@ -503,6 +514,15 @@ class PaywallV1Presenter: PaywallV1PresentationLogic {
         return "PayWall.Caption.CancelAnytime".localized
     }
     
+    private func nonEmptyPayloadString(_ value: String?, fallback: String) -> String {
+        let trimmedValue = value?.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let trimmedValue, !trimmedValue.isEmpty else {
+            return fallback
+        }
+        
+        return trimmedValue
+    }
+    
     private func shouldInsertSubscriptionCaption(
         before product: SKProduct,
         at index: Int,
@@ -583,7 +603,34 @@ class PaywallV1Presenter: PaywallV1PresentationLogic {
             )
         }
         
+        if isBestSeasonValue(product, products: products) {
+            return .init(
+                icon: .tag,
+                title: "PayWall.Tag.BestOffer".localized,
+                style: .Success,
+                align: .Left
+            )
+        }
+        
         return nil
+    }
+    
+    private func isBestSeasonValue(_ product: SKProduct, products: [SKProduct]) -> Bool {
+        guard let oneTimeProduct = products.first(where: isOneTimePremium),
+              let weeklyProduct = products.first(where: isWeeklySubscription),
+              product.productIdentifier == oneTimeProduct.productIdentifier
+                || product.productIdentifier == weeklyProduct.productIdentifier else {
+            return false
+        }
+        
+        let oneTimeSeasonPrice = oneTimeProduct.price.decimalValue
+        let weeklySeasonPrice = weeklyProduct.price.decimalValue * PaywallValue.seasonWeeks
+        
+        if oneTimeSeasonPrice <= weeklySeasonPrice {
+            return product.productIdentifier == oneTimeProduct.productIdentifier
+        }
+        
+        return product.productIdentifier == weeklyProduct.productIdentifier
     }
 
     private func isPromotional(productIdentifier: String, catalog: KingOSIAPCatalog?) -> Bool {
@@ -651,6 +698,22 @@ class PaywallV1Presenter: PaywallV1PresentationLogic {
     
     private func isOneTimePremium(_ product: SKProduct) -> Bool {
         product.subscriptionPeriod == nil || isOneTimePremiumIdentifier(product.productIdentifier)
+    }
+    
+    private func isWeeklySubscription(_ product: SKProduct) -> Bool {
+        guard !isOneTimePremium(product) else {
+            return false
+        }
+        
+        if product.productIdentifier == InAppPurchase.Product.premiumSubscriptionWeekly.identifier {
+            return true
+        }
+        
+        guard let subscriptionPeriod = product.subscriptionPeriod else {
+            return false
+        }
+        
+        return subscriptionPeriod.unit == .week && subscriptionPeriod.numberOfUnits == 1
     }
     
     private func isOneTimePremiumIdentifier(_ identifier: String) -> Bool {

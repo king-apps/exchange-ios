@@ -8,7 +8,7 @@ extension MatchMakerViewController: MatchFilterDelegate {
         viewFilterBadge.isHidden = !LocalConfig.shared.filterIsActive()
         if LocalConfig.shared.getHasChanged() {
             LocalConfig.shared.setHasChanged(false)
-            reload()
+            reloadIfNeeded()
         }
         
     }

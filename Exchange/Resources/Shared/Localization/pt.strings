@@ -409,13 +409,15 @@ Ao adicionar uma foto 📸, eles ficam disponíveis para usuários próximos int
 /* ==================================================================================================== */
 /* ADS                                                                                                  */
 /* ==================================================================================================== */
-"Ads.Button" = "Remover anúncios?";
+"Ads.Button" = "Remova anúncios com Premium";
 
 
 /* ==================================================================================================== */
 /* PAYWALL */
 /* ==================================================================================================== */
 "Premium.Fallback.Cta" = "Assinar agora";
+"PayWall.Header.Cta" = "Troque mais, anuncie melhor";
+"PayWall.Header.Description" = "Desbloqueie recursos premium e use o app sem anúncios.";
 "PayWall.Cta.Purchase" = "Continuar com {$0}";
 "PayWall.Cta.OneTime.2026" = "Comprar acesso 2026";
 "PayWall.Cta.Promotional" = "Continuar com desconto";
@@ -429,7 +431,7 @@ Ao adicionar uma foto 📸, eles ficam disponíveis para usuários próximos int
 "PayWall.Restore.Empty.Message" = "Nenhuma compra anterior foi encontrada para esta conta Apple.";
 "PayWall.Tag.BestOffer" = "melhor oferta";
 "PayWall.Tag.SpecialOffer" = "promoção";
-"PayWall.Section.OneTime" = "TEMPORADA 2026";
+"PayWall.Section.OneTime" = "PAGAMENTO ÚNICO";
 "PayWall.Section.Subscription" = "ASSINATURAS";
 "PayWall.Caption.CancelAnytime" = "* Renovação automática. Cancele quando quiser.";
 "PayWall.Caption.OneTime.2026" = "* Pagamento único. Acesso premium válido durante a temporada 2026.";

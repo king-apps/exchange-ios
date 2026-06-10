@@ -254,6 +254,7 @@ class PaywallV1ViewController: MainBaseViewController, PaywallV1DisplayLogic {
         )
         let action = UIAlertAction(title: "Alert.Action.Close".localized, style: .default) { [weak self] _ in
             guard viewModel.shouldDismiss else { return }
+            self?.reloadAllIfNeeded()
             self?.dismiss(animated: true)
         }
         alert.addAction(action)
@@ -283,6 +284,7 @@ class PaywallV1ViewController: MainBaseViewController, PaywallV1DisplayLogic {
         )
         let action = UIAlertAction(title: "Alert.Action.Close".localized, style: .default) { [weak self] _ in
             guard viewModel.shouldDismiss else { return }
+            self?.reloadAllIfNeeded()
             self?.dismiss(animated: true)
         }
         alert.addAction(action)

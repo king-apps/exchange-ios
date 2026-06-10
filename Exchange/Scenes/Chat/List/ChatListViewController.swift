@@ -76,7 +76,7 @@ class ChatListViewController: MainBaseViewController, ChatListDisplayLogic {
     
     // Setup notifications
     func setupNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(fetch), name: .reloadChatList, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadIfNeeded), name: .reloadChatList, object: nil)
     }
     
     
@@ -85,6 +85,14 @@ class ChatListViewController: MainBaseViewController, ChatListDisplayLogic {
         if hasAd() {
             adBannerView?.load(.chatListBanner, viewController: self)
         }
+    }
+    
+    
+    // Handler reload
+    @objc
+    func reloadIfNeeded() {
+        setupAd()
+        fetch()
     }
     
     

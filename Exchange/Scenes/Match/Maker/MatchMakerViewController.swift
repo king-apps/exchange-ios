@@ -141,7 +141,7 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
     
     // Setup notifications
     func setupNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: .reloadMatchMaker, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadIfNeeded), name: .reloadMatchMaker, object: nil)
     }
     
     
@@ -157,6 +157,16 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
             constraintMatchButtonsBottom.constant = 64
         }
         self.view.layoutIfNeeded()
+    }
+    
+    
+    // Handler reload
+    @objc
+    func reloadIfNeeded() {
+        setupAd()
+        self.page = 0
+        self.viewSwipeable.discardViews()
+        search()
     }
     
     
@@ -246,12 +256,6 @@ class MatchMakerViewController: MainBaseViewController, MatchMakerDisplayLogic {
     
     
     // Handler search
-    @objc
-    func reload() {
-        self.page = 0
-        self.viewSwipeable.discardViews()
-        search()
-    }
     func search() {
         searchGeneration += 1
         let generation = searchGeneration

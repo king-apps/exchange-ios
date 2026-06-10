@@ -78,7 +78,7 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
 
         viewFilterBadge.isHidden = true
         
-        NotificationCenter.default.addObserver(self, selector: #selector(fetch), name: .reloadProductList, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadIfNeeded), name: .reloadProductList, object: nil)
     }
     
     
@@ -93,6 +93,14 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
     // Setup analytics
     func setupAnalytics() {
         
+    }
+    
+    
+    // Handler reload
+    @objc
+    func reloadIfNeeded() {
+        setupAd()
+        fetch()
     }
     
     
@@ -111,7 +119,6 @@ class StickerListViewController: MainBaseViewController, StickerListDisplayLogic
     
     
     // Handler fetch
-    @objc
     func fetch() {
         let request = StickerList.Fetch.Request()
         interactor?.fetch(request: request)

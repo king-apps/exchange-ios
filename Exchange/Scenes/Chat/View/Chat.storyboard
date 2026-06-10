@@ -63,6 +63,9 @@
                                         <state key="normal" title="Ads.Button">
                                             <color key="titleColor" name="BrandPrimary100"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="W0g-vW-kPF" kind="presentation" id="mzs-Ys-T5P"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -315,6 +318,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItE-Xw-P52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1945" y="108"/>
+        </scene>
+        <!--Paywall-->
+        <scene sceneID="GGZ-vR-xiQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Paywall" id="W0g-vW-kPF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOn-lO-Wly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="548"/>
         </scene>
     </scenes>
     <resources>
