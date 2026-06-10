@@ -1,1 +1,5 @@
 "CFBundleDisplayName" = "Troca Figurinhas";
+"NSCameraUsageDescription" = "Troca Figurinhas usa a câmera para fotografar suas figurinhas e criar produtos para troca.";
+"NSLocationWhenInUseUsageDescription" = "Troca Figurinhas usa sua localização para encontrar trocas de figurinhas próximas.";
+"NSPhotoLibraryUsageDescription" = "Troca Figurinhas usa sua galeria para escolher fotos das suas figurinhas e criar produtos para troca.";
+"NSUserTrackingUsageDescription" = "Troca Figurinhas usa sua permissão para personalizar anúncios e manter o app gratuito.";

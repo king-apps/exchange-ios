@@ -46,7 +46,7 @@
                                 <rect key="frame" x="0.0" y="318" width="393" height="534"/>
                                 <color key="backgroundColor" name="BackgroundBase"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdE-rk-wWa">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdE-rk-wWa" userLabel="Header">
                                 <rect key="frame" x="0.0" y="172" width="393" height="146"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGO-eS-pmC" customClass="UIViewBase" customModule="Exchange" customModuleProvider="target">
@@ -147,6 +147,9 @@
                                                 <state key="normal" title="Ads.Button">
                                                     <color key="titleColor" name="BrandPrimary100"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="DhP-iO-C7s" kind="presentation" id="pUZ-5l-2Cf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -168,6 +171,7 @@
                                     <constraint firstItem="jqi-ls-xmT" firstAttribute="bottom" secondItem="PGO-eS-pmC" secondAttribute="bottom" id="6Ua-Fn-HLf"/>
                                     <constraint firstItem="7eX-0G-A0f" firstAttribute="top" secondItem="PGO-eS-pmC" secondAttribute="top" id="9cY-st-NyP"/>
                                     <constraint firstAttribute="trailing" secondItem="jqi-ls-xmT" secondAttribute="trailing" constant="16" id="9vQ-qz-v1Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="PGO-eS-pmC" secondAttribute="bottom" priority="750" constant="16" id="Dqd-qa-P6s"/>
                                     <constraint firstItem="hf7-cx-6pM" firstAttribute="top" secondItem="PGO-eS-pmC" secondAttribute="bottom" constant="16" id="F9o-8o-JRf"/>
                                     <constraint firstItem="PGO-eS-pmC" firstAttribute="leading" secondItem="IdE-rk-wWa" secondAttribute="leading" constant="16" id="RDL-Q4-9g9"/>
                                     <constraint firstItem="7eX-0G-A0f" firstAttribute="bottom" secondItem="PGO-eS-pmC" secondAttribute="bottom" id="TOx-V3-p4e"/>
@@ -210,13 +214,21 @@
             </objects>
             <point key="canvasLocation" x="213" y="108"/>
         </scene>
+        <!--Paywall-->
+        <scene sceneID="ETm-hj-e1J">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Paywall" id="DhP-iO-C7s" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qL4-Vv-IsO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="555"/>
+        </scene>
         <!--Product-->
         <scene sceneID="atn-yk-QZS">
             <objects>
                 <viewControllerPlaceholder storyboardName="Product" id="IPT-0A-oLz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEK-mg-tnm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="247" y="555"/>
+            <point key="canvasLocation" x="261" y="555"/>
         </scene>
         <!--Sticker Filter View Controller-->
         <scene sceneID="cbi-ym-Gt8">

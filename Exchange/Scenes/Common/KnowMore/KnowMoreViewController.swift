@@ -121,8 +121,9 @@ class KnowMoreViewController: MainBaseViewController, KnowMoreDisplayLogic {
         
         self.buttonIsPurchase = viewModel.buttonIsPurchase
         DispatchQueue.main.async(execute: {
+            self.buttonAction.hideLoading()
             self.buttonAction.setTitle(viewModel.buttonTitle, for: .normal)
-            self.buttonAction.isEnabled = true
+            self.buttonAction.isEnabled = viewModel.buttonIsEnabled
         })
         
     }

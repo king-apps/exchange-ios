@@ -1,1 +1,5 @@
 "CFBundleDisplayName" = "Exchange Stickers";
+"NSCameraUsageDescription" = "Exchange Stickers uses the camera to photograph your stickers and create items for trading.";
+"NSLocationWhenInUseUsageDescription" = "Exchange Stickers uses your location to find nearby sticker trades.";
+"NSPhotoLibraryUsageDescription" = "Exchange Stickers uses your photo library to choose sticker photos and create items for trading.";
+"NSUserTrackingUsageDescription" = "Exchange Stickers uses your permission to personalize ads and keep the app free.";

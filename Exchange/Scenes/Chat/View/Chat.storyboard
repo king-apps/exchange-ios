@@ -90,7 +90,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BDf-Ri-PbN" secondAttribute="trailing" constant="24" id="V0F-5h-InX"/>
                             <constraint firstItem="151-g4-1dq" firstAttribute="top" secondItem="BDf-Ri-PbN" secondAttribute="bottom" id="b8x-kB-C0a"/>
                             <constraint firstAttribute="bottom" secondItem="151-g4-1dq" secondAttribute="bottom" id="cqC-e4-UJ9"/>
-                            <constraint firstItem="151-g4-1dq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="top" id="il0-OU-l0j"/>
+                            <constraint firstItem="151-g4-1dq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" priority="750" id="il0-OU-l0j"/>
                             <constraint firstItem="151-g4-1dq" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="u3S-Vz-g2i"/>
                         </constraints>
                     </view>

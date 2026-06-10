@@ -267,6 +267,9 @@
 		A5A2F1232FC8A41F00741582 /* UserLinkEmailValidadeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A2F1222FC8A41200741582 /* UserLinkEmailValidadeDTO.swift */; };
 		A5A2F1252FC8C05500741582 /* MatchProductSuperLikeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A2F1242FC8C04B00741582 /* MatchProductSuperLikeRequestDTO.swift */; };
 		A5A2F1272FC8CC8E00741582 /* ProductCountResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A2F1262FC8CC7F00741582 /* ProductCountResponseDTO.swift */; };
+		A5AD10042FD781AA00AD0001 /* AdAppOpenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10012FD781AA00AD0001 /* AdAppOpenService.swift */; };
+		A5AD10052FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10022FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift */; };
+		A5AD10062FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10032FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift */; };
 		A5B6943F2FD2728E00005A1C /* StickerScanConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694382FD2728E00005A1C /* StickerScanConfigurator.swift */; };
 		A5B694402FD2728E00005A1C /* StickerScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943D2FD2728E00005A1C /* StickerScanViewController.swift */; };
 		A5B694412FD2728E00005A1C /* StickerScanModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6943A2FD2728E00005A1C /* StickerScanModels.swift */; };
@@ -276,6 +279,15 @@
 		A5B694452FD2728E00005A1C /* StickerScanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694392FD2728E00005A1C /* StickerScanInteractor.swift */; };
 		A5B694462FD2A6E70005A1C /* StickerScanViewController+DataScannerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694472FD2A6E70005A1C /* StickerScanViewController+DataScannerViewControllerDelegate.swift */; };
 		A5B694492FD30A940005A1C /* StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B694482FD30A940005A1C /* StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift */; };
+		A5B9AD772FD74DC700F06477 /* PaywallV1Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AD6F2FD74DC700F06477 /* PaywallV1Presenter.swift */; };
+		A5B9AD782FD74DC700F06477 /* PaywallV1Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AD6C2FD74DC700F06477 /* PaywallV1Configurator.swift */; };
+		A5B9AD792FD74DC700F06477 /* PaywallV1Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AD6E2FD74DC700F06477 /* PaywallV1Models.swift */; };
+		A5B9AD7A2FD74DC700F06477 /* PaywallV1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AD712FD74DC700F06477 /* PaywallV1ViewController.swift */; };
+		A5B9AD7B2FD74DC700F06477 /* PaywallV1Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AD6D2FD74DC700F06477 /* PaywallV1Interactor.swift */; };
+		A5B9AD7C2FD74DC700F06477 /* PaywallV1Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AD702FD74DC700F06477 /* PaywallV1Router.swift */; };
+		A5B9AD7D2FD74DC700F06477 /* PaywallV1Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AD722FD74DC700F06477 /* PaywallV1Worker.swift */; };
+		A5B9AD7E2FD74DC700F06477 /* Paywall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AD742FD74DC700F06477 /* Paywall.storyboard */; };
+		A5B9AD802FD74E8100F06477 /* KingOSExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AD7F2FD74E7A00F06477 /* KingOSExperiment.swift */; };
 		A5BB9B362FC9C03200E81B75 /* ProductBoostResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB9B352FC9C02900E81B75 /* ProductBoostResponseDTO.swift */; };
 		A5BED72D2FA903A9008821DB /* MyProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BED72C2FA903A2008821DB /* MyProductCell.swift */; };
 		A5BED72F2FA9044B008821DB /* MyProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BED72E2FA9044B008821DB /* MyProductCell.xib */; };
@@ -288,6 +300,7 @@
 		A5BED77E2FA92211008821DB /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BED7762FA92211008821DB /* ChatListRouter.swift */; };
 		A5BED77F2FA92211008821DB /* ChatListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BED7782FA92211008821DB /* ChatListWorker.swift */; };
 		A5BED7802FA92347008821DB /* loading-list.lottie in Resources */ = {isa = PBXBuildFile; fileRef = A5D930852FA38B7E007C6113 /* loading-list.lottie */; };
+		A5BED7812FA92347008821DB /* premium.lottie in Resources */ = {isa = PBXBuildFile; fileRef = A5E7E4A72FD8C40A00691FF9 /* premium.lottie */; };
 		A5BF1DF52FBB333D0085C457 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5BF1DF42FBB333D0085C457 /* ProductCell.xib */; };
 		A5BF1DF72FBB34F00085C457 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF1DF62FBB34EC0085C457 /* ProductCell.swift */; };
 		A5BF1DF92FBB37A60085C457 /* MatchChatProductsResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BF1DF82FBB378F0085C457 /* MatchChatProductsResponseDTO.swift */; };
@@ -396,7 +409,6 @@
 		A5D9308C2FA3C914007C6113 /* ProductCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9308B2FA3C90C007C6113 /* ProductCategoryCell.swift */; };
 		A5D9308E2FA3C996007C6113 /* UIViewBaseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9308D2FA3C996007C6113 /* UIViewBaseWidget.swift */; };
 		A5DB48092FC469BF0043F93D /* StickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB48082FC469BA0043F93D /* StickerService.swift */; };
-		A5F0A1012FD5A10000D6A32F /* AppStoreReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F0A1002FD5A10000D6A32F /* AppStoreReviewService.swift */; };
 		A5DB48122FC478F40043F93D /* StickerFilterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB48112FC478F40043F93D /* StickerFilterWorker.swift */; };
 		A5DB48132FC478F40043F93D /* StickerFilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB480F2FC478F40043F93D /* StickerFilterRouter.swift */; };
 		A5DB48142FC478F40043F93D /* StickerFilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DB480C2FC478F40043F93D /* StickerFilterInteractor.swift */; };
@@ -502,11 +514,9 @@
 		A5EF2FA62FA0DA050030697F /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF2FA02FA0DA050030697F /* AdBannerView.swift */; };
 		A5EF2FA72FA0DA050030697F /* AdPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF2F9E2FA0DA050030697F /* AdPlacement.swift */; };
 		A5EF2FA82FA0DA050030697F /* AdPlacementResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF2F9F2FA0DA050030697F /* AdPlacementResolver.swift */; };
-		A5AD10042FD781AA00AD0001 /* AdAppOpenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10012FD781AA00AD0001 /* AdAppOpenService.swift */; };
-		A5AD10052FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10022FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift */; };
-		A5AD10062FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD10032FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift */; };
 		A5EF2FAD2FA0DA3F0030697F /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EF2FAB2FA0DA3F0030697F /* TagCell.swift */; };
 		A5EF2FAE2FA0DA3F0030697F /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EF2FA92FA0DA3F0030697F /* TagCell.xib */; };
+		A5F0A1012FD5A10000D6A32F /* AppStoreReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F0A1002FD5A10000D6A32F /* AppStoreReviewService.swift */; };
 		A9700E5F030D3BCB584AA5E1 /* MainTableRow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91016FEFB8A562B149FB5A30 /* MainTableRow+Extension.swift */; };
 		AA5ED0D7339F192C10FC07D0 /* HeadingMd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8F044BA42A54D32BAE5E5 /* HeadingMd.swift */; };
 		AA8DF5A439BCD9ACC8549466 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486B517380589AF103206B9 /* Message.swift */; };
@@ -821,6 +831,9 @@
 		A5A2F1222FC8A41200741582 /* UserLinkEmailValidadeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLinkEmailValidadeDTO.swift; sourceTree = "<group>"; };
 		A5A2F1242FC8C04B00741582 /* MatchProductSuperLikeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchProductSuperLikeRequestDTO.swift; sourceTree = "<group>"; };
 		A5A2F1262FC8CC7F00741582 /* ProductCountResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCountResponseDTO.swift; sourceTree = "<group>"; };
+		A5AD10012FD781AA00AD0001 /* AdAppOpenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdAppOpenService.swift; sourceTree = "<group>"; };
+		A5AD10022FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdRewardService+FullScreenContentDelegate.swift"; sourceTree = "<group>"; };
+		A5AD10032FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdAppOpenService+FullScreenContentDelegate.swift"; sourceTree = "<group>"; };
 		A5B694382FD2728E00005A1C /* StickerScanConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanConfigurator.swift; sourceTree = "<group>"; };
 		A5B694392FD2728E00005A1C /* StickerScanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanInteractor.swift; sourceTree = "<group>"; };
 		A5B6943A2FD2728E00005A1C /* StickerScanModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanModels.swift; sourceTree = "<group>"; };
@@ -830,6 +843,15 @@
 		A5B6943E2FD2728E00005A1C /* StickerScanWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerScanWorker.swift; sourceTree = "<group>"; };
 		A5B694472FD2A6E70005A1C /* StickerScanViewController+DataScannerViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StickerScanViewController+DataScannerViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		A5B694482FD30A940005A1C /* StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StickerScanViewController+UIAdaptivePresentationControllerDelegate.swift"; sourceTree = "<group>"; };
+		A5B9AD6C2FD74DC700F06477 /* PaywallV1Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallV1Configurator.swift; sourceTree = "<group>"; };
+		A5B9AD6D2FD74DC700F06477 /* PaywallV1Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallV1Interactor.swift; sourceTree = "<group>"; };
+		A5B9AD6E2FD74DC700F06477 /* PaywallV1Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallV1Models.swift; sourceTree = "<group>"; };
+		A5B9AD6F2FD74DC700F06477 /* PaywallV1Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallV1Presenter.swift; sourceTree = "<group>"; };
+		A5B9AD702FD74DC700F06477 /* PaywallV1Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallV1Router.swift; sourceTree = "<group>"; };
+		A5B9AD712FD74DC700F06477 /* PaywallV1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallV1ViewController.swift; sourceTree = "<group>"; };
+		A5B9AD722FD74DC700F06477 /* PaywallV1Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallV1Worker.swift; sourceTree = "<group>"; };
+		A5B9AD742FD74DC700F06477 /* Paywall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Paywall.storyboard; sourceTree = "<group>"; };
+		A5B9AD7F2FD74E7A00F06477 /* KingOSExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingOSExperiment.swift; sourceTree = "<group>"; };
 		A5BB9B352FC9C02900E81B75 /* ProductBoostResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBoostResponseDTO.swift; sourceTree = "<group>"; };
 		A5BED72C2FA903A2008821DB /* MyProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductCell.swift; sourceTree = "<group>"; };
 		A5BED72E2FA9044B008821DB /* MyProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProductCell.xib; sourceTree = "<group>"; };
@@ -948,7 +970,6 @@
 		A5D9308B2FA3C90C007C6113 /* ProductCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryCell.swift; sourceTree = "<group>"; };
 		A5D9308D2FA3C996007C6113 /* UIViewBaseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBaseWidget.swift; sourceTree = "<group>"; };
 		A5DB48082FC469BA0043F93D /* StickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerService.swift; sourceTree = "<group>"; };
-		A5F0A1002FD5A10000D6A32F /* AppStoreReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewService.swift; sourceTree = "<group>"; };
 		A5DB480B2FC478F40043F93D /* StickerFilterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerFilterConfigurator.swift; sourceTree = "<group>"; };
 		A5DB480C2FC478F40043F93D /* StickerFilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerFilterInteractor.swift; sourceTree = "<group>"; };
 		A5DB480D2FC478F40043F93D /* StickerFilterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerFilterModels.swift; sourceTree = "<group>"; };
@@ -1003,6 +1024,7 @@
 		A5E6D2702FC13CEC00A984E7 /* StickerListViewController+UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StickerListViewController+UIImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
 		A5E6D2722FC13F2500A984E7 /* StickerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCategory.swift; sourceTree = "<group>"; };
 		A5E6D2742FC13FBD00A984E7 /* Sticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		A5E7E4A72FD8C40A00691FF9 /* premium.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = premium.lottie; sourceTree = "<group>"; };
 		A5EF2F1B2FA0D60B0030697F /* MainTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableRow.swift; sourceTree = "<group>"; };
 		A5EF2F1E2FA0D63A0030697F /* CtaCreativeUrlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CtaCreativeUrlCell.xib; sourceTree = "<group>"; };
 		A5EF2F202FA0D63A0030697F /* CtaCreativeUrlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtaCreativeUrlCell.swift; sourceTree = "<group>"; };
@@ -1051,11 +1073,9 @@
 		A5EF2FA02FA0DA050030697F /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
 		A5EF2FA12FA0DA050030697F /* AdBannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerService.swift; sourceTree = "<group>"; };
 		A5EF2FA22FA0DA050030697F /* AdRewardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdRewardService.swift; sourceTree = "<group>"; };
-		A5AD10012FD781AA00AD0001 /* AdAppOpenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdAppOpenService.swift; sourceTree = "<group>"; };
-		A5AD10022FD781AA00AD0001 /* AdRewardService+FullScreenContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdRewardService+FullScreenContentDelegate.swift"; sourceTree = "<group>"; };
-		A5AD10032FD781AA00AD0001 /* AdAppOpenService+FullScreenContentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdAppOpenService+FullScreenContentDelegate.swift"; sourceTree = "<group>"; };
 		A5EF2FA92FA0DA3F0030697F /* TagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
 		A5EF2FAB2FA0DA3F0030697F /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
+		A5F0A1002FD5A10000D6A32F /* AppStoreReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewService.swift; sourceTree = "<group>"; };
 		A8F3672D7EC05DFA6D9F5E7B /* AppContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		A93947956C8450CFC937FC1B /* Chat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		ABD99DEE79C3B4E707F14C99 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1128,6 +1148,7 @@
 		01E58EA24C483841F00D6259 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				A5E7E4A72FD8C40A00691FF9 /* premium.lottie */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -1139,6 +1160,7 @@
 				A56160752FBF2B130095B841 /* KnowMore */,
 				A50954722FBB7C2F00F752B6 /* Product */,
 				A55026782FBDEE8A00556E78 /* SuperLike */,
+				A5B9AD762FD74DC700F06477 /* Paywall */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1220,6 +1242,7 @@
 		3D1F3F9D423B8AFC4FDE5E15 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				A5B9AD7F2FD74E7A00F06477 /* KingOSExperiment.swift */,
 				A56160862FBF2B7E0095B841 /* KnowMoreOption.swift */,
 				A59948B72FB61E910014BBD2 /* MatchMakerOption.swift */,
 				9B3B9A35498A987029B2E997 /* DenunciateReason.swift */,
@@ -1959,6 +1982,37 @@
 				A5B6943E2FD2728E00005A1C /* StickerScanWorker.swift */,
 			);
 			path = Scan;
+			sourceTree = "<group>";
+		};
+		A5B9AD732FD74DC700F06477 /* v1 */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9AD6C2FD74DC700F06477 /* PaywallV1Configurator.swift */,
+				A5B9AD6D2FD74DC700F06477 /* PaywallV1Interactor.swift */,
+				A5B9AD6E2FD74DC700F06477 /* PaywallV1Models.swift */,
+				A5B9AD6F2FD74DC700F06477 /* PaywallV1Presenter.swift */,
+				A5B9AD702FD74DC700F06477 /* PaywallV1Router.swift */,
+				A5B9AD712FD74DC700F06477 /* PaywallV1ViewController.swift */,
+				A5B9AD722FD74DC700F06477 /* PaywallV1Worker.swift */,
+			);
+			path = v1;
+			sourceTree = "<group>";
+		};
+		A5B9AD752FD74DC700F06477 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9AD742FD74DC700F06477 /* Paywall.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5B9AD762FD74DC700F06477 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9AD732FD74DC700F06477 /* v1 */,
+				A5B9AD752FD74DC700F06477 /* View */,
+			);
+			path = Paywall;
 			sourceTree = "<group>";
 		};
 		A5BED72A2FA90388008821DB /* MyProduct */ = {
@@ -3221,6 +3275,7 @@
 				D25F4E8C8C824A1B9F39A008 /* es_override.strings in Resources */,
 				A52715E22FBBD1CE0095C11C /* ProfileUserCell.xib in Resources */,
 				A5BED7682FA91D50008821DB /* Chat.storyboard in Resources */,
+				A5B9AD7E2FD74DC700F06477 /* Paywall.storyboard in Resources */,
 				A5C41E552FA37C48003C8588 /* NewProduct.storyboard in Resources */,
 				A5C41DBE2FA244EB003C8588 /* Match.storyboard in Resources */,
 				A510FDCD2FB961300046CD47 /* ChatMessageHeCell.xib in Resources */,
@@ -3243,6 +3298,7 @@
 				A56160772FBF2B3B0095B841 /* KnowMore.storyboard in Resources */,
 				A5EF2F5B2FA0D65C0030697F /* TextBodySmallCell.xib in Resources */,
 				A5BED7802FA92347008821DB /* loading-list.lottie in Resources */,
+				A5BED7812FA92347008821DB /* premium.lottie in Resources */,
 				A50954752FBB7C4500F752B6 /* Product.storyboard in Resources */,
 				A5EF2F6D2FA0D6600030697F /* InputTokenCell.xib in Resources */,
 				A5E6D2512FC0CF9E00A984E7 /* ProductProgressCell.xib in Resources */,
@@ -3275,6 +3331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B9AD802FD74E8100F06477 /* KingOSExperiment.swift in Sources */,
 				488524441B626185DE003AF0 /* AppDelegate+MessagingDelegate.swift in Sources */,
 				81387C38D7C420E9D706396B /* AppDelegate+UNUserNotificationCenterDelegate.swift in Sources */,
 				1AC4217A27366F375F1E2A94 /* AppDelegate.swift in Sources */,
@@ -3291,6 +3348,13 @@
 				A5EF2F942FA0D99D0030697F /* UIButtonBase.swift in Sources */,
 				A5EF2F952FA0D99D0030697F /* MainBaseStatus.swift in Sources */,
 				A5BF1DF72FBB34F00085C457 /* ProductCell.swift in Sources */,
+				A5B9AD772FD74DC700F06477 /* PaywallV1Presenter.swift in Sources */,
+				A5B9AD782FD74DC700F06477 /* PaywallV1Configurator.swift in Sources */,
+				A5B9AD792FD74DC700F06477 /* PaywallV1Models.swift in Sources */,
+				A5B9AD7A2FD74DC700F06477 /* PaywallV1ViewController.swift in Sources */,
+				A5B9AD7B2FD74DC700F06477 /* PaywallV1Interactor.swift in Sources */,
+				A5B9AD7C2FD74DC700F06477 /* PaywallV1Router.swift in Sources */,
+				A5B9AD7D2FD74DC700F06477 /* PaywallV1Worker.swift in Sources */,
 				A51D81812FB49A3800080060 /* AuthInputNameViewController+InputTextCellDelegate.swift in Sources */,
 				A59948AC2FB61B980014BBD2 /* AuthEndPoint.swift in Sources */,
 				A51D81682FB3DF3900080060 /* AuthLocationPresenter.swift in Sources */,

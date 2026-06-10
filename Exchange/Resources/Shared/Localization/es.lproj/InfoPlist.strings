@@ -1,1 +1,5 @@
 "CFBundleDisplayName" = "Cambio de Cromos";
+"NSCameraUsageDescription" = "Cambio de Cromos usa la cámara para fotografiar tus cromos y crear productos para intercambio.";
+"NSLocationWhenInUseUsageDescription" = "Cambio de Cromos usa tu ubicación para encontrar intercambios de cromos cercanos.";
+"NSPhotoLibraryUsageDescription" = "Cambio de Cromos usa tu galería para elegir fotos de tus cromos y crear productos para intercambio.";
+"NSUserTrackingUsageDescription" = "Cambio de Cromos usa tu permiso para personalizar anuncios y mantener la app gratuita.";

@@ -8,6 +8,7 @@ final class InAppPurchase: NSObject {
     
     // Product catalog
     enum Product: CaseIterable {
+        case premiumOneTime
         case premiumSubscriptionWeekly
         case premiumSubscriptionPromotional
         case premiumSubscriptionMonthly
@@ -16,6 +17,8 @@ final class InAppPurchase: NSObject {
         
         var identifier: String {
             switch self {
+            case .premiumOneTime:
+                return InAppPurchase.shared.identifier(for: self)
             case .premiumSubscriptionWeekly:
                 return InAppPurchase.shared.identifier(for: self)
             case .premiumSubscriptionPromotional:
@@ -152,6 +155,11 @@ final class InAppPurchase: NSObject {
         }
         
         for offer in catalog.offers where offer.storeProductId.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false {
+            if Self.isOneTimePremiumIdentifier(offer.storeProductId) {
+                identifiersByProduct[.premiumOneTime] = offer.storeProductId
+                continue
+            }
+            
             switch offer.key {
             case .weekly:
                 identifiersByProduct[.premiumSubscriptionWeekly] = offer.storeProductId
@@ -378,6 +386,7 @@ final class InAppPurchase: NSObject {
     
     private static func emptyIdentifiersByProduct() -> [Product: String] {
         [
+            .premiumOneTime: "",
             .premiumSubscriptionWeekly: "",
             .premiumSubscriptionPromotional: "",
             .premiumSubscriptionMonthly: "",
@@ -421,7 +430,8 @@ private extension InAppPurchase.Product {
     static func isPremiumIdentifier(_ identifier: String) -> Bool {
         return Self.allCases.contains { product in
             switch product {
-            case .premiumSubscriptionWeekly,
+            case .premiumOneTime,
+                    .premiumSubscriptionWeekly,
                     .premiumSubscriptionPromotional,
                     .premiumSubscriptionMonthly,
                     .premiumSubscriptionQuarterly,
@@ -429,6 +439,15 @@ private extension InAppPurchase.Product {
                 return product.identifier == identifier
             }
         }
+    }
+}
+
+
+private extension InAppPurchase {
+    static func isOneTimePremiumIdentifier(_ identifier: String) -> Bool {
+        let normalized = identifier.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        return normalized == "exchange.stickers.premium"
+            || (normalized.hasSuffix(".premium") && !normalized.contains(".subscription."))
     }
 }
 

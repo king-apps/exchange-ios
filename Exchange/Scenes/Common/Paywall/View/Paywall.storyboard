@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PaywallV1 View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="v1" id="Y6W-OH-hqX" customClass="PaywallV1ViewController" customModule="Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pg8-Cy-iRR">
+                                <rect key="frame" x="0.0" y="262" width="393" height="406"/>
+                                <color key="backgroundColor" name="BackgroundBase"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcb-7G-uI2">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="262"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcn-mh-8Q7">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="262"/>
+                                        <color key="backgroundColor" name="BrandPrimary500"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI5-VD-oS9" customClass="UIButtonBase" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="353" y="24" width="24" height="24"/>
+                                        <color key="backgroundColor" name="SemanticIconOnPrimary"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="8cn-wa-IZq"/>
+                                            <constraint firstAttribute="width" secondItem="AI5-VD-oS9" secondAttribute="height" id="I4h-yY-lG0"/>
+                                        </constraints>
+                                        <color key="tintColor" name="SemanticBrandPrimary700"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="x"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didClose" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9ib-CQ-PYK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPrimary500"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AI5-VD-oS9" secondAttribute="trailing" constant="16" id="HRk-aZ-spV"/>
+                                    <constraint firstItem="Lcn-mh-8Q7" firstAttribute="height" secondItem="bcb-7G-uI2" secondAttribute="width" multiplier="2:3" id="M8N-am-Gom"/>
+                                    <constraint firstItem="AI5-VD-oS9" firstAttribute="top" secondItem="bcb-7G-uI2" secondAttribute="top" constant="24" id="NbG-AG-KYB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lcn-mh-8Q7" secondAttribute="bottom" id="USM-ZR-tc8"/>
+                                    <constraint firstItem="Lcn-mh-8Q7" firstAttribute="top" secondItem="bcb-7G-uI2" secondAttribute="top" id="fjo-Br-Bvg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lcn-mh-8Q7" secondAttribute="trailing" id="iXK-4G-MQ9"/>
+                                    <constraint firstItem="Lcn-mh-8Q7" firstAttribute="leading" secondItem="bcb-7G-uI2" secondAttribute="leading" id="ypE-zK-XqA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laL-wq-BHk" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="668" width="393" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaF-vg-ScR" customClass="UIButtonFilled" customModule="Exchange" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="16" width="361" height="48"/>
+                                        <color key="backgroundColor" name="BrandPrimary500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="gqD-MU-Kqd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="tintColor" name="SemanticIconOnPrimary"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="PayWall.Cta.Purchase.Trial.Plural">
+                                            <color key="titleColor" name="SemanticTextOnPrimary"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPurchase" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3zt-uQ-L7r"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eN6-k2-f1z">
+                                        <rect key="frame" x="16" y="72" width="361" height="28"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-Nq-BM1" customClass="UIButtonBase" customModule="Exchange" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="tintColor" name="SemanticTextSecondary"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="PayWall.Footer.Terms">
+                                                    <color key="titleColor" name="TextOnSurfaceSecondary"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="pLP-Z7-yFq" kind="presentation" identifier="TermsOfUse" modalPresentationStyle="pageSheet" id="4Ox-xV-lsi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-R4-0gf" customClass="UIButtonBase" customModule="Exchange" customModuleProvider="target">
+                                                <rect key="frame" x="115" y="0.66666666666662877" width="131" height="27"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="tintColor" name="SemanticTextSecondary"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="PayWall.Footer.Restore">
+                                                    <color key="titleColor" name="TextOnSurfaceSecondary"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didRestore" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HjX-Wb-rCR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAC-lw-qaM" customClass="UIButtonBase" customModule="Exchange" customModuleProvider="target">
+                                                <rect key="frame" x="232" y="0.66666666666662877" width="129" height="27"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="tintColor" name="SemanticTextSecondary"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="PayWall.Footer.Privacy">
+                                                    <color key="titleColor" name="TextOnSurfaceSecondary"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="bSW-yZ-iuy" kind="presentation" identifier="PrivacyPolicy" modalPresentationStyle="pageSheet" id="fAO-gp-X5j"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="zB1-Nq-BM1" firstAttribute="top" secondItem="eN6-k2-f1z" secondAttribute="top" id="EPR-7I-W9q"/>
+                                            <constraint firstItem="a5e-R4-0gf" firstAttribute="centerY" secondItem="zB1-Nq-BM1" secondAttribute="centerY" id="Ga5-jB-IGY"/>
+                                            <constraint firstAttribute="trailing" secondItem="kAC-lw-qaM" secondAttribute="trailing" id="QcL-JY-Yu9"/>
+                                            <constraint firstAttribute="bottom" secondItem="zB1-Nq-BM1" secondAttribute="bottom" id="Y02-H2-gmT"/>
+                                            <constraint firstItem="kAC-lw-qaM" firstAttribute="centerY" secondItem="a5e-R4-0gf" secondAttribute="centerY" id="YWa-JQ-mbb"/>
+                                            <constraint firstItem="a5e-R4-0gf" firstAttribute="centerX" secondItem="eN6-k2-f1z" secondAttribute="centerX" id="at3-kA-e5Y"/>
+                                            <constraint firstItem="zB1-Nq-BM1" firstAttribute="leading" secondItem="eN6-k2-f1z" secondAttribute="leading" id="wPm-U3-yQB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundSurface90"/>
+                                <color key="tintColor" name="SemanticBrandPrimary500"/>
+                                <constraints>
+                                    <constraint firstItem="vaF-vg-ScR" firstAttribute="top" secondItem="laL-wq-BHk" secondAttribute="top" constant="16" id="5qR-Rb-QZm"/>
+                                    <constraint firstItem="eN6-k2-f1z" firstAttribute="leading" secondItem="vaF-vg-ScR" secondAttribute="leading" id="B2h-cn-DR8"/>
+                                    <constraint firstItem="vaF-vg-ScR" firstAttribute="leading" secondItem="laL-wq-BHk" secondAttribute="leading" constant="16" id="Bjy-hH-zXT"/>
+                                    <constraint firstItem="eN6-k2-f1z" firstAttribute="trailing" secondItem="vaF-vg-ScR" secondAttribute="trailing" id="UZp-c5-b0a"/>
+                                    <constraint firstAttribute="trailing" secondItem="vaF-vg-ScR" secondAttribute="trailing" constant="16" id="n1X-0n-jsf"/>
+                                    <constraint firstItem="eN6-k2-f1z" firstAttribute="top" secondItem="vaF-vg-ScR" secondAttribute="bottom" constant="8" id="rtQ-N9-hDq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="SemanticBgApp"/>
+                        <constraints>
+                            <constraint firstItem="bcb-7G-uI2" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3Za-bw-Y1K"/>
+                            <constraint firstAttribute="top" secondItem="bcb-7G-uI2" secondAttribute="top" id="5ST-gy-IhV"/>
+                            <constraint firstItem="laL-wq-BHk" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="6Bu-Cp-CU4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="eN6-k2-f1z" secondAttribute="bottom" constant="16" id="B7p-dS-1Db"/>
+                            <constraint firstAttribute="bottom" secondItem="laL-wq-BHk" secondAttribute="bottom" id="FMe-SY-y36"/>
+                            <constraint firstItem="Pg8-Cy-iRR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MLC-jJ-jgm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="laL-wq-BHk" secondAttribute="trailing" id="NSm-sv-usH"/>
+                            <constraint firstItem="laL-wq-BHk" firstAttribute="top" secondItem="Pg8-Cy-iRR" secondAttribute="bottom" id="RZG-Ex-dzP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pg8-Cy-iRR" secondAttribute="trailing" id="ZhM-nL-hLB"/>
+                            <constraint firstItem="bcb-7G-uI2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ar2-rD-S8z"/>
+                            <constraint firstItem="Pg8-Cy-iRR" firstAttribute="top" secondItem="bcb-7G-uI2" secondAttribute="bottom" id="fwp-Vy-3Og"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonPurchase" destination="vaF-vg-ScR" id="MdD-XB-EjA"/>
+                        <outlet property="heroImageView" destination="Lcn-mh-8Q7" id="Wpe-FB-2Gb"/>
+                        <outlet property="tableView" destination="Pg8-Cy-iRR" id="k9X-xZ-xtF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248.09160305343511" y="98.591549295774655"/>
+        </scene>
+        <!--WebContent-->
+        <scene sceneID="RMg-WZ-e46">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WebContent" id="pLP-Z7-yFq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTh-nk-smF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="48"/>
+        </scene>
+        <!--WebContent-->
+        <scene sceneID="cPB-kV-asM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WebContent" id="bSW-yZ-iuy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojs-4I-sCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="x" width="24" height="24"/>
+        <namedColor name="BackgroundBase">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundSurface90">
+            <color red="1" green="1" blue="1" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPrimary500">
+            <color red="0.14509803921568629" green="0.43137254901960786" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemanticBgApp">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemanticBrandPrimary500">
+            <color red="0.0" green="0.45882352941176469" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemanticBrandPrimary700">
+            <color red="0.098039215686274508" green="0.30980392156862746" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemanticIconOnPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemanticTextOnPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SemanticTextSecondary">
+            <color red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextOnSurfaceSecondary">
+            <color red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

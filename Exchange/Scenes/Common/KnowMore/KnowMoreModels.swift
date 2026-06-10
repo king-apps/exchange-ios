@@ -51,6 +51,7 @@ enum KnowMore {
         struct ViewModel {
             var buttonTitle: String
             var buttonIsPurchase: Bool
+            var buttonIsEnabled: Bool
         }
     }
     

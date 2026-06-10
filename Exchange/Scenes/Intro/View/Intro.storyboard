@@ -12,13 +12,13 @@
         <!--Intro View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="IntroViewController" customModule="exchange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="IntroViewController" customModule="Exchange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo_on_primary" translatesAutoresizingMaskIntoConstraints="NO" id="LcS-wr-Miz">
-                                <rect key="frame" x="155.66666666666666" y="374.66666666666669" width="82" height="153.00000000000006"/>
+                                <rect key="frame" x="116.33333333333333" y="346.66666666666669" width="160.66666666666669" height="208.66666666666669"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -35,7 +35,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo_on_primary" width="82" height="153"/>
+        <image name="logo_on_primary" width="160.66667175292969" height="208.66667175292969"/>
         <namedColor name="BrandPrimary500">
             <color red="0.14509803921568629" green="0.43137254901960786" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -15,6 +15,7 @@ BUILD_DIR="$APP_DIR/Resources/Build"
 BUILD_BRAND_XCCONFIG="$BUILD_DIR/Brand.generated.xcconfig"
 BUILD_ASSETS="$BUILD_DIR/Assets.xcassets"
 BUILD_LOCALIZATION_DIR="$BUILD_DIR/Localization"
+BUILD_LOTTIE_DIR="$BUILD_DIR/Lottie"
 
 lowercase() {
   printf '%s' "$1" | tr '[:upper:]' '[:lower:]'
@@ -91,6 +92,7 @@ fi
 BRAND_NAME="$(brand_name_from_dir "$BRAND_DIR")"
 BRAND_XCCONFIG="$(brand_xcconfig_path "$BRAND_DIR")"
 SOURCE_LOCALIZATION_DIR="$BRAND_DIR/Localization"
+SOURCE_LOTTIE_DIR="$BRAND_DIR/Lottie"
 
 if [ "$BRAND_XCCONFIG" = "" ] || [ ! -f "$BRAND_XCCONFIG" ]; then
   printf '%s\n' "Arquivo de configuracao da brand nao encontrado: $BRAND_XCCONFIG" >&2
@@ -102,6 +104,12 @@ mkdir -p "$BUILD_DIR"
 
 find "$BRAND_DIR" -mindepth 1 -maxdepth 1 ! -name '.*' -exec cp -R {} "$BUILD_DIR/" \;
 mkdir -p "$BUILD_LOCALIZATION_DIR"
+
+if [ -d "$SOURCE_LOTTIE_DIR" ]; then
+  rm -rf "$BUILD_LOTTIE_DIR"
+  mkdir -p "$BUILD_LOTTIE_DIR"
+  find "$SOURCE_LOTTIE_DIR" -mindepth 1 -maxdepth 1 ! -name '.*' -exec cp -R {} "$BUILD_LOTTIE_DIR/" \;
+fi
 
 if [ -d "$SOURCE_LOCALIZATION_DIR" ]; then
   find "$BUILD_LOCALIZATION_DIR" -maxdepth 1 -type f -name '*_override.strings' -delete
@@ -131,4 +139,5 @@ printf '%s\n' "Build atualizado com a brand: $BRAND_NAME"
 printf '%s\n' "Brand config: $BRAND_XCCONFIG"
 printf '%s\n' "Build resources: $BUILD_DIR"
 printf '%s\n' "Localization: $BUILD_LOCALIZATION_DIR"
+printf '%s\n' "Lottie: $BUILD_LOTTIE_DIR"
 printf '%s\n' "Generated config: $BUILD_BRAND_XCCONFIG"

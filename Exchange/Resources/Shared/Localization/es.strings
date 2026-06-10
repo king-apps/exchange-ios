@@ -400,6 +400,58 @@ Al agregar una foto 📸, estarán disponibles para usuarios cercanos interesado
 
 
 /* ==================================================================================================== */
+/* PAYWALL                                                                                              */
+/* ==================================================================================================== */
+"Premium.Fallback.Cta" = "Suscribirse ahora";
+"PayWall.Cta.Purchase" = "Continuar con {$0}";
+"PayWall.Cta.OneTime.2026" = "Comprar acceso 2026";
+"PayWall.Cta.Promotional" = "Continuar con descuento";
+"PayWall.Cta.Purchase.Trial.Singular" = "Empieza la prueba GRATIS de 1 día";
+"PayWall.Cta.Purchase.Trial.Plural" = "Empieza la prueba GRATIS de {$0} días";
+"PayWall.Purchase.Success.Title" = "Compra completada";
+"PayWall.Purchase.Success.Message" = "Tu acceso premium se activó correctamente.";
+"PayWall.Purchase.ProductRequired" = "Selecciona una opción para continuar.";
+"PayWall.Restore.Success.Title" = "Compra restaurada";
+"PayWall.Restore.Success.Message" = "Tu acceso premium se restauró correctamente.";
+"PayWall.Restore.Empty.Message" = "No se encontró ninguna compra anterior para esta cuenta Apple.";
+"PayWall.Tag.BestOffer" = "mejor oferta";
+"PayWall.Tag.SpecialOffer" = "promoción";
+"PayWall.Section.OneTime" = "TEMPORADA 2026";
+"PayWall.Section.Subscription" = "SUSCRIPCIONES";
+"PayWall.Caption.CancelAnytime" = "* Suscripción auto-renovable. Cancela cuando quieras.";
+"PayWall.Caption.OneTime.2026" = "* Pago único. Acceso premium válido durante la temporada 2026.";
+"PayWall.Caption.Mixed" = "* Elige pago único o suscripción auto-renovable.";
+"PayWall.Footer.Terms" = "Términos";
+"PayWall.Footer.Restore" = "Restaurar";
+"PayWall.Footer.Privacy" = "Privacidad";
+"PayWall.Intro.FreeTrial.Highlight" = "GRATIS por {$0}";
+"PayWall.Intro.RenewalPricePeriod" = "Luego, solo {$0}{$1}";
+"PayWall.Intro.RenewalEveryPeriod" = " cada {$0}";
+"PayWall.Intro.RenewalSlashDay" = "/día";
+"PayWall.Intro.RenewalSlashWeek" = "/semana";
+"PayWall.Intro.RenewalSlashMonth" = "/mes";
+"PayWall.Intro.RenewalSlashYear" = "/año";
+"PayWall.Intro.PricePeriod" = "{$0} por {$1}";
+"PayWall.Period.OneTime" = "Acceso 2026";
+"PayWall.Period.OneTime.2026" = "Válido durante toda la temporada de 2026";
+"PayWall.Period.Promotional" = "Mensual con descuento";
+"PayWall.Period.Weekly" = "Semanal";
+"PayWall.Period.Monthly" = "Mensual";
+"PayWall.Period.Bimonthly" = "Bimestral";
+"PayWall.Period.Quarterly" = "Trimestral";
+"PayWall.Period.Semiannual" = "Semestral";
+"PayWall.Period.Annual" = "Anual";
+"PayWall.Period.Day.Singular" = "1 día";
+"PayWall.Period.Day.Plural" = "{$0} días";
+"PayWall.Period.Week.Singular" = "1 semana";
+"PayWall.Period.Week.Plural" = "{$0} semanas";
+"PayWall.Period.Month.Singular" = "1 mes";
+"PayWall.Period.Month.Plural" = "{$0} meses";
+"PayWall.Period.Year.Singular" = "1 año";
+"PayWall.Period.Year.Plural" = "{$0} años";
+
+
+/* ==================================================================================================== */
 /* ERRORES                                                                                              */
 /* ==================================================================================================== */
 "Error.500" = "Error 500";

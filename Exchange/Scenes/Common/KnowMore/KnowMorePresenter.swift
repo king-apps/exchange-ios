@@ -54,7 +54,8 @@ class KnowMorePresenter: KnowMorePresentationLogic {
             
             let viewModel = KnowMore.Fetch.ViewModel(
                 buttonTitle: buttonTitle,
-                buttonIsPurchase: buttonIsPurchase
+                buttonIsPurchase: buttonIsPurchase,
+                buttonIsEnabled: buttonIsPurchase
             )
             viewController?.onFetch(viewModel: viewModel)
         }

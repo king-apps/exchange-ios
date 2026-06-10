@@ -12,7 +12,7 @@ import UIKit
 class ProfileListWorker {
    
     
-    // Handler load
+    // Handler load 
     func load(completion: @escaping() -> ()) {
         completion()
     }

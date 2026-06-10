@@ -70,7 +70,13 @@ class KnowMoreInteractor: KnowMoreBusinessLogic, KnowMoreDataStore {
     // Handler purchase
     func purchase(request: KnowMore.Purchase.Request) {
         
-        worker.purchase(product: self.storeProduct!) { error in
+        guard let storeProduct = self.storeProduct else {
+            let response = KnowMore.Purchase.Response(error: "Alert.Generic.Error".localized)
+            presenter?.purchase(response: response)
+            return
+        }
+        
+        worker.purchase(product: storeProduct) { error in
             let response = KnowMore.Purchase.Response(error: error)
             self.presenter?.purchase(response: response)
         }

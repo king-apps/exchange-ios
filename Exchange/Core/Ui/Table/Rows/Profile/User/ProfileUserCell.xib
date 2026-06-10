@@ -25,7 +25,7 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="EQ0-fd-eJq">
                                 <rect key="frame" x="146.66666666666666" y="8" width="100" height="100"/>
-                                <color key="backgroundColor" name="BrandPrimary100"/>
+                                <color key="backgroundColor" name="BaseWhite"/>
                                 <color key="tintColor" name="BaseWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EQ0-fd-eJq" secondAttribute="height" id="EWF-hB-tzX"/>
