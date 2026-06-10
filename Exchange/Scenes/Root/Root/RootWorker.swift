@@ -22,9 +22,8 @@ class RootWorker {
     func controllers(completion: @escaping(_ list: [Root.RootController]) -> ()) {
         
         let list: [Root.RootController] = [
-            .init(storyboard: "Stickers", title: "", icon: .bookOpen),
             .init(storyboard: "Match", title: "", icon: .layers),
-            
+            .init(storyboard: "Stickers", title: "", icon: .bookOpen),
             .init(storyboard: "Chat", title: "", icon: .messageCircle),
             .init(storyboard: "Profile", title: "", icon: .user),
             

@@ -211,16 +211,16 @@ class DefaultCell: UITableViewCellBase, NibLoadableCell {
         //imageViewIconRight.tintColor = AppTheme.shared.getColorIconOnSurface()
     }
     private func applyStyleSelected() {
-        effectView?.backgroundColor = AppTheme.Colors.brandPrimary700
-        viewContainer.layer.borderColor = AppTheme.Colors.brandPrimary500.resolvedColor(with: traitCollection).cgColor
-        viewContainer.backgroundColor = AppTheme.Colors.brandPrimary500
+        effectView?.backgroundColor = AppTheme.Colors.borderDefault
+        viewContainer.layer.borderColor = AppTheme.Colors.brandPrimary500.cgColor
+        //viewContainer.backgroundColor = AppTheme.Colors.brandPrimary100
         //viewIconLeft.backgroundColor = AppTheme.Colors.backgroundApp
-        viewIconLeft.layer.borderColor = AppTheme.Colors.brandPrimary500.resolvedColor(with: traitCollection).cgColor
+        viewIconLeft.layer.borderColor = AppTheme.Colors.brandPrimary500.cgColor
         viewIconLeft.backgroundColor = AppTheme.Colors.brandPrimary500
         imageViewIconLeft.tintColor = AppTheme.Colors.iconOnBrandPrimary
-        labelTitle.textColor = AppTheme.Colors.textOnBrandPrimary
-        labelDescription.textColor = AppTheme.Colors.brandPrimary100
-        imageViewIconRight.tintColor = AppTheme.Colors.iconOnBrandPrimary
+        labelTitle.textColor = AppTheme.Colors.brandPrimary500
+        labelDescription.textColor = AppTheme.Colors.textOnSurface
+        imageViewIconRight.tintColor = AppTheme.Colors.brandPrimary500
     }
     private func applyStyleSelected(color: UIColor) {
         effectView?.backgroundColor = color.withAlphaComponent(0.5)

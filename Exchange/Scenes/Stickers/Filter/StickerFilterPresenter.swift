@@ -47,13 +47,13 @@ class StickerFilterPresenter: StickerFilterPresentationLogic {
                 .init(
                     title: "StickerFilter.Categories.Title".localized,
                     placeholder:
-                    config.getCategories().count > 0
-                    ? "StickerFilter.Categories.Value".localized.replacingOccurrences(of: "{$0}", with: "\(config.getCategories().count)")
+                    config.getStickerFilterCategories().count > 0
+                    ? "StickerFilter.Categories.Value".localized.replacingOccurrences(of: "{$0}", with: "\(config.getStickerFilterCategories().count)")
                     : "StickerFilter.Categories.Placeholder".localized
                     ,
                     value: "",
-                    count: "", // config.getCategories().count > 0 ? "\(config.getCategories().count)" : "",
-                    iconLeft: config.getCategories().count > 0
+                    count: "", // config.getStickerFilterCategories().count > 0 ? "\(config.getStickerFilterCategories().count)" : "",
+                    iconLeft: config.getStickerFilterCategories().count > 0
                     ? .checkCircle
                     : .circle
                     ,

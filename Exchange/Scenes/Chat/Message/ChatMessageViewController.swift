@@ -24,9 +24,13 @@ class ChatMessageViewController: MainBaseViewController, ChatMessageDisplayLogic
     @IBOutlet var textViewMessage: UITextView!
     @IBOutlet var buttonSend: UIButtonBase!
     @IBOutlet var constraintToSafeAreaBottom: NSLayoutConstraint!
+    @IBOutlet var viewMessage: UIView!
     var timer: Timer?
     private var loopTime: Int = 20
     private var chatId: Int = 0
+    private var messagePlaceholder: String {
+        "Chat.Message.Placeholder".localized
+    }
 
   
     // Constructor
@@ -93,6 +97,7 @@ class ChatMessageViewController: MainBaseViewController, ChatMessageDisplayLogic
         textViewMessage.enablesReturnKeyAutomatically = true
         setTextViewMessagePlaceholder()
         addTapToDismissKeyboard()
+       
         
         
         NotificationCenter.default.addObserver(
@@ -214,13 +219,13 @@ class ChatMessageViewController: MainBaseViewController, ChatMessageDisplayLogic
     
     func setTextViewMessagePlaceholder() {
         if textViewMessage.text.isEmpty {
-            textViewMessage.text = "Chat.Message.Placeholder".localized
-            textViewMessage.textColor = AppTheme.Colors.textOnSurfaceDisabled
+            textViewMessage.text = messagePlaceholder
+            textViewMessage.textColor = AppTheme.Colors.textOnSurfaceSecondary
         }
         handlerButtonSend()
     }
     func setTextViewMessageEnter() {
-        if textViewMessage.text == "Chat.Message.Placeholder".localized {
+        if textViewMessage.text == messagePlaceholder {
             textViewMessage.text = ""
         }
         textViewMessage.textColor = AppTheme.Colors.textOnSurface
@@ -259,7 +264,7 @@ class ChatMessageViewController: MainBaseViewController, ChatMessageDisplayLogic
     // Handler button save
     func handlerButtonSend() {
         if let text = textViewMessage.text {
-            if text.isEmpty || text == "Chat.Message.Placeholder".localized {
+            if text.isEmpty || text == messagePlaceholder {
                 buttonSend.isEnabled = false
             }
             else {

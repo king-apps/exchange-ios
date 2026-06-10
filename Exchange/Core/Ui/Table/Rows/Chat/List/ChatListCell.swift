@@ -23,6 +23,12 @@ class ChatListCell: UITableViewCellBase, NibLoadableCell {
         var notViewed: Int
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageViewAvatar.kf.cancelDownloadTask()
+        imageViewAvatar.image = nil
+    }
+    
     
     // Setup
     func setup(model: Model) {
@@ -31,7 +37,8 @@ class ChatListCell: UITableViewCellBase, NibLoadableCell {
         imageViewAvatar.layer.cornerRadius = imageViewAvatar.bounds.height / 2
         
         if let avatar = model.avatarUrl, let url = URL(string: avatar) {
-            imageViewAvatar.kf.setImage(with: url)
+            imageViewAvatar.image = AppTheme.icon(.user)
+            imageViewAvatar.kf.setImage(with: url, options: [.forceRefresh])
             imageViewAvatar.contentMode = .scaleAspectFill
         }
         else {

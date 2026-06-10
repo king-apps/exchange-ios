@@ -17,6 +17,7 @@ class LocalConfig {
     private var stickerFilterOnlyPublished: Bool
     private var stickerFilterSortByName: Bool
     private var stickerFilterLocked: Bool
+    private var stickerFilterCategories: [Int]
     
     private var hasChanged: Bool
 
@@ -35,6 +36,7 @@ class LocalConfig {
         static let stickerFilterOnlyPublished = "LocalConfig.StickerFilterOnlyPublished"
         static let stickerFilterSortByName = "LocalConfig.StickerFilterSortByName"
         static let stickerFilterLocked = "LocalConfig.StickerFilterLocked"
+        static let stickerFilterCategories = "LocalConfig.StickerFilterCategories"
     }
     
     
@@ -51,6 +53,7 @@ class LocalConfig {
         stickerFilterOnlyPublished = false
         stickerFilterSortByName = false
         stickerFilterLocked = false
+        stickerFilterCategories = []
         
         hasChanged = false
     }
@@ -70,6 +73,7 @@ class LocalConfig {
         defaults.set(stickerFilterOnlyPublished, forKey: Key.stickerFilterOnlyPublished)
         defaults.set(stickerFilterSortByName, forKey: Key.stickerFilterSortByName)
         defaults.set(stickerFilterLocked, forKey: Key.stickerFilterLocked)
+        defaults.set(stickerFilterCategories, forKey: Key.stickerFilterCategories)
         
         defaults.synchronize()
     }
@@ -91,6 +95,9 @@ class LocalConfig {
         stickerFilterOnlyPublished << defaults.value(forKey: Key.stickerFilterOnlyPublished)
         stickerFilterSortByName << defaults.value(forKey: Key.stickerFilterSortByName)
         stickerFilterLocked << defaults.value(forKey: Key.stickerFilterLocked)
+        if let values = defaults.value(forKey: Key.stickerFilterCategories) as? [Int] {
+            stickerFilterCategories = values
+        }
     }
     
     
@@ -106,6 +113,7 @@ class LocalConfig {
         stickerFilterOnlyPublished = false
         stickerFilterSortByName = false
         stickerFilterLocked = false
+        stickerFilterCategories = []
         
         hasChanged = true
         save()
@@ -143,6 +151,9 @@ class LocalConfig {
     }
     func setStickerFilterLocked(_ value: Bool) {
         self.stickerFilterLocked = value
+    }
+    func setStickerFilterCategories(_ value: [Int]) {
+        self.stickerFilterCategories = value
     }
     
     func setHasChanged(_ value: Bool) {
@@ -182,6 +193,9 @@ class LocalConfig {
     func getStickerFilterLocked() -> Bool {
         return stickerFilterLocked
     }
+    func getStickerFilterCategories() -> [Int] {
+        return stickerFilterCategories
+    }
     
     func getHasChanged() -> Bool {
         return hasChanged
@@ -199,6 +213,17 @@ class LocalConfig {
     func clearCategories() {
         categories.removeAll()
     }
+    func toogleStickerFilterCategory(_ category: Int) {
+        if !stickerFilterCategories.contains(category) {
+            stickerFilterCategories.append(category)
+        }
+        else {
+            stickerFilterCategories.removeAll(where: {$0 == category})
+        }
+    }
+    func clearStickerFilterCategories() {
+        stickerFilterCategories.removeAll()
+    }
     
     func filterIsActive() -> Bool {
         let isActive = categories.count > 0 || radius != RemoteConfig.shared.getMatchFilterRadiusMax()
@@ -206,7 +231,7 @@ class LocalConfig {
     }
     func filterStickerIsActive() -> Bool {
         
-        let isActive = stickerFilterOnlyMissing || stickerFilterOnlyCollected || stickerFilterOnlyPublished || stickerFilterOnlyDuplicated || !stickerFilterKeywords.isEmpty || !categories.isEmpty
+        let isActive = stickerFilterOnlyMissing || stickerFilterOnlyCollected || stickerFilterOnlyPublished || stickerFilterOnlyDuplicated || !stickerFilterKeywords.isEmpty || !stickerFilterCategories.isEmpty
     
         return isActive
         

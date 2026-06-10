@@ -37,7 +37,7 @@ class StickerCategoryListWorker {
     
         if let categories = categories  {
             let category = categories[row]
-            LocalConfig.shared.toogleCategory(category.getId())
+            LocalConfig.shared.toogleStickerFilterCategory(category.getId())
             LocalConfig.shared.save()
         }
         
@@ -49,7 +49,7 @@ class StickerCategoryListWorker {
     // Handler clear
     func clear(completion: @escaping(_ localConfig: LocalConfig) -> ()) {
         
-        LocalConfig.shared.clearCategories()
+        LocalConfig.shared.clearStickerFilterCategories()
         LocalConfig.shared.save()
         let localConfig = LocalConfig.shared
         completion(localConfig)

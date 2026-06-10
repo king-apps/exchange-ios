@@ -280,6 +280,7 @@
                         <outlet property="labelName" destination="M8Y-Qn-8T7" id="7eN-gN-sr8"/>
                         <outlet property="tableView" destination="EzH-0s-L3v" id="Uig-b4-ezg"/>
                         <outlet property="textViewMessage" destination="BkP-Yr-7EQ" id="akG-Ll-ENi"/>
+                        <outlet property="viewMessage" destination="tg1-bz-AeY" id="bcv-5h-Gmn"/>
                         <segue destination="hDa-8H-mta" kind="show" identifier="Products" id="UTQ-Mq-BiG"/>
                     </connections>
                 </viewController>

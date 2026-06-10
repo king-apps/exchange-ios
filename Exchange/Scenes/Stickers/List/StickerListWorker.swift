@@ -211,7 +211,7 @@ class StickerListWorker {
         let onlyMissing = config.getStickerFilterOnlyMissing()
         let onlyDuplicated = config.getStickerFilterOnlyDuplicated()
         let onlyPublished = config.getStickerFilterOnlyPublished()
-        let categoryIds = Set(config.getCategories())
+        let categoryIds = Set(config.getStickerFilterCategories())
         let shouldFilterCategories = categoryIds.isEmpty == false
         let keywords = normalizedSearchTerms(config.getStickerFilterKeywords())
         let shouldFilterKeywords = keywords.isEmpty == false

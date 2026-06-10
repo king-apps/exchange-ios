@@ -72,7 +72,7 @@ class StickerCategoryListPresenter: StickerCategoryListPresentationLogic {
     private func makeRows(config: LocalConfig, categories: [ProductCategory]?) -> [MainTableRow] {
         
         var rows = [MainTableRow]()
-        let selectedCategoryIds = Set(config.getCategories())
+        let selectedCategoryIds = Set(config.getStickerFilterCategories())
         
         if let categories = categories {
             for category in categories {
