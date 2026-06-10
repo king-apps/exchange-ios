@@ -9,8 +9,8 @@ extension StickerListViewController: knowMoreDelegate {
             
             switch option {
             case .stickerImage:
-                //openCamera()
-                handlerImage()
+                openCamera()
+                //handlerImage()
                 break
             default: break
             }
